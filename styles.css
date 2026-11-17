@@ -5854,3 +5854,94 @@ hr { border-color: var(--border-hairline); }
 @media (max-width: 640px) {
   .island-img-pair img[style*="span 2"] { height: 220px !important; }
 }
+
+/* ==========================================================================
+   HERO REDISEÑADO PARA CONTRASTE (nov-2026)
+   Texto marfil siempre sobre un velo oscuro cinematográfico, sin importar
+   qué tan clara sea la foto en turno. Sustituye al velo crema anterior.
+   ========================================================================== */
+/* 1. Velo único (.hero::before): oscuro a la izquierda, donde vive el texto,
+      y oscuro abajo para el pie de fotos. El selector "html body" gana a la
+      regla con !important que landing.html trae en su propio <style>. */
+html body .hero::before {
+  content: "" !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  z-index: 2 !important;
+  background:
+    linear-gradient(90deg,
+      rgba(16, 14, 12, 0.84) 0%,
+      rgba(16, 14, 12, 0.70) 30%,
+      rgba(16, 14, 12, 0.36) 56%,
+      rgba(16, 14, 12, 0.10) 80%,
+      rgba(16, 14, 12, 0.04) 100%),
+    linear-gradient(180deg,
+      rgba(16, 14, 12, 0.30) 0%,
+      rgba(16, 14, 12, 0) 22%,
+      rgba(16, 14, 12, 0) 72%,
+      rgba(16, 14, 12, 0.50) 100%) !important;
+}
+/* Orden de capas: fotos (1) < velo (2) < texto (3) < menú y pie de fotos (4) */
+html body .hero .hero-editorial { z-index: 3 !important; }
+html body .hero .hero-header,
+html body .hero .hero-footer { z-index: 4 !important; }
+
+/* "Ver Portada" sigue despejando la foto */
+html body .hero.is-cover-clean::before { opacity: 0 !important; }
+
+/* 3. Tipografía con más cuerpo y sombra difusa (legible, sin halo duro) */
+.hero-editorial .section-title {
+  color: #FBF8F2 !important;
+  text-shadow: 0 2px 24px rgba(0, 0, 0, 0.45), 0 1px 2px rgba(0, 0, 0, 0.25);
+}
+.hero-editorial .section-title em { color: #E9D6B8 !important; }
+.hero-editorial .section-copy {
+  color: #F3EEE5 !important;
+  font-weight: 450;
+  text-shadow: 0 1px 12px rgba(0, 0, 0, 0.55);
+}
+.hero-editorial .hero-tag {
+  color: #F3EEE5 !important;
+  background: rgba(16, 14, 12, 0.55);
+  border-color: rgba(247, 243, 234, 0.28);
+}
+.hero-editorial .hero-btn {
+  background: #F7F3EA;
+  color: #1A1918;
+  border-color: #F7F3EA;
+}
+.hero-editorial .hero-btn:hover { background: #FFFFFF; color: #000; }
+.hero-editorial .hero-btn-secondary {
+  background: rgba(16, 14, 12, 0.40) !important;
+  border-color: rgba(247, 243, 234, 0.6) !important;
+}
+
+/* 4. Pie de fotos (contador, leyenda y controles) en vidrio oscuro */
+.hero-footer {
+  background: rgba(16, 14, 12, 0.58);
+  border-top: 1px solid rgba(247, 243, 234, 0.14);
+}
+.hero-footer .scene-counter { color: #F7F3EA !important; }
+.hero-footer .scene-caption { color: rgba(247, 243, 234, 0.82) !important; }
+.hero-footer .scene-arrow {
+  color: #F7F3EA;
+  border-color: rgba(247, 243, 234, 0.35);
+  background: rgba(247, 243, 234, 0.06);
+}
+.hero-footer .scene-arrow:hover { background: rgba(247, 243, 234, 0.18); }
+.hero-footer .scene-dot-num { color: rgba(247, 243, 234, 0.7) !important; }
+.hero-footer .scene-dot-bar { background: rgba(247, 243, 234, 0.35); }
+
+/* 5. Celular: el texto está abajo, así que el velo oscuro sube desde abajo */
+@media (max-width: 760px) {
+  html body .hero::before {
+    background: linear-gradient(0deg,
+      rgba(16, 14, 12, 0.88) 0%,
+      rgba(16, 14, 12, 0.74) 40%,
+      rgba(16, 14, 12, 0.46) 64%,
+      rgba(16, 14, 12, 0.18) 84%,
+      rgba(16, 14, 12, 0.06) 100%) !important;
+  }
+}
