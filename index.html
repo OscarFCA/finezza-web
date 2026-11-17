@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FINEZZA — Diseño Moderno Italiano &amp; Mobiliario de Autor | Cocinas, Vestidores y Hábitat Integral</title>
+  <meta name="description" content="Finezza: Muebles de autor inspirados en el diseño moderno italiano. Cocinas integrales como el corazón del hogar, vestidores, living, entretenimiento, recámara, home office y outdoor.">
+  
+  <!-- Favicon e Imágenes Principales Pre-cargadas -->
+  <link rel="icon" type="image/png" href="assets/favicon-finezza.png">
+  <link rel="preload" as="image" href="assets/portada-finezza.jpg" fetchpriority="high">
+  <link rel="preload" as="image" href="assets/logo-finezza.png" fetchpriority="high">
+
+  <!-- Fuentes especificadas en el Hero y Editorial -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wdth,wght@0,75..100,400..700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..500;1,6..72,300..400&display=swap">
+  
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       SECCIÓN HERO (Secuencia Cinematográfica de Portada Finezza & Logotipo Oficial)
+       ========================================================================== -->
+  <section class="hero" id="inicio" aria-label="Bienvenida Finezza — Recorrido Arquitectónico">
+    <!-- Escenario multicapa con las 10 perspectivas y detalles del proyecto en orden aleatorio -->
+    <div class="hero-stage" id="heroStage" aria-live="off">
+      <div class="hero-slide is-active" data-motion="zoom-in" data-type="wide" data-label="PERSPECTIVA INTEGRAL &bull; COCINA EN ISLA DE MÁRMOL, LIBRERO DOBLE ALTURA &amp; LIVING">
+        <img 
+          class="hero-cover" 
+          src="assets/portada-finezza.jpg" 
+          alt="Cocina integral en nogal e isla monolítica de mármol integrada con librero de doble altura y living"
+          width="1024"
+          height="571"
+          fetchpriority="high"
+          decoding="async">
+      </div>
+      <div class="hero-slide" data-motion="pan-right" data-type="detail" data-label="DETALLE DE AUTOR &bull; CORTE A 45° EN ISLA MONOLÍTICA DE PIEDRA NATURAL">
+        <img 
+          class="hero-cover" 
+          src="assets/portada-detalle-marmol-isla.jpg" 
+          alt="Detalle macro de la isla de cocina en mármol natural con veta continua y bancos de piel"
+          width="1024"
+          height="571"
+          loading="eager"
+          decoding="async">
+      </div>
+      <div class="hero-slide" data-motion="pan-left" data-type="wide" data-label="GRAN APERTURA &bull; CONEXIÓN INTERIOR–EXTERIOR, TERRAZA &amp; CAMPO DE GOLF">
+        <img 
+          class="hero-cover" 
+          src="assets/portada-03-arquitectura-terraza.jpg" 
+          alt="Gran apertura arquitectónica que conecta escalera, cocina, estancia de doble altura y terraza exterior"
+          width="1024"
+          height="571"
+          loading="eager"
+          decoding="async">
+      </div>
+      <div class="hero-slide" data-motion="zoom-out" data-type="detail" data-label="ATMÓSFERA ÍNTIMA &bull; VITRINAS EN CRISTAL FUMÉ, CHIMENEA &amp; LUZ NATURAL">
+        <img 
+          class="hero-cover" 
+          src="assets/portada-chimenea-vitrinas-living.jpg" 
+          alt="Vista desde el living hacia la chimenea integrada y vitrinas iluminadas con luz natural"
+          width="1024"
+          height="571"
+          loading="lazy"
+          decoding="async">
+      </div>
+      <div class="hero-slide" data-motion="pan-down" data-type="wide" data-label="CONTINUIDAD ARQUITECTÓNICA &bull; COCINA, BOISERIE Y PASILLO CON PUERTAS OCULTAS">
+        <img 
+          class="hero-cover" 
+          src="assets/portada-06-cocina-boiserie.jpg" 
+          alt="Elevación arquitectónica de cocina en nogal, lambrines continuos de muro a muro y pasillo con puertas coplanares ocultas"
+          width="1024"
+          height="571"
+          loading="lazy"
+          decoding="async">
+      </div>
+      <div class="hero-slide" data-motion="zoom-in" data-type="detail" data-label="ACABADOS SENSORIALES &bull; TEXTURAS PÉTREAS, SALA DE ESTAR Y HOGAR ENCENDIDO">
+        <img 
+          class="hero-cover" 
+          src="assets/portada-detalle-mesa-chimenea.jpg" 
+          alt="Primer plano de mesa en piedra natural con chimenea encendida y cocina Finezza al fondo"
+          width="1024"
+          height="571"
+          loading="lazy"
+          decoding="async">
+      </div>
+      <div class="hero-slide" data-motion="pan-right" data-type="wide" data-label="CORAZÓN DEL HOGAR &bull; COCINA EN NOGAL, CAVA ILUMINADA &amp; COMEDOR">
+        <img 
+          class="hero-cover" 
+          src="assets/portada-04-cocina-comedor.jpg" 
+          alt="Cocina de autor Finezza con isla desayunador, cava iluminada en nicho de nogal, comedor y escalera suspendida"
+          width="1024"
+          height="571"
+          loading="lazy"
+          decoding="async">
+      </div>
+      <div class="hero-slide" data-motion="pan-up" data-type="wide" data-label="SIMETRÍA ITALIANA &bull; ESTANCIA DE DOBLE ALTURA, VENTANAL RETICULAR &amp; COCINA">
+        <img 
+          class="hero-cover" 
+          src="assets/portada-panoramica-invertida.jpg" 
+          alt="Vista simétrica de la estancia de doble altura, librero monumental y cocina abierta"
+          width="1024"
+          height="571"
+          loading="lazy"
+          decoding="async">
+      </div>
+      <div class="hero-slide" data-motion="pan-down" data-type="wide" data-label="DOBLE ALTURA &bull; VISTA DESDE MEZZANINE HACIA ISLA MONOLÍTICA Y LIBRERO">
+        <img 
+          class="hero-cover" 
+          src="assets/portada-05-doble-altura.jpg" 
+          alt="Vista desde el mezzanine superior hacia la isla de cocina en piedra natural, librero monumental con chimenea y ventanal"
+          width="1024"
+          height="571"
+          loading="lazy"
+          decoding="async">
+      </div>
+      <div class="hero-slide" data-motion="zoom-out" data-type="wide" data-label="LUZ DE ATARDECER &bull; DIÁLOGO CÁLIDO ENTRE EBANISTERÍA ITALIANA Y ESTANCIA">
+        <img 
+          class="hero-cover" 
+          src="assets/portada-02-estancia.jpg" 
+          alt="Atmósfera cálida de atardecer sobre la cocina de autor, librero iluminado y sala residencial"
+          width="1024"
+          height="571"
+          loading="lazy"
+          decoding="async">
+      </div>
+    </div>
+
+   <!-- Header superior dentro del Hero (Logotipo Oficial Finezza y las 9 Categorías) -->
+    <header class="hero-header">
+      <a href="#inicio" class="section-brand" aria-label="FINEZZA Quer&eacute;taro &mdash; Dise&ntilde;o Moderno Italiano &amp; Mobiliario Integral">
+        <img 
+          src="assets/logo-finezza.png" 
+          alt="FINEZZA Quer&eacute;taro &mdash; Dise&ntilde;o Moderno Italiano" 
+          class="brand-logo"
+          width="240"
+          height="67">
+      </a>
+
+      <nav class="section-nav" aria-label="Categor&iacute;as principales Finezza">
+        <a href="cocinas.html">Cocinas</a>
+        <a href="vestidores.html">Closets</a>
+        <a href="living.html">Living</a>
+        <a href="entretenimiento.html">Entretenimiento</a>
+        <a href="home-office.html">Home Office</a>
+        <a href="recamaras.html">Rec&aacute;maras</a>
+        <a href="puertas.html">Puertas Intercomunicaci&oacute;n</a>
+        <a href="mobiliario-autor.html">Mobiliario de Autor</a>
+        <a href="outdoor.html">Outdoor</a>
+      </nav>
+
+      <div class="header-actions">
+        <button type="button" class="demo-switcher" id="toggleCoverView" title="Alternar vista despejada de la secuencia de portada">
+          <span id="coverViewLabel">Ver Portada</span>
+        </button>
+        <a href="#cotizar" class="header-cta-link">Agendar Cita</a>
+      </div>
+    </header>
+
+    <!-- Composición: bloque editorial alineado a la izquierda, tercio izquierdo, max 600px -->
+    <div class="hero-editorial">
+      <div class="hero-tag reveal-item" style="--delay: 0.05s;">
+        <span class="tag-dot"></span>
+        <span id="heroEyebrow">SHOWROOM QUER&Eacute;TARO &bull; DISE&Ntilde;O MODERNO ITALIANO</span>
+      </div>
+
+      <h1 class="section-title reveal-item" style="--delay: 0.16s;" id="heroTitle">
+        Espacios que se adaptan<br>
+        <em>a la vida.</em>
+      </h1>
+
+      <p class="section-copy reveal-item" style="--delay: 0.28s;" id="heroCopy">
+        Tienda oficial Finezza en Quer&eacute;taro. Proyectamos mobiliario de autor de dise&ntilde;o moderno italiano para toda tu residencia: cocinas, closets, living, entretenimiento, home office, rec&aacute;maras, puertas y outdoor.
+      </p>
+
+      <div class="hero-actions reveal-item" style="--delay: 0.40s;">
+        <a href="#cotizar" class="hero-btn" id="heroBtn">
+          <span id="heroBtnText">Agendar Cita en Showroom</span>
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <path d="M3.5 8H12.5M12.5 8L8.5 4M12.5 8L8.5 12" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+        <a href="#materialidad" class="hero-btn-secondary">Materialidad &amp; Paletas</a>
+      </div>
+    </div>
+
+    <!-- Pie del Hero: Navegador Cinematográfico de las 10 Vistas del Proyecto (Orden Aleatorio) -->
+    <footer class="hero-footer reveal-item" style="--delay: 0.52s;">
+      <div class="hero-footer-left">
+        <span class="scene-counter" id="heroFooterCode">VISTA 01 / 10</span>
+        <span class="footer-divider">/</span>
+        <span class="scene-caption" id="heroFooterLabel">PERSPECTIVA INTEGRAL &bull; COCINA EN ISLA DE MÁRMOL, LIBRERO DOBLE ALTURA &amp; LIVING</span>
+      </div>
+
+      <div class="hero-scene-controls" aria-label="Selector de vistas del proyecto en portada">
+        <button type="button" class="scene-arrow" id="prevSceneBtn" aria-label="Vista anterior del proyecto" title="Vista anterior">
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <path d="M10.5 3.5L6 8L10.5 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+
+        <div class="scene-dots" role="tablist" aria-label="Vistas del proyecto">
+          <button type="button" class="scene-dot is-active" data-scene="0" role="tab" aria-selected="true" title="Vista 01">
+            <span class="scene-dot-num">01</span>
+            <span class="scene-dot-bar"><span class="scene-dot-fill"></span></span>
+          </button>
+          <button type="button" class="scene-dot" data-scene="1" role="tab" aria-selected="false" title="Vista 02">
+            <span class="scene-dot-num">02</span>
+            <span class="scene-dot-bar"><span class="scene-dot-fill"></span></span>
+          </button>
+          <button type="button" class="scene-dot" data-scene="2" role="tab" aria-selected="false" title="Vista 03">
+            <span class="scene-dot-num">03</span>
+            <span class="scene-dot-bar"><span class="scene-dot-fill"></span></span>
+          </button>
+          <button type="button" class="scene-dot" data-scene="3" role="tab" aria-selected="false" title="Vista 04">
+            <span class="scene-dot-num">04</span>
+            <span class="scene-dot-bar"><span class="scene-dot-fill"></span></span>
+          </button>
+          <button type="button" class="scene-dot" data-scene="4" role="tab" aria-selected="false" title="Vista 05">
+            <span class="scene-dot-num">05</span>
+            <span class="scene-dot-bar"><span class="scene-dot-fill"></span></span>
+          </button>
+          <button type="button" class="scene-dot" data-scene="5" role="tab" aria-selected="false" title="Vista 06">
+            <span class="scene-dot-num">06</span>
+            <span class="scene-dot-bar"><span class="scene-dot-fill"></span></span>
+          </button>
+          <button type="button" class="scene-dot" data-scene="6" role="tab" aria-selected="false" title="Vista 07">
+            <span class="scene-dot-num">07</span>
+            <span class="scene-dot-bar"><span class="scene-dot-fill"></span></span>
+          </button>
+          <button type="button" class="scene-dot" data-scene="7" role="tab" aria-selected="false" title="Vista 08">
+            <span class="scene-dot-num">08</span>
+            <span class="scene-dot-bar"><span class="scene-dot-fill"></span></span>
+          </button>
+          <button type="button" class="scene-dot" data-scene="8" role="tab" aria-selected="false" title="Vista 09">
+            <span class="scene-dot-num">09</span>
+            <span class="scene-dot-bar"><span class="scene-dot-fill"></span></span>
+          </button>
+          <button type="button" class="scene-dot" data-scene="9" role="tab" aria-selected="false" title="Vista 10">
+            <span class="scene-dot-num">10</span>
+            <span class="scene-dot-bar"><span class="scene-dot-fill"></span></span>
+          </button>
+        </div>
+
+        <button type="button" class="scene-arrow" id="nextSceneBtn" aria-label="Siguiente vista del proyecto" title="Siguiente vista">
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <path d="M5.5 3.5L10 8L5.5 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+    </footer>
+  </section>
+
+  <!-- ==========================================================================
+       CINTILLO DE POSICIONAMIENTO / MANIFIESTO RÁPIDO PARA CAMPAÑAS
+       ========================================================================== -->
+  <section class="manifesto-strip" id="filosofia">
+    <div class="container">
+      <div class="manifesto-grid">
+        <div class="manifesto-lead">
+          <img 
+            src="assets/logo-finezza.png" 
+            alt="FINEZZA Querétaro — Diseño Moderno Italiano &amp; Mobiliario Integral" 
+            class="manifesto-brand-logo"
+            width="180"
+            height="50"
+            loading="lazy">
+          <span class="eyebrow">01 / UN MISMO LENGUAJE ARQUITECTÓNICO</span>
+          <h2 class="editorial-h2">
+            La cocina es el corazón del hogar.<br>
+            <em>Todo lo demás nace de su diálogo.</em>
+          </h2>
+        </div>
+        <div class="manifesto-body">
+          <p>
+            En <strong>Finezza</strong> concebimos el hogar no como habitaciones aisladas, sino como una obra integral de diseño de autor. Partimos de nuestro <em>Core Business</em> —<strong>Cocinas y Vestidores de alta gama</strong>— y proyectamos esa misma nobleza de materiales, herrajes de ingeniería europea y proporciones italianas hacia cada espacio de tu vida.
+          </p>
+          <div class="manifesto-stats">
+            <div class="stat-item">
+              <span class="stat-num">10</span>
+              <span class="stat-desc">Ambientes residenciales integrados bajo una misma firma</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-num">100%</span>
+              <span class="stat-desc">Personalización en piedras sinterizadas, chapas y lacas italianas</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-num">Autor</span>
+              <span class="stat-desc">Diseño exclusivo hecho a la medida exacta de tu arquitectura</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       CORE BUSINESS: COCINAS Y VESTIDORES (EL CORAZÓN DEL HOGAR)
+       ========================================================================== -->
+  <section class="core-section" id="corazon">
+    <div class="container">
+      <div class="section-header-row">
+        <div>
+          <span class="eyebrow">02 / NUESTRO CORE BUSINESS</span>
+          <h2 class="editorial-h2">Pilares de <em>alta precisión.</em></h2>
+        </div>
+        <p class="section-intro-copy">
+          Dos espacios definen la experiencia cotidiana y el valor patrimonial de una residencia: la cocina donde convergen los sentidos y el vestidor donde habita el orden íntimo.
+        </p>
+      </div>
+
+      <div class="core-cards-grid">
+        <!-- Tarjeta 1: Cocinas de Autor -->
+        <article class="core-card">
+          <div class="core-card-media">
+            <img 
+              src="assets/portada-04-cocina-comedor.jpg" 
+              alt="Cocina integral Finezza de diseño moderno italiano con isla monolítica, cava iluminada y comedor"
+              loading="lazy">
+            <span class="core-badge">CORE 01 &bull; EL CORAZÓN DEL HOGAR</span>
+          </div>
+          <div class="core-card-content">
+            <div class="core-card-top">
+              <h3>Cocinas de Autor</h3>
+              <span class="core-sub">Islas monolíticas, columnas ocultas y ergonomía italiana</span>
+            </div>
+            <p>
+              Diseñadas como el epicentro arquitectónico de la residencia. Integramos superficies ultracompactas (Dekton, Neolith, cuarzos y mármoles seleccionados), sistemas de puertas escamoteables (<em>pocket doors</em>), iluminación lineal cálida empotrada y herrajes de cierre silencioso que transforman la gastronomía en un ritual estético.
+            </p>
+            <ul class="core-features">
+              <li>Continuidad de veta en frentes e islas a 45° (corte inglete)</li>
+              <li>Electrodomésticos panelables e integración invisible</li>
+              <li>Golas arquitectónicas, aperturas push-to-open y perfiles anodizados</li>
+            </ul>
+            <div class="core-card-actions" style="display: flex; flex-wrap: wrap; gap: 18px; align-items: center;">
+              <a href="cocinas.html" class="link-arrow">Explorar Cocinas de Autor <span>&rarr;</span></a>
+              <a href="#cotizar" class="link-arrow" data-space="Cocina de Autor" style="opacity: 0.82;">Diseñar mi cocina <span>&rarr;</span></a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Tarjeta 2: Vestidores & Walk-in Closets -->
+        <article class="core-card">
+          <div class="core-card-media">
+            <img 
+              src="assets/portada-vestidores-finezza.jpg" 
+              alt="Portada Vestidores y Walk-in Closets Finezza con vitrinas iluminadas, isla central y tocador retroiluminado"
+              loading="lazy">
+            <span class="core-badge">CORE 02 &bull; 3 LÍNEAS DE FÁBRICA 2025</span>
+          </div>
+          <div class="core-card-content">
+            <div class="core-card-top">
+              <h3>Vestidores &amp; Walk-in Closets</h3>
+              <span class="core-sub">El arte de diseñar clósets: Modular, Libre y Light</span>
+            </div>
+            <p>
+              El diseño de un vestidor Finezza conjuga estética italiana, funcionalidad milimétrica y optimización del espacio. Fabricamos nuestras soluciones en <strong>tres líneas estructurales de fábrica</strong> —<strong>Clóset Modular</strong>, <strong>Clóset Libre</strong> y la nueva línea <strong>Clóset Light 2025</strong>—, con profundidades de <strong>400 mm y 600 mm</strong>, islas centrales organizadoras y herrajes europeos ocultos.
+            </p>
+            <ul class="core-features">
+              <li><strong>3 Líneas de Fábrica:</strong> Clóset Modular (Tornillo), Clóset Libre (Rafix interno) y Clóset Light (Divisiones cortantes 400/600 mm)</li>
+              <li><strong>Islas Centrales Dobles y Cuádruples</strong> (8 y 16 cajones organizadores con cubierta de cristal)</li>
+              <li><strong>16 Accesorios Extraíbles &amp; LED</strong> + Colección Merino Super Mate, Altos Brillos y Chapas Naturales</li>
+            </ul>
+            <div class="core-card-actions" style="display: flex; flex-wrap: wrap; gap: 18px; align-items: center;">
+              <a href="vestidores.html" class="link-arrow">Explorar las 3 Líneas y Catálogo 2025 <span>&rarr;</span></a>
+              <a href="#cotizar" class="link-arrow" data-space="Vestidor / Walk-in Closet" style="opacity: 0.82;">Cotizar mi vestidor <span>&rarr;</span></a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       ECOSISTEMA INTEGRAL FINEZZA (LAS 9 COLECCIONES Y ESPACIOS DE AUTOR)
+       ========================================================================== -->
+  <section class="ecosystem-section" id="colecciones">
+    <div class="container">
+      <div class="section-header-row">
+        <div>
+          <span class="eyebrow">03 / VISI&Oacute;N INTEGRAL DE H&Aacute;BITAT &bull; QUER&Eacute;TARO</span>
+          <h2 class="editorial-h2">Un solo lenguaje de dise&ntilde;o en <em>toda tu residencia.</em></h2>
+        </div>
+        <p class="section-intro-copy">
+          Desde nuestro showroom en Quer&eacute;taro proyectamos una narrativa arquitect&oacute;nica continua: cuando los materiales, proporciones y herrajes de tu cocina se extienden hacia los closets, el living, las puertas y la terraza, tu hogar adquiere la serenidad de una obra de autor.
+        </p>
+      </div>
+
+      <!-- Filtros interactivos de las 9 colecciones -->
+      <div class="ecosystem-tabs" role="tablist" aria-label="Filtrar colecciones y espacios Finezza">
+        <button class="eco-tab active" role="tab" aria-selected="true" data-filter="all">Todas las Colecciones (9)</button>
+        <button class="eco-tab" role="tab" aria-selected="false" data-filter="core">Core: Cocinas &amp; Closets</button>
+        <button class="eco-tab" role="tab" aria-selected="false" data-filter="social">Social: Living, Entretenimiento &amp; Autor</button>
+        <button class="eco-tab" role="tab" aria-selected="false" data-filter="privado">Privado: Rec&aacute;maras &amp; Puertas</button>
+        <button class="eco-tab" role="tab" aria-selected="false" data-filter="funcional">Estudio &amp; Exterior: Home Office &amp; Outdoor</button>
+      </div>
+
+      <div class="ecosystem-grid" id="ecosystemGrid">
+
+        <!-- 01. Cocinas -->
+        <article class="eco-card" data-category="core">
+          <a href="cocinas.html" class="eco-img-wrap" style="display:block;">
+            <img src="assets/portada-cocinas.webp" alt="Cocinas Integrales de Autor Finezza" loading="lazy">
+            <span class="eco-num">01 / COCINAS</span>
+          </a>
+          <div class="eco-body">
+            <h3>Cocinas</h3>
+            <p>El coraz&oacute;n arquitect&oacute;nico del hogar. Islas monol&iacute;ticas en piedra natural o sinterizada con corte a 45&deg;, columnas ocultas (<em>pocket doors</em>), iluminaci&oacute;n lineal c&aacute;lida y herrajes europeos de precisi&oacute;n.</p>
+            <div class="eco-tags">
+              <span>Islas a 45&deg;</span>
+              <span>Pocket Doors</span>
+              <span>Piedra &amp; Nogal</span>
+            </div>
+            <div style="margin-top: 14px;">
+              <a href="cocinas.html" class="link-arrow">Explorar Cocinas <span>&rarr;</span></a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 02. Closets -->
+        <article class="eco-card" data-category="core">
+          <a href="vestidores.html" class="eco-img-wrap" style="display:block;">
+            <img src="assets/portada-vestidores-finezza.jpg" alt="Closets, Vestidores y Walk-in Closets Finezza" loading="lazy">
+            <span class="eco-num">02 / CLOSETS</span>
+          </a>
+          <div class="eco-body">
+            <h3>Closets</h3>
+            <p>Closets, vestidores y <em>walk-in closets</em> con islas centrales de dise&ntilde;o moderno e inspiraci&oacute;n europea. Tres sistemas constructivos (Modular, Libre y Light) con sastrer&iacute;a interior e iluminaci&oacute;n LED.</p>
+            <div class="eco-tags">
+              <span>Walk-in Closets</span>
+              <span>Islas Centrales</span>
+              <span>3 L&iacute;neas Europeas</span>
+            </div>
+            <div style="margin-top: 14px;">
+              <a href="vestidores.html" class="link-arrow">Explorar Closets y Vestidores <span>&rarr;</span></a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 03. Living -->
+        <article class="eco-card" data-category="social">
+          <a href="living.html" class="eco-img-wrap" style="display:block;">
+            <img src="assets/portada-living.webp" alt="Libreros, Sistemas de Pared, Aparadores y Credenzas para Living Finezza" loading="lazy">
+            <span class="eco-num">03 / LIVING</span>
+          </a>
+          <div class="eco-body">
+            <h3>Living</h3>
+            <p>Libreros arquitect&oacute;nicos de piso a techo, sistemas de pared continuos (<em>boiserie</em>), aparadores y credenzas fabricados a la medida para integrar tu estancia con elegancia atemporal.</p>
+            <div class="eco-tags">
+              <span>Libreros a Medida</span>
+              <span>Sistemas de Pared</span>
+              <span>Aparadores &amp; Credenzas</span>
+            </div>
+            <div style="margin-top: 14px;">
+              <a href="living.html" class="link-arrow">Explorar Living <span>&rarr;</span></a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 04. Entretenimiento -->
+        <article class="eco-card" data-category="social">
+          <a href="entretenimiento.html" class="eco-img-wrap" style="display:block;">
+            <img src="assets/portada-entretenimiento.webp" alt="Configuraciones y M&oacute;dulos para Sistemas Multimedia y TV" loading="lazy">
+            <span class="eco-num">04 / ENTRETENIMIENTO</span>
+          </a>
+          <div class="eco-body">
+            <h3>Entretenimiento</h3>
+            <p>Configuraciones y m&oacute;dulos arquitect&oacute;nicos para sistemas multimedia y TV con gesti&oacute;n oculta de cableado, paneles ac&uacute;sticos, iluminaci&oacute;n ambiental y nichos integrados.</p>
+            <div class="eco-tags">
+              <span>Sistemas Multimedia</span>
+              <span>M&oacute;dulos de TV</span>
+              <span>Cero Cables Visibles</span>
+            </div>
+            <div style="margin-top: 14px;">
+              <a href="entretenimiento.html" class="link-arrow">Explorar Entretenimiento <span>&rarr;</span></a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 05. Home Office -->
+        <article class="eco-card" data-category="funcional">
+          <a href="home-office.html" class="eco-img-wrap" style="display:block;">
+            <img src="assets/home-office/home-office-principal.webp" alt="Workstations, Escritorios y Espacios Integrales para Home Office" loading="lazy">
+            <span class="eco-num">05 / HOME OFFICE</span>
+          </a>
+          <div class="eco-body">
+            <h3>Home Office</h3>
+            <p><em>Workstations</em>, escritorios suspendidos y espacios integrales para tu estudio en casa. Colecci&oacute;n <strong>Habitat Essenziale</strong> y proyectos de estudio arquitect&oacute;nico dise&ntilde;ados a medida.</p>
+            <div class="eco-tags">
+              <span>Workstations</span>
+              <span>Escritorios de Autor</span>
+              <span>Estudios a Medida</span>
+            </div>
+            <div style="margin-top: 14px;">
+              <a href="home-office.html" class="link-arrow">Explorar Home Office <span>&rarr;</span></a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 06. Recámaras -->
+        <article class="eco-card" data-category="privado">
+          <a href="recamaras.html" class="eco-img-wrap" style="display:block;">
+            <img src="assets/portada-recamara.webp" alt="Bur&oacute;s, Cabeceras, Cajoneras y Mobiliario para Rec&aacute;maras" loading="lazy" style="object-position: center 45%;">
+            <span class="eco-num">06 / REC&Aacute;MARAS</span>
+          </a>
+          <div class="eco-body">
+            <h3>Rec&aacute;maras</h3>
+            <p>Bur&oacute;s flotantes, cabeceras arquitect&oacute;nicas de muro a muro, cajoneras y mobiliario complementario dise&ntilde;ados para crear atm&oacute;sferas &iacute;ntimas de descanso y orden visual.</p>
+            <div class="eco-tags">
+              <span>Cabeceras Integrales</span>
+              <span>Bur&oacute;s &amp; Cajoneras</span>
+              <span>Mobiliario Complementario</span>
+            </div>
+            <div style="margin-top: 14px;">
+              <a href="recamaras.html" class="link-arrow">Explorar Rec&aacute;maras <span>&rarr;</span></a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 07. Puertas Intercomunicación -->
+        <article class="eco-card" data-category="privado">
+          <a href="puertas.html" class="eco-img-wrap" style="display:block;">
+            <img src="assets/portada-puertas.webp" alt="Puertas de Intercomunicaci&oacute;n Abatibles, Deslizables y Extra Altas" loading="lazy" style="object-position: center 35%;">
+            <span class="eco-num">07 / PUERTAS</span>
+          </a>
+          <div class="eco-body">
+            <h3>Puertas de Intercomunicaci&oacute;n</h3>
+            <p>Hacemos que el lenguaje de tu mobiliario se traslade a cada rinc&oacute;n de tu hogar, incluyendo las puertas de cada espacio. Abatibles, deslizables, coplanares o extra altas: t&uacute; decides.</p>
+            <div class="eco-tags">
+              <span>Abatibles &amp; Deslizables</span>
+              <span>Extra Altas</span>
+              <span>Coplanares en Lambr&iacute;n</span>
+            </div>
+            <div style="margin-top: 14px;">
+              <a href="puertas.html" class="link-arrow">Explorar Puertas <span>&rarr;</span></a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 08. Mobiliario de Autor -->
+        <article class="eco-card" data-category="social">
+          <a href="mobiliario-autor.html" class="eco-img-wrap" style="display:block;">
+            <img src="assets/portada-mobiliario-autor.webp" alt="Colecciones de Mobiliario de Autor Inspiradas en el Dise&ntilde;o Italiano" loading="lazy">
+            <span class="eco-num">08 / AUTOR</span>
+          </a>
+          <div class="eco-body">
+            <h3>Mobiliario de Autor</h3>
+            <p>Descubre nuestras colecciones de muebles inspirados en los &iacute;conos del dise&ntilde;o italiano para todos los rincones de tu hogar. Personal&iacute;zalos seg&uacute;n tu propio <em>mood board</em> para expresar el interiorismo que buscas.</p>
+            <div class="eco-tags">
+              <span>&Iacute;conos Italianos</span>
+              <span>Mood Board a Medida</span>
+              <span>Piezas Singulares</span>
+            </div>
+            <div style="margin-top: 14px;">
+              <a href="mobiliario-autor.html" class="link-arrow">Explorar Mobiliario de Autor <span>&rarr;</span></a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 09. Outdoor -->
+        <article class="eco-card" data-category="funcional">
+          <a href="outdoor.html" class="eco-img-wrap" style="display:block;">
+            <img src="assets/portada-outdoor-finezza.jpg" alt="Mobiliario y Equipos Outdoor de Alta Gama Mont Alpi y Thor" loading="lazy" style="object-position: center 58%;">
+            <span class="eco-num">09 / OUTDOOR</span>
+          </a>
+          <div class="eco-body">
+            <h3>Outdoor</h3>
+            <p>Mobiliario y equipamiento de alta gama (<strong>Mont Alpi&reg;</strong> y <strong>Thor Appliances&reg;</strong>) dedicados a crear espacios al exterior de tu hogar: islas modulares de asador y equipos para esa &aacute;rea tan especial.</p>
+            <div class="eco-tags">
+              <span>Asadores Mont Alpi&reg;</span>
+              <span>Equipos Thor&reg;</span>
+              <span>Cocinas Exteriores</span>
+            </div>
+            <div style="margin-top: 14px;">
+              <a href="outdoor.html" class="link-arrow">Explorar Outdoor <span>&rarr;</span></a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       EL HILO CONDUCTOR: MATERIALIDAD ITALIANA INTERACTIVA
+       ========================================================================== -->
+  <section class="materials-section" id="materialidad">
+    <div class="container">
+      <div class="materials-layout">
+        <div class="materials-info">
+          <span class="eyebrow">04 / EL HILO CONDUCTOR</span>
+          <h2 class="editorial-h2">Materiales que hablan <em>el mismo idioma.</em></h2>
+          <p class="materials-lead">
+            El secreto de las grandes residencias contemporáneas italianas es la coherencia material. En Finezza seleccionamos una paleta curada para tu cocina y la declinamos con sutileza en tu sala, vestidor, baño y terraza.
+          </p>
+
+          <div class="palette-selector" role="tablist" aria-label="Paletas de diseño Finezza">
+            <button class="palette-btn active" data-palette="milano" role="tab" aria-selected="true">
+              <span class="swatch-group">
+                <span class="swatch" style="background:#3b2d23;"></span>
+                <span class="swatch" style="background:#d8d2c7;"></span>
+                <span class="swatch" style="background:#1e1e1e;"></span>
+              </span>
+              <span class="palette-text">
+                <strong>Atmósfera Milano Notte</strong>
+                <small>Nogal Canaletto + Piedra Travertino Mate + Aluminio Grafito</small>
+              </span>
+            </button>
+
+            <button class="palette-btn" data-palette="como" role="tab" aria-selected="false">
+              <span class="swatch-group">
+                <span class="swatch" style="background:#e6dfd5;"></span>
+                <span class="swatch" style="background:#b99d7c;"></span>
+                <span class="swatch" style="background:#8c857b;"></span>
+              </span>
+              <span class="palette-text">
+                <strong>Atmósfera Lago di Como</strong>
+                <small>Laca Seda Arena + Roble Natural + Mármol Calacatta Cálido</small>
+              </span>
+            </button>
+
+            <button class="palette-btn" data-palette="torino" role="tab" aria-selected="false">
+              <span class="swatch-group">
+                <span class="swatch" style="background:#26282a;"></span>
+                <span class="swatch" style="background:#594a3c;"></span>
+                <span class="swatch" style="background:#9a7b56;"></span>
+              </span>
+              <span class="palette-text">
+                <strong>Atmósfera Torino Monolith</strong>
+                <small>Fenix Negro Anti-huella + Eucalipto Ahumado + Bronce Cepillado</small>
+              </span>
+            </button>
+          </div>
+        </div>
+
+        <div class="materials-showcase" id="palettePreview">
+          <div class="palette-card">
+            <div class="palette-card-header">
+              <span class="palette-tag" id="paletteCode">PALETA ARQUITECTÓNICA 01</span>
+              <h3 id="paletteTitle">Atmósfera Milano Notte</h3>
+            </div>
+            <p id="paletteDesc">
+              Ideal para residencias de planta abierta donde la cocina convive directamente con el living y el comedor. Combina la calidez profunda del nogal italiano con superficies pétreas de poro cerrado.
+            </p>
+            <div class="continuity-timeline">
+              <div class="continuity-step">
+                <span class="step-room">En la Cocina</span>
+                <p id="stepKitchen">Isla monolítica en piedra sinterizada tono travertino con columnas ocultas en Nogal Canaletto.</p>
+              </div>
+              <div class="continuity-step">
+                <span class="step-room">En Living &amp; Libreros</span>
+                <p id="stepLiving">Muro multimedia con lambrín del mismo Nogal Canaletto y repisas metálicas en grafito.</p>
+              </div>
+              <div class="continuity-step">
+                <span class="step-room">En Recámara &amp; Vestidor</span>
+                <p id="stepBedroom">Vestidor con vitrinas en aluminio grafito, cristal fumé y cajoneras con interiores en piel topo.</p>
+              </div>
+              <div class="continuity-step">
+                <span class="step-room">En Terraza Outdoor</span>
+                <p id="stepOutdoor">Módulo de asador revestido en la misma piedra ultracompacta inalterable a la intemperie.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECCIÓN DE CONVERSIÓN PARA CAMPAÑAS EN REDES (LEAD MAGNET + SHOWROOMS)
+       ========================================================================== -->
+  <section class="campaign-cta-section" id="cotizar">
+    <div class="container">
+      <div class="campaign-grid">
+        
+        <!-- Columna Izquierda: Propuesta de Valor & Showrooms -->
+        <div class="campaign-copy">
+          <span class="eyebrow">05 / INICIA TU PROYECTO</span>
+          <h2 class="editorial-h2">Agenda una sesión de <em>diseño privado.</em></h2>
+          <p>
+            Ya sea que estés construyendo desde planos arquitectónicos o renovando el corazón de tu residencia, nuestro equipo de arquitectos e interioristas desarrollará una propuesta integral a medida.
+          </p>
+
+          <div class="process-steps">
+            <div class="p-step">
+              <strong>01. Diagnóstico &amp; Curaduría</strong>
+              <span>Revisamos tus planos o levantamos medidas en sitio para definir el lenguaje material de tu hogar.</span>
+            </div>
+            <div class="p-step">
+              <strong>02. Propuesta 3D &amp; Muestrario</strong>
+              <span>Experimenta en nuestros showrooms las piedras, maderas, lacas y herrajes reales de tu proyecto.</span>
+            </div>
+            <div class="p-step">
+              <strong>03. Fabricación &amp; Instalación de Precisión</strong>
+              <span>Ejecución milimétrica con garantía y acompañamiento directo en obra.</span>
+            </div>
+          </div>
+
+          <div class="showrooms-box">
+            <h4>Showroom Finezza Querétaro</h4>
+            <div class="showrooms-grid">
+              <div class="showroom-item">
+                <strong>Ubicación Sucursal</strong>
+                <p>Blvd. Bernardo Quintana 7 D, Col. Álamos 2da. Sección<br>Querétaro, Qro. C.P. 76160</p>
+              </div>
+              <div class="showroom-item">
+                <strong>Contacto Directo</strong>
+                <p>
+                  Tel. Sucursal: <a href="tel:4422137342"><strong>442 213 73 42</strong></a><br>
+                  WhatsApp: <a href="https://wa.me/524427197102" target="_blank" rel="noopener"><strong>442 719 7102</strong></a>
+                </p>
+              </div>
+            </div>
+            <p class="showroom-hours">Atención personalizada en showroom y proyectos a medida &bull; Tel: 442 213 73 42 &bull; WhatsApp: 442 719 7102</p>
+          </div>
+        </div>
+
+        <!-- Columna Derecha: Formulario interactivo limpio -->
+        <div class="campaign-form-card">
+          <form id="leadForm" class="lead-form">
+            <div class="form-header">
+              <h3>Solicitar Cotizaci&oacute;n / Cita</h3>
+              <p>Activa las &aacute;reas de tu inter&eacute;s y recibe atenci&oacute;n prioritaria de un especialista en dise&ntilde;o.</p>
+            </div>
+
+            <div class="form-group">
+              <label for="clientName">Nombre completo *</label>
+              <input type="text" id="clientName" name="clientName" required placeholder="Ej. Alejandro Montemayor">
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="clientPhone">WhatsApp / Tel&eacute;fono *</label>
+                <input type="tel" id="clientPhone" name="clientPhone" required placeholder="442 000 0000">
+              </div>
+              <div class="form-group">
+                <label for="clientCity">Ciudad / Zona del Proyecto</label>
+                <input type="text" id="clientCity" name="clientCity" placeholder="Ej. El Campanario / Juriquilla, Qro.">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>&iquest;Qu&eacute; espacios deseas integrar en tu proyecto? <small>(Activa todos los que apliquen)</small></label>
+              <div class="chips-grid" id="spacesChips">
+                <label class="chip-checkbox">
+                  <input type="checkbox" name="spaces" value="Cocinas" checked>
+                  <span>Cocinas</span>
+                </label>
+                <label class="chip-checkbox">
+                  <input type="checkbox" name="spaces" value="Closets y Vestidores">
+                  <span>Closets</span>
+                </label>
+                <label class="chip-checkbox">
+                  <input type="checkbox" name="spaces" value="Living">
+                  <span>Living</span>
+                </label>
+                <label class="chip-checkbox">
+                  <input type="checkbox" name="spaces" value="Entretenimiento">
+                  <span>Entretenimiento</span>
+                </label>
+                <label class="chip-checkbox">
+                  <input type="checkbox" name="spaces" value="Home Office">
+                  <span>Home Office</span>
+                </label>
+                <label class="chip-checkbox">
+                  <input type="checkbox" name="spaces" value="Rec&aacute;maras">
+                  <span>Rec&aacute;maras</span>
+                </label>
+                <label class="chip-checkbox">
+                  <input type="checkbox" name="spaces" value="Puertas de Intercomunicaci&oacute;n">
+                  <span>Puertas Intercomunicaci&oacute;n</span>
+                </label>
+                <label class="chip-checkbox">
+                  <input type="checkbox" name="spaces" value="Mobiliario de Autor">
+                  <span>Mobiliario de Autor</span>
+                </label>
+                <label class="chip-checkbox">
+                  <input type="checkbox" name="spaces" value="Outdoor">
+                  <span>Outdoor</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="projectStage">Etapa de tu proyecto</label>
+                <select id="projectStage" name="projectStage">
+                  <option value="En planos arquitect&oacute;nicos">En planos arquitect&oacute;nicos</option>
+                  <option value="Obra gris / en construcci&oacute;n">Obra gris / en construcci&oacute;n</option>
+                  <option value="Remodelaci&oacute;n residencial">Remodelaci&oacute;n residencial</option>
+                  <option value="Soy Arquitecto / Interiorista">Soy Arquitecto / Desarrollador</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="preferredShowroom">Preferencia de atenci&oacute;n</label>
+                <select id="preferredShowroom" name="preferredShowroom">
+                  <option value="Showroom Quer&eacute;taro (Blvd. Bernardo Quintana 7 D)">Visita Showroom Quer&eacute;taro (Bernardo Quintana 7 D)</option>
+                  <option value="Visita en Obra / Domicilio en Quer&eacute;taro">Cita en Obra / Domicilio (Quer&eacute;taro)</option>
+                  <option value="Videollamada inicial">Videollamada de diagn&oacute;stico</option>
+                </select>
+              </div>
+            </div>
+
+            <button type="submit" class="submit-btn">
+              <span>Agendar Asesor&iacute;a Personalizada</span>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                <path d="M3.5 8H12.5M12.5 8L8.5 4M12.5 8L8.5 12" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+
+            <p class="form-footnote" id="formFeedback" aria-live="polite">
+              Trato directo con arquitectos proyectistas. Tus datos est&aacute;n protegidos.
+            </p>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       PIE DE PÁGINA (FOOTER)
+       ========================================================================== -->
+  <footer class="subpage-return-strip" aria-label="Enlaces a redes y créditos">
+    <div class="container" style="text-align: center; color: #5e5a54; font-size: 0.85rem; padding: 40px 0 20px;">
+      <p>&copy; 2026 FINEZZA Quer&eacute;taro &bull; Todos los derechos reservados.</p>
+      <p style="margin-top: 8px; font-size: 0.75rem; opacity: 0.8;">Inspiraci&oacute;n, dise&ntilde;o e ingenier&iacute;a para h&aacute;bitat integral en alta gama.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    (function () {
+      const heroSection = document.getElementById('inicio');
+      const toggleBtn = document.getElementById('toggleCoverView');
+      const coverLabel = document.getElementById('coverViewLabel');
+      const slides = Array.from(document.querySelectorAll('#heroStage .hero-slide'));
+      const dots = Array.from(document.querySelectorAll('.hero-scene-controls .scene-dot'));
+      const prevBtn = document.getElementById('prevSceneBtn');
+      const nextBtn = document.getElementById('nextSceneBtn');
+      const footerCode = document.getElementById('heroFooterCode');
+      const footerLabel = document.getElementById('heroFooterLabel');
+
+      // 1. Botón "Ver Portada" (oculta/muestra textos para apreciar las fotografías limpias)
+      if (toggleBtn && heroSection) {
+        toggleBtn.addEventListener('click', (e) => {
+          e.preventDefault();
+          e.stopImmediatePropagation();
+          const isClean = heroSection.classList.toggle('is-cover-only');
+          if (coverLabel) {
+            coverLabel.textContent = isClean ? 'Mostrar Textos' : 'Ver Portada';
+          }
+        }, true);
+      }
+
+      // 2. Transición automática de portada cada 5 segundos (5000 ms)
+      if (slides.length > 1) {
+        let currentIndex = slides.findIndex(s => s.classList.contains('is-active'));
+        if (currentIndex < 0) currentIndex = 0;
+        let autoTimer = null;
+
+        function goToSlide(index) {
+          currentIndex = (index + slides.length) % slides.length;
+
+          slides.forEach((slide, i) => {
+            slide.classList.toggle('is-active', i === currentIndex);
+          });
+
+          dots.forEach((dot, i) => {
+            const active = i === currentIndex;
+            dot.classList.toggle('is-active', active);
+            dot.setAttribute('aria-selected', active ? 'true' : 'false');
+          });
+
+          const activeSlide = slides[currentIndex];
+          if (footerCode) {
+            footerCode.textContent = `VISTA ${String(currentIndex + 1).padStart(2, '0')} / ${String(slides.length).padStart(2, '0')}`;
+          }
+          if (footerLabel && activeSlide) {
+            footerLabel.innerHTML = activeSlide.dataset.label || '';
+          }
+        }
+
+        function resetAutoPlay() {
+          if (autoTimer) clearInterval(autoTimer);
+          autoTimer = setInterval(() => {
+            goToSlide(currentIndex + 1);
+          }, 5000);
+        }
+
+        if (prevBtn) {
+          prevBtn.addEventListener('click', (e) => {
+            e.stopImmediatePropagation();
+            goToSlide(currentIndex - 1);
+            resetAutoPlay();
+          }, true);
+        }
+
+        if (nextBtn) {
+          nextBtn.addEventListener('click', (e) => {
+            e.stopImmediatePropagation();
+            goToSlide(currentIndex + 1);
+            resetAutoPlay();
+          }, true);
+        }
+
+        dots.forEach((dot, idx) => {
+          dot.addEventListener('click', (e) => {
+            e.stopImmediatePropagation();
+            goToSlide(idx);
+            resetAutoPlay();
+          }, true);
+        });
+
+        goToSlide(currentIndex);
+        resetAutoPlay();
+      }
+    })();
+  </script>
+</body>
+</html>
