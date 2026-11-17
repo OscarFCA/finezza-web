@@ -5945,3 +5945,42 @@ html body .hero.is-cover-clean::before { opacity: 0 !important; }
       rgba(16, 14, 12, 0.06) 100%) !important;
   }
 }
+
+/* ==========================================================================
+   HERO: TEXTO A UN VISTAZO (nov-2026)
+   El título escala con el ancho Y con el alto de la ventana, y el bloque de
+   texto usa más ancho, para que todo quepa en la primera pantalla sin
+   importar si el monitor es ancho y bajo, una laptop o un celular.
+   ========================================================================== */
+.hero { min-height: 100svh; }
+.hero .hero-editorial {
+  max-width: min(960px, 64vw);
+  padding-block: clamp(92px, 13vh, 132px) clamp(70px, 10vh, 100px);
+}
+.hero .hero-editorial .hero-tag { margin-bottom: clamp(12px, 2.2vh, 22px); }
+.hero .hero-editorial .section-title {
+  font-size: clamp(40px, min(5.6vw, 10.2vh), 98px);
+  line-height: 0.96;
+  margin-bottom: clamp(14px, 2.6vh, 26px);
+}
+.hero .hero-editorial .section-title {
+  max-width: 9.4em;   /* "Arquitectura" | "interior que" | "eleva tu forma de vivir." */
+  text-wrap: balance;
+}
+.hero .hero-editorial .section-title em { display: inline; }
+.hero .hero-editorial .section-copy {
+  max-width: 540px;
+  font-size: clamp(0.95rem, 0.62rem + 0.9vh, 1.1rem);
+  line-height: 1.5;
+  margin-bottom: clamp(18px, 3.4vh, 32px);
+}
+
+/* Celular y tablet vertical */
+@media (max-width: 760px) {
+  .hero .hero-editorial {
+    max-width: 100%;
+    padding-block: clamp(96px, 15vh, 120px) clamp(68px, 10vh, 84px);
+  }
+  .hero .hero-editorial .section-title { font-size: clamp(32px, min(9.2vw, 6.6vh), 58px); }
+  .hero .hero-editorial .section-copy { font-size: 0.95rem; }
+}
