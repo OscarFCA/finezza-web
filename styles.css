@@ -5589,3 +5589,268 @@ body.is-loaded .reveal-item {
   justify-content: space-between;
   gap: 16px;
 }
+/* ==========================================================================
+   CAPA PREMIUM + RESPONSIVA (nov-2026)
+   Solo CSS: refina acabados y adapta todas las páginas a celular, tablet y
+   escritorio sin tocar la estructura HTML existente.
+   ========================================================================== */
+:root {
+  --ease-premium: cubic-bezier(0.22, 1, 0.36, 1);
+  --shadow-soft: 0 1px 2px rgba(26, 25, 24, 0.04), 0 8px 24px rgba(26, 25, 24, 0.06);
+  --shadow-lift: 0 2px 4px rgba(26, 25, 24, 0.05), 0 22px 48px rgba(26, 25, 24, 0.12);
+  --gold-hairline: rgba(156, 124, 78, 0.45);
+}
+
+/* ---------- Tipografía editorial ---------- */
+body {
+  text-rendering: optimizeLegibility;
+  font-kerning: normal;
+  font-feature-settings: "kern", "liga", "calt";
+}
+h1, h2, h3, .editorial-h2 { text-wrap: balance; }
+p, li { text-wrap: pretty; }
+::selection { background: #1A1918; color: #F7F3EA; }
+h1 em, h2 em, h3 em, .editorial-h2 em { letter-spacing: -0.005em; }
+
+/* ---------- Tarjetas: elevación suave y zoom lento de la foto ---------- */
+.eco-card,
+.core-card,
+.closet-acc-card,
+.typology-card,
+.ma-orig-feature-card,
+.ho-card-mueble,
+.subpage-return-card,
+.palette-card,
+.ma-pdf-card {
+  transition: transform 0.6s var(--ease-premium), box-shadow 0.6s var(--ease-premium), border-color 0.4s ease;
+  will-change: transform;
+}
+.eco-card img,
+.core-card img,
+.closet-acc-card img,
+.typology-card img,
+.ma-orig-feature-card img,
+.ho-card-img-box img {
+  transition: transform 1.2s var(--ease-premium), filter 0.8s ease;
+}
+@media (hover: hover) {
+  .eco-card:hover,
+  .core-card:hover,
+  .closet-acc-card:hover,
+  .typology-card:hover,
+  .ma-orig-feature-card:hover,
+  .ho-card-mueble:hover,
+  .subpage-return-card:hover,
+  .ma-pdf-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lift);
+    border-color: var(--gold-hairline);
+  }
+  .eco-card:hover img,
+  .core-card:hover img,
+  .closet-acc-card:hover img,
+  .typology-card:hover img,
+  .ma-orig-feature-card:hover img,
+  .ho-card-img-box:hover img {
+    transform: scale(1.045);
+  }
+}
+.eco-card > :first-child,
+.core-card > :first-child,
+.closet-acc-card > :first-child,
+.typology-card > :first-child { overflow: hidden; }
+
+/* ---------- Botones: transición refinada ---------- */
+.hero-btn, .hero-btn-secondary, .submit-btn, .subpage-cta-btn, .header-cta-link,
+.ho-btn-cotizar-directo, .ho-btn-configurar, .ho-btn-galeria, .palette-btn, .link-arrow {
+  transition: background-color 0.35s var(--ease-premium), color 0.35s var(--ease-premium),
+              border-color 0.35s var(--ease-premium), box-shadow 0.35s var(--ease-premium),
+              transform 0.35s var(--ease-premium);
+}
+@media (hover: hover) {
+  .hero-btn:hover, .submit-btn:hover, .subpage-cta-btn:hover, .header-cta-link:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 10px 24px rgba(26, 25, 24, 0.18);
+  }
+}
+.submit-btn, .hero-btn { letter-spacing: 0.02em; }
+.link-arrow span { display: inline-block; transition: transform 0.35s var(--ease-premium); }
+.link-arrow:hover span { transform: translateX(4px); }
+
+/* ---------- Formulario ---------- */
+.campaign-form-card {
+  box-shadow: var(--shadow-soft);
+  border-color: rgba(34, 34, 34, 0.1);
+}
+.form-group input:not([type="checkbox"]):not([type="radio"]),
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  min-width: 0;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #1A1918;
+  box-shadow: 0 0 0 3px rgba(26, 25, 24, 0.08);
+}
+.showrooms-box { box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6); }
+
+/* ---------- Encabezado de subpáginas ---------- */
+.subpage-header { box-shadow: 0 1px 0 rgba(26, 25, 24, 0.02), 0 6px 20px rgba(26, 25, 24, 0.04); }
+.subpage-nav a, .hero-header .section-nav a {
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+/* ---------- Detalles finos ---------- */
+img { -webkit-user-drag: none; }
+hr { border-color: var(--border-hairline); }
+@media (min-width: 1025px) {
+  html { scrollbar-color: rgba(26, 25, 24, 0.35) var(--bg-editorial); }
+}
+
+/* ==========================================================================
+   RESPONSIVO: anti-desborde horizontal en todas las páginas
+   ========================================================================== */
+.campaign-grid { grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr); }
+.campaign-grid > *,
+.campaign-copy,
+.campaign-form-card,
+.lead-form,
+.form-row > *,
+.form-group { min-width: 0; }
+.chips-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.chips-grid > * { min-width: 0; }
+.chips-grid span { overflow-wrap: anywhere; }
+[class*="-grid"] > *, [class*="-layout"] > * { min-width: 0; }
+
+/* Tablas comparativas: desplazables dentro de su caja, nunca empujan la página */
+@media (max-width: 980px) {
+  .closets-matrix-table { display: block; max-width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .closets-matrix-table th, .closets-matrix-table td { min-width: 150px; }
+  .closets-matrix-table th:first-child, .closets-matrix-table td:first-child { min-width: 128px; }
+}
+
+/* El menú nunca empuja el botón de cita fuera de la pantalla */
+.subpage-nav, .hero-header .section-nav { min-width: 0; overflow-x: auto; scrollbar-width: none; }
+.subpage-nav::-webkit-scrollbar, .hero-header .section-nav::-webkit-scrollbar { display: none; }
+
+/* Escritorio mediano (laptops hasta 1500 px): menú compacto */
+@media (max-width: 1500px) {
+  .subpage-nav { gap: 12px !important; justify-content: flex-start !important; }
+  .subpage-nav a, .hero-header .section-nav a { font-size: 0.74rem !important; }
+  .subpage-logo, .hero-header .brand-logo { max-width: 150px !important; }
+}
+
+/* Tablet y celular: el menú se vuelve una tira deslizable bajo el logo */
+@media (max-width: 1100px) {
+  .subpage-header-inner { flex-wrap: wrap !important; row-gap: 10px !important; }
+  .subpage-brand-group { flex: 1 1 auto !important; }
+  .subpage-nav {
+    order: 3;
+    flex: 1 1 100% !important;
+    justify-content: flex-start !important;
+    overflow-x: auto;
+    scrollbar-width: none;
+    padding-bottom: 2px;
+    -webkit-mask-image: linear-gradient(90deg, #000 85%, transparent);
+            mask-image: linear-gradient(90deg, #000 85%, transparent);
+  }
+  .subpage-nav::-webkit-scrollbar { display: none; }
+  .subpage-actions { margin-left: auto; }
+
+  .hero-header { flex-wrap: wrap !important; row-gap: 10px !important; }
+  .hero-header .section-nav {
+    order: 3;
+    flex: 1 1 100% !important;
+    justify-content: flex-start !important;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -webkit-mask-image: linear-gradient(90deg, #000 85%, transparent);
+            mask-image: linear-gradient(90deg, #000 85%, transparent);
+  }
+  .hero-header .section-nav::-webkit-scrollbar { display: none; }
+  .hero-header .header-actions { margin-left: auto; }
+}
+
+@media (max-width: 980px) {
+  .campaign-grid { grid-template-columns: minmax(0, 1fr); }
+}
+
+@media (max-width: 640px) {
+  .chips-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .subpage-logo, .hero-header .brand-logo { max-width: 128px !important; }
+  .header-cta-link { padding: 9px 14px !important; font-size: 0.78rem !important; }
+  .campaign-cta-section { padding-block: 72px; }
+  .subpage-breadcrumb-bar { font-size: 0.72rem; overflow-x: auto; white-space: nowrap; }
+  /* Botones e inputs con área táctil cómoda */
+  .form-group input:not([type="checkbox"]):not([type="radio"]), .form-group select { min-height: 46px; font-size: 16px; }
+  .hero-btn, .hero-btn-secondary, .submit-btn, .subpage-cta-btn { min-height: 46px; }
+}
+
+@media (max-width: 380px) {
+  .chips-grid { grid-template-columns: minmax(0, 1fr); }
+  .hero-header .header-actions a:not(:last-child) { display: none; }
+}
+
+/* Pantallas muy grandes: contener la lectura */
+@media (min-width: 1800px) {
+  html { font-size: 17px; }
+}
+
+/* ==========================================================================
+   BOTÓN FLOTANTE DE WHATSAPP (esquina inferior derecha)
+   ========================================================================== */
+.wa-float {
+  position: fixed;
+  right: clamp(16px, 2.4vw, 32px);
+  bottom: calc(clamp(16px, 2.4vw, 32px) + env(safe-area-inset-bottom, 0px));
+  z-index: 5000;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  height: 58px;
+  padding: 0 17px;
+  border-radius: 999px;
+  background: #1A1918;
+  color: #F7F3EA;
+  text-decoration: none;
+  border: 1px solid rgba(247, 243, 234, 0.18);
+  box-shadow: 0 12px 32px rgba(26, 25, 24, 0.28), 0 2px 6px rgba(26, 25, 24, 0.18);
+  transition: transform 0.4s var(--ease-premium), box-shadow 0.4s var(--ease-premium), background-color 0.4s ease;
+}
+.wa-float svg { width: 24px; height: 24px; flex-shrink: 0; fill: #25D366; }
+.wa-float-label {
+  font-size: 0.86rem;
+  font-weight: 550;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+.wa-float:hover {
+  transform: translateY(-3px);
+  background: #000;
+  box-shadow: 0 18px 40px rgba(26, 25, 24, 0.34), 0 3px 8px rgba(26, 25, 24, 0.2);
+}
+.wa-float:focus-visible { outline: 2px solid #25D366; outline-offset: 4px; }
+@media (max-width: 640px) {
+  .wa-float { width: 56px; height: 56px; padding: 0; justify-content: center; }
+  .wa-float-label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+  .wa-float svg { width: 27px; height: 27px; }
+}
+@media print { .wa-float { display: none; } }
+
+@media (prefers-reduced-motion: reduce) {
+  .eco-card, .core-card, .closet-acc-card, .typology-card, .ma-orig-feature-card,
+  .ho-card-mueble, .subpage-return-card, .wa-float, .eco-card img, .core-card img {
+    transition: none !important;
+  }
+}
+
+/* Galerías de proyectos: la caja de foto se ajusta a la foto y no se encima con el texto */
+.island-img-pair { height: auto; overflow: hidden; }
+@media (max-width: 640px) {
+  .island-img-pair img[style*="span 2"] { height: 220px !important; }
+}
