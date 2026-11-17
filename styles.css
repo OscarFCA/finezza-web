@@ -5984,3 +5984,314 @@ html body .hero.is-cover-clean::before { opacity: 0 !important; }
   .hero .hero-editorial .section-title { font-size: clamp(32px, min(9.2vw, 6.6vh), 58px); }
   .hero .hero-editorial .section-copy { font-size: 0.95rem; }
 }
+
+/* ==========================================================================
+   SISTEMA DE COMPONENTES PREMIUM (nov-2026)
+   Una sola gramática para todo el sitio:
+   · Botones: rectángulo casi recto, mayúsculas espaciadas, filo dorado al pasar.
+   · Filtros: píldora con contorno fino; la activa en tinta.
+   · Etiquetas: versalitas pequeñas, sin ruido.
+   · Esquinas: más rectas (2–4 px), propio del mobiliario italiano.
+   ========================================================================== */
+:root {
+  --radius-sm: 2px;
+  --radius-md: 3px;
+  --radius-lg: 4px;
+  --radius-max: 3px;
+  --gold: #B08D57;
+  --gold-soft: rgba(176, 141, 87, 0.55);
+  --ink: #1A1918;
+  --ivory: #F7F3EA;
+  --btn-type: 600 0.74rem/1.2 var(--font-sans);
+  --btn-track: 0.14em;
+}
+
+/* ---------- 1. Botones principales (tinta sobre fondo claro) ---------- */
+.submit-btn,
+.header-cta-link,
+.ho-btn-cotizar-directo,
+.ho-btn-galeria,
+.ma-plp-btn-quote,
+.back-home-pill,
+.subpage-return-strip .back-home-pill {
+  font: var(--btn-type) !important;
+  letter-spacing: var(--btn-track) !important;
+  text-transform: uppercase !important;
+  border-radius: var(--radius-sm) !important;
+  background: var(--ink) !important;
+  color: var(--ivory) !important;
+  border: 1px solid var(--ink) !important;
+  box-shadow: none;
+  transition: background-color 0.4s var(--ease-premium), box-shadow 0.4s var(--ease-premium),
+              transform 0.4s var(--ease-premium), color 0.3s ease !important;
+}
+.submit-btn { padding: 18px 28px !important; min-height: 54px; }
+.header-cta-link { padding: 11px 18px !important; }
+.ho-btn-cotizar-directo, .ho-btn-galeria { padding: 13px 18px !important; }
+.ma-plp-btn-quote { padding: 9px 14px !important; }
+.back-home-pill { padding: 12px 20px !important; }
+
+/* ---------- 2. Botones del hero (marfil sobre la foto oscura) ---------- */
+.hero .hero-editorial .hero-btn,
+.hero .hero-editorial .hero-btn-secondary {
+  font: var(--btn-type) !important;
+  letter-spacing: var(--btn-track) !important;
+  text-transform: uppercase !important;
+  border-radius: var(--radius-sm) !important;
+  padding: 18px 28px !important;
+  min-height: 54px;
+  gap: 12px;
+}
+.hero .hero-editorial .hero-btn {
+  background: var(--ivory) !important;
+  color: var(--ink) !important;
+  border: 1px solid var(--ivory) !important;
+}
+.hero .hero-editorial .hero-btn-secondary {
+  background: rgba(16, 14, 12, 0.28) !important;
+  color: var(--ivory) !important;
+  border: 1px solid rgba(247, 243, 234, 0.55) !important;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+/* ---------- 3. Botones secundarios (contorno) ---------- */
+.subpage-cta-btn,
+.ho-btn-configurar,
+.ma-plp-btn-spec,
+.ma-extra-pill {
+  font: var(--btn-type) !important;
+  letter-spacing: var(--btn-track) !important;
+  text-transform: uppercase !important;
+  border-radius: var(--radius-sm) !important;
+  transition: background-color 0.4s var(--ease-premium), color 0.4s var(--ease-premium),
+              border-color 0.4s var(--ease-premium), transform 0.4s var(--ease-premium) !important;
+}
+.subpage-cta-btn, .ho-btn-configurar, .ma-plp-btn-spec {
+  background: transparent !important;
+  color: var(--ink) !important;
+  border: 1px solid rgba(26, 25, 24, 0.45) !important;
+}
+.subpage-cta-btn { padding: 13px 20px !important; }
+.ho-btn-configurar { padding: 13px 18px !important; }
+.ma-plp-btn-spec { padding: 9px 12px !important; }
+.ma-extra-pill { padding: 14px 18px !important; }
+
+/* ---------- Estados (solo con mouse; en táctil no se quedan "pegados") ---------- */
+@media (hover: hover) {
+  .submit-btn:hover, .header-cta-link:hover, .ho-btn-cotizar-directo:hover,
+  .ho-btn-galeria:hover, .ma-plp-btn-quote:hover, .back-home-pill:hover {
+    background: #000 !important;
+    box-shadow: inset 0 0 0 1px var(--gold-soft), 0 14px 30px rgba(26, 25, 24, 0.22) !important;
+    transform: translateY(-2px);
+    opacity: 1 !important;
+  }
+  .hero .hero-editorial .hero-btn:hover {
+    background: #FFFFFF !important;
+    box-shadow: 0 0 0 1px var(--gold-soft), 0 16px 36px rgba(0, 0, 0, 0.35) !important;
+    transform: translateY(-2px);
+  }
+  .hero .hero-editorial .hero-btn-secondary:hover {
+    background: var(--ivory) !important;
+    color: var(--ink) !important;
+    border-color: var(--ivory) !important;
+    transform: translateY(-2px);
+  }
+  .subpage-cta-btn:hover, .ho-btn-configurar:hover, .ma-plp-btn-spec:hover {
+    background: var(--ink) !important;
+    color: var(--ivory) !important;
+    border-color: var(--ink) !important;
+    transform: translateY(-2px);
+  }
+  .ma-extra-pill:hover { background: var(--ivory) !important; color: var(--ink) !important; }
+}
+.submit-btn:active, .header-cta-link:active, .hero-btn:active, .hero-btn-secondary:active,
+.subpage-cta-btn:active, .ho-btn-configurar:active { transform: translateY(0) scale(0.99); }
+
+/* Flecha de los botones: se desliza al pasar */
+.hero-btn svg, .submit-btn svg, .hero-btn span[aria-hidden], .submit-btn span[aria-hidden] {
+  transition: transform 0.45s var(--ease-premium);
+}
+.hero-btn:hover svg, .submit-btn:hover svg { transform: translateX(4px); }
+
+/* ---------- 4. Enlaces con flecha: subrayado que se dibuja ---------- */
+.link-arrow {
+  font-size: 0.72rem !important;
+  font-weight: 600 !important;
+  letter-spacing: var(--btn-track);
+  text-transform: uppercase;
+  border-bottom: 0 !important;
+  padding-bottom: 6px;
+  background-image: linear-gradient(var(--ink), var(--ink)), linear-gradient(var(--gold), var(--gold));
+  background-size: 100% 1px, 0% 1px;
+  background-position: 0 100%, 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 0.5s var(--ease-premium) !important;
+}
+@media (hover: hover) {
+  .link-arrow:hover { background-size: 100% 1px, 100% 1px; }
+}
+
+/* ---------- 5. Filtros y pestañas (píldoras) ---------- */
+.eco-tab,
+.closet-line-tab,
+.acc-filter-btn,
+.tech-tab-btn,
+.subpage-quick-pill,
+.ma-qv-thumb,
+.demo-switcher {
+  font: 600 0.7rem/1.2 var(--font-sans) !important;
+  letter-spacing: 0.12em !important;
+  text-transform: uppercase !important;
+  border-radius: 999px !important;
+  padding: 11px 18px !important;
+  background: transparent !important;
+  color: var(--text-secondary) !important;
+  border: 1px solid rgba(26, 25, 24, 0.22) !important;
+  transition: background-color 0.35s var(--ease-premium), color 0.35s var(--ease-premium),
+              border-color 0.35s var(--ease-premium) !important;
+}
+@media (hover: hover) {
+  .eco-tab:hover, .closet-line-tab:hover, .acc-filter-btn:hover, .tech-tab-btn:hover,
+  .subpage-quick-pill:hover, .ma-qv-thumb:hover, .demo-switcher:hover {
+    color: var(--ink) !important;
+    border-color: var(--ink) !important;
+  }
+}
+.eco-tab.active, .eco-tab[aria-selected="true"],
+.closet-line-tab.active, .acc-filter-btn.active, .tech-tab-btn.active, .ma-qv-thumb.active {
+  background: var(--ink) !important;
+  color: var(--ivory) !important;
+  border-color: var(--ink) !important;
+}
+/* En secciones oscuras, el contorno pasa a marfil */
+.tech-tab-btn:not(.active) { color: rgba(247, 243, 234, 0.75) !important; border-color: rgba(247, 243, 234, 0.25) !important; }
+.tech-tab-btn.active { background: var(--ivory) !important; color: var(--ink) !important; border-color: var(--ivory) !important; }
+@media (hover: hover) { .tech-tab-btn:not(.active):hover { color: var(--ivory) !important; border-color: var(--ivory) !important; } }
+.demo-switcher { background: rgba(247, 243, 234, 0.7) !important; padding: 9px 16px !important; }
+
+/* ---------- 6. Etiquetas y distintivos ---------- */
+.eco-tags span,
+.ho-card-gallery-tag,
+.acc-dim-pill,
+.ma-plp-dims-badge,
+.d-badge {
+  font: 600 0.62rem/1.3 var(--font-sans) !important;
+  letter-spacing: 0.1em !important;
+  text-transform: uppercase !important;
+  border-radius: var(--radius-sm) !important;
+  padding: 5px 9px !important;
+  background: transparent !important;
+  color: var(--text-secondary) !important;
+  border: 1px solid rgba(26, 25, 24, 0.16) !important;
+}
+.core-badge, .caption-tag, .island-badge, .depth-pill, .line-num-badge, .line-tech-badge,
+.acc-finish-tag, .ho-card-family-tag, .pill-index, .ho-pillar-num {
+  font-size: 0.6rem !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.16em !important;
+  text-transform: uppercase !important;
+  border-radius: var(--radius-sm) !important;
+  padding: 5px 10px !important;
+}
+.hero-editorial .hero-tag { border-radius: var(--radius-sm) !important; letter-spacing: 0.16em !important; }
+
+/* ---------- 7. Formulario: chips de espacios e inputs ---------- */
+.chip-checkbox span {
+  font-size: 0.74rem !important;
+  font-weight: 550 !important;
+  letter-spacing: 0.04em;
+  border-radius: var(--radius-sm) !important;
+  border-color: rgba(26, 25, 24, 0.16) !important;
+  background: #FFFDF9 !important;
+  transition: background-color 0.3s var(--ease-premium), color 0.3s ease, border-color 0.3s ease !important;
+}
+@media (hover: hover) { .chip-checkbox:hover span { border-color: var(--ink) !important; } }
+.chip-checkbox input:checked + span {
+  background: var(--ink) !important;
+  color: var(--ivory) !important;
+  border-color: var(--ink) !important;
+  box-shadow: inset 0 -2px 0 var(--gold);
+}
+.chip-checkbox input:focus-visible + span { outline: 2px solid var(--gold); outline-offset: 2px; }
+.form-group input:not([type="checkbox"]):not([type="radio"]),
+.form-group select,
+.form-group textarea {
+  background: #FFFDF9 !important;
+  border-color: rgba(26, 25, 24, 0.18) !important;
+  border-radius: var(--radius-sm) !important;
+}
+.form-group label { letter-spacing: 0.02em; }
+
+/* ---------- 8. Selectores de paleta (sección oscura) ---------- */
+.palette-btn { border-radius: var(--radius-md) !important; transition: background-color 0.35s var(--ease-premium), border-color 0.35s var(--ease-premium) !important; }
+.palette-btn.active { box-shadow: inset 2px 0 0 var(--gold); }
+
+/* ---------- 9. Tarjetas: esquinas y filo coherentes ---------- */
+.eco-card, .core-card, .closet-acc-card, .typology-card, .ma-orig-feature-card, .ho-card-mueble,
+.subpage-return-card, .palette-card, .ma-pdf-card, .campaign-form-card, .showrooms-box,
+.island-2025-card, .ho-pillar-item, .closet-summary-pill {
+  border-radius: var(--radius-lg) !important;
+}
+
+/* ---------- 10. Flechas de navegación de escenas ---------- */
+.scene-arrow, .ma-feat-arrow { border-radius: 999px !important; transition: background-color 0.3s ease, border-color 0.3s ease !important; }
+
+/* Celular: botones a lo ancho para un toque cómodo */
+@media (max-width: 640px) {
+  .hero .hero-editorial .hero-actions { flex-direction: column; align-items: stretch; }
+  .hero .hero-editorial .hero-btn,
+  .hero .hero-editorial .hero-btn-secondary { justify-content: center; width: 100%; padding: 17px 20px !important; }
+  .submit-btn { width: 100%; }
+}
+
+/* Botones con clase de hero usados fuera del hero (subpáginas): misma gramática, en tinta */
+.hero-btn,
+.hero-btn-secondary {
+  font: var(--btn-type) !important;
+  letter-spacing: var(--btn-track) !important;
+  text-transform: uppercase !important;
+  border-radius: var(--radius-sm) !important;
+  padding: 17px 26px !important;
+  min-height: 52px;
+  gap: 12px;
+  cursor: pointer;
+}
+:not(.hero-editorial) > .hero-btn:not(.hero .hero-btn),
+.hero-btn:not(.hero .hero-btn) {
+  background: var(--ink) !important;
+  color: var(--ivory) !important;
+  border: 1px solid var(--ink) !important;
+}
+.hero-btn-secondary:not(.hero .hero-btn-secondary) {
+  background: transparent !important;
+  color: var(--ink) !important;
+  border: 1px solid rgba(26, 25, 24, 0.45) !important;
+}
+@media (hover: hover) {
+  .hero-btn:not(.hero .hero-btn):hover {
+    background: #000 !important;
+    box-shadow: inset 0 0 0 1px var(--gold-soft), 0 14px 30px rgba(26, 25, 24, 0.22) !important;
+    transform: translateY(-2px);
+  }
+  .hero-btn-secondary:not(.hero .hero-btn-secondary):hover {
+    background: var(--ink) !important;
+    color: var(--ivory) !important;
+    border-color: var(--ink) !important;
+    transform: translateY(-2px);
+  }
+}
+.link-arrow { letter-spacing: 0.11em; }
+@media (max-width: 640px) {
+  .hero .hero-editorial .hero-btn,
+  .hero .hero-editorial .hero-btn-secondary,
+  .submit-btn {
+    font-size: 0.7rem !important;
+    letter-spacing: 0.1em !important;
+    text-align: center;
+    white-space: nowrap;
+  }
+}
+@media (max-width: 340px) {
+  .hero .hero-editorial .hero-btn, .submit-btn { white-space: normal; }
+}
