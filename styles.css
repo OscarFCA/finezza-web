@@ -6295,3 +6295,9 @@ html body .hero.is-cover-clean::before { opacity: 0 !important; }
 @media (max-width: 340px) {
   .hero .hero-editorial .hero-btn, .submit-btn { white-space: normal; }
 }
+
+/* ==========================================================================
+   WHATSAPP FLOTANTE: no tapar los controles del hero mientras están a la vista
+   ========================================================================== */
+.wa-float { transition: transform 0.4s var(--ease-premium), box-shadow 0.4s var(--ease-premium), background-color 0.4s ease, bottom 0.35s var(--ease-premium); }
+.wa-float.is-lifted { bottom: calc(var(--wa-lift, 72px) + env(safe-area-inset-bottom, 0px)); }

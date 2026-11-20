@@ -10,6 +10,11 @@ RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 # www -> sin www
 RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
 RewriteRule ^ https://%1%{REQUEST_URI} [L,R=301]
+# La landing ahora es solo de cocinas: /landing.html y /landing-cocinas.html -> /landing-cocinas
+RewriteCond %{THE_REQUEST} \s/landing(-cocinas)?\.html[\s?] [NC]
+RewriteRule ^ /landing-cocinas [L,R=301]
+# /landing-cocinas sirve el archivo landing-cocinas.html
+RewriteRule ^landing-cocinas/?$ landing-cocinas.html [L]
 </IfModule>
 
 <IfModule mod_deflate.c>

@@ -1142,3 +1142,19 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+// WhatsApp flotante: subirlo mientras el pie del hero (controles del carrusel) esté en pantalla
+const initWaLift = function () {
+  const wa = document.querySelector('.wa-float');
+  const heroFooter = document.querySelector('.hero .hero-footer');
+  if (!wa || !heroFooter || !('IntersectionObserver' in window)) return;
+  const setLift = () => {
+    wa.style.setProperty('--wa-lift', Math.round(heroFooter.getBoundingClientRect().height + 14) + 'px');
+  };
+  setLift();
+  window.addEventListener('resize', setLift);
+  new IntersectionObserver((entries) => {
+    entries.forEach((entry) => wa.classList.toggle('is-lifted', entry.isIntersecting));
+  }).observe(heroFooter);
+};
+if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', initWaLift);
+else initWaLift();
