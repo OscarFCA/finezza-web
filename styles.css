@@ -5524,21 +5524,56 @@ body.is-loaded .reveal-item {
   color: #1A1816 !important;
 }
 
-/* 5. Pie de portada (Contador de vistas y controles 01 - 10) */
-.hero-footer,
-.hero-footer .scene-counter,
-.hero-footer .scene-caption,
-.hero-footer .scene-dot-num {
+/* 5. Pie de portada (Contador de vistas y controles 01 - 10) con alto contraste */
+.hero-footer {
+  background: rgba(20, 18, 16, 0.78) !important;
+  border-top: 1px solid rgba(247, 243, 234, 0.18) !important;
   color: #F7F3EA !important;
+}
+
+.hero-footer .scene-counter {
+  color: #E8C59B !important;
   text-shadow: 0 1px 6px rgba(0, 0, 0, 0.45);
 }
+
+.hero-footer .scene-caption,
+.hero-footer .scene-dot-num {
+  color: rgba(247, 243, 234, 0.9) !important;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.45);
+}
+
+.hero-footer .scene-dot.is-active .scene-dot-num {
+  color: #FFFFFF !important;
+}
+
+.hero-footer .scene-dot-bar {
+  background: rgba(247, 243, 234, 0.25);
+}
+
+.hero-footer .scene-arrow {
+  border-color: rgba(247, 243, 234, 0.3);
+  background: rgba(247, 243, 234, 0.1);
+  color: #F7F3EA;
+}
+
+.hero-footer .scene-arrow:hover {
+  background: #F7F3EA;
+  color: #1A1816;
+  border-color: #F7F3EA;
+}
+
 /* ==========================================================================
-   EXTENSIÓN DE ANCHO COMPLETO PARA LA BARRA SUPERIOR DEL HERO
+   EXTENSIÓN DE ANCHO COMPLETO PARA LA BARRA SUPERIOR DEL HERO & MENÚ MÓVIL
    ========================================================================== */
 .hero-header {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  z-index: 20 !important;
   width: 100% !important;
   max-width: 100% !important;
-  padding-inline: clamp(20px, 2.5vw, 40px) !important;
+  padding: 16px clamp(20px, 2.5vw, 40px) !important;
   box-sizing: border-box;
   display: flex;
   align-items: center;
@@ -5551,7 +5586,7 @@ body.is-loaded .reveal-item {
 }
 
 .hero-header .brand-logo {
-  max-width: 185px;
+  max-width: clamp(135px, 13vw, 185px);
   height: auto;
 }
 
@@ -5560,11 +5595,11 @@ body.is-loaded .reveal-item {
   display: flex;
   justify-content: center;
   flex-wrap: nowrap;
-  gap: clamp(10px, 1.1vw, 18px);
+  gap: clamp(8px, 0.95vw, 16px);
 }
 
 .hero-header .section-nav a {
-  font-size: 0.8rem;
+  font-size: clamp(0.71rem, 0.8vw, 0.82rem);
   white-space: nowrap;
 }
 
@@ -5572,726 +5607,325 @@ body.is-loaded .reveal-item {
   flex-shrink: 0;
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
 }
-.hero-header {
-  position: absolute !important;
-  top: 0 !important;
-  left: 0 !important;
-  right: 0 !important;
-  z-index: 3 !important;
-  width: 100% !important;
-  max-width: 100% !important;
-  padding: 16px clamp(20px, 2.5vw, 40px) !important;
-  box-sizing: border-box;
-  display: flex;
+
+/* Botón hamburguesa (oculto en escritorio grande, visible <= 1180px) */
+.mobile-menu-btn {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-}
-/* ==========================================================================
-   CAPA PREMIUM + RESPONSIVA (nov-2026)
-   Solo CSS: refina acabados y adapta todas las páginas a celular, tablet y
-   escritorio sin tocar la estructura HTML existente.
-   ========================================================================== */
-:root {
-  --ease-premium: cubic-bezier(0.22, 1, 0.36, 1);
-  --shadow-soft: 0 1px 2px rgba(26, 25, 24, 0.04), 0 8px 24px rgba(26, 25, 24, 0.06);
-  --shadow-lift: 0 2px 4px rgba(26, 25, 24, 0.05), 0 22px 48px rgba(26, 25, 24, 0.12);
-  --gold-hairline: rgba(156, 124, 78, 0.45);
-}
-
-/* ---------- Tipografía editorial ---------- */
-body {
-  text-rendering: optimizeLegibility;
-  font-kerning: normal;
-  font-feature-settings: "kern", "liga", "calt";
-}
-h1, h2, h3, .editorial-h2 { text-wrap: balance; }
-p, li { text-wrap: pretty; }
-::selection { background: #1A1918; color: #F7F3EA; }
-h1 em, h2 em, h3 em, .editorial-h2 em { letter-spacing: -0.005em; }
-
-/* ---------- Tarjetas: elevación suave y zoom lento de la foto ---------- */
-.eco-card,
-.core-card,
-.closet-acc-card,
-.typology-card,
-.ma-orig-feature-card,
-.ho-card-mueble,
-.subpage-return-card,
-.palette-card,
-.ma-pdf-card {
-  transition: transform 0.6s var(--ease-premium), box-shadow 0.6s var(--ease-premium), border-color 0.4s ease;
-  will-change: transform;
-}
-.eco-card img,
-.core-card img,
-.closet-acc-card img,
-.typology-card img,
-.ma-orig-feature-card img,
-.ho-card-img-box img {
-  transition: transform 1.2s var(--ease-premium), filter 0.8s ease;
-}
-@media (hover: hover) {
-  .eco-card:hover,
-  .core-card:hover,
-  .closet-acc-card:hover,
-  .typology-card:hover,
-  .ma-orig-feature-card:hover,
-  .ho-card-mueble:hover,
-  .subpage-return-card:hover,
-  .ma-pdf-card:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-lift);
-    border-color: var(--gold-hairline);
-  }
-  .eco-card:hover img,
-  .core-card:hover img,
-  .closet-acc-card:hover img,
-  .typology-card:hover img,
-  .ma-orig-feature-card:hover img,
-  .ho-card-img-box:hover img {
-    transform: scale(1.045);
-  }
-}
-.eco-card > :first-child,
-.core-card > :first-child,
-.closet-acc-card > :first-child,
-.typology-card > :first-child { overflow: hidden; }
-
-/* ---------- Botones: transición refinada ---------- */
-.hero-btn, .hero-btn-secondary, .submit-btn, .subpage-cta-btn, .header-cta-link,
-.ho-btn-cotizar-directo, .ho-btn-configurar, .ho-btn-galeria, .palette-btn, .link-arrow {
-  transition: background-color 0.35s var(--ease-premium), color 0.35s var(--ease-premium),
-              border-color 0.35s var(--ease-premium), box-shadow 0.35s var(--ease-premium),
-              transform 0.35s var(--ease-premium);
-}
-@media (hover: hover) {
-  .hero-btn:hover, .submit-btn:hover, .subpage-cta-btn:hover, .header-cta-link:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 10px 24px rgba(26, 25, 24, 0.18);
-  }
-}
-.submit-btn, .hero-btn { letter-spacing: 0.02em; }
-.link-arrow span { display: inline-block; transition: transform 0.35s var(--ease-premium); }
-.link-arrow:hover span { transform: translateX(4px); }
-
-/* ---------- Formulario ---------- */
-.campaign-form-card {
-  box-shadow: var(--shadow-soft);
-  border-color: rgba(34, 34, 34, 0.1);
-}
-.form-group input:not([type="checkbox"]):not([type="radio"]),
-.form-group select,
-.form-group textarea {
-  width: 100%;
-  min-width: 0;
-  transition: border-color 0.25s ease, box-shadow 0.25s ease;
-}
-.form-group input:focus,
-.form-group select:focus,
-.form-group textarea:focus {
-  outline: none;
-  border-color: #1A1918;
-  box-shadow: 0 0 0 3px rgba(26, 25, 24, 0.08);
-}
-.showrooms-box { box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6); }
-
-/* ---------- Encabezado de subpáginas ---------- */
-.subpage-header { box-shadow: 0 1px 0 rgba(26, 25, 24, 0.02), 0 6px 20px rgba(26, 25, 24, 0.04); }
-.subpage-nav a, .hero-header .section-nav a {
-  position: relative;
-  transition: color 0.3s ease;
-}
-
-/* ---------- Detalles finos ---------- */
-img { -webkit-user-drag: none; }
-hr { border-color: var(--border-hairline); }
-@media (min-width: 1025px) {
-  html { scrollbar-color: rgba(26, 25, 24, 0.35) var(--bg-editorial); }
-}
-
-/* ==========================================================================
-   RESPONSIVO: anti-desborde horizontal en todas las páginas
-   ========================================================================== */
-.campaign-grid { grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr); }
-.campaign-grid > *,
-.campaign-copy,
-.campaign-form-card,
-.lead-form,
-.form-row > *,
-.form-group { min-width: 0; }
-.chips-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-.chips-grid > * { min-width: 0; }
-.chips-grid span { overflow-wrap: anywhere; }
-[class*="-grid"] > *, [class*="-layout"] > * { min-width: 0; }
-
-/* Tablas comparativas: desplazables dentro de su caja, nunca empujan la página */
-@media (max-width: 980px) {
-  .closets-matrix-table { display: block; max-width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; }
-  .closets-matrix-table th, .closets-matrix-table td { min-width: 150px; }
-  .closets-matrix-table th:first-child, .closets-matrix-table td:first-child { min-width: 128px; }
-}
-
-/* El menú nunca empuja el botón de cita fuera de la pantalla */
-.subpage-nav, .hero-header .section-nav { min-width: 0; overflow-x: auto; scrollbar-width: none; }
-.subpage-nav::-webkit-scrollbar, .hero-header .section-nav::-webkit-scrollbar { display: none; }
-
-/* Escritorio mediano (laptops hasta 1500 px): menú compacto */
-@media (max-width: 1500px) {
-  .subpage-nav { gap: 12px !important; justify-content: flex-start !important; }
-  .subpage-nav a, .hero-header .section-nav a { font-size: 0.74rem !important; }
-  .subpage-logo, .hero-header .brand-logo { max-width: 150px !important; }
-}
-
-/* Tablet y celular: el menú se vuelve una tira deslizable bajo el logo */
-@media (max-width: 1100px) {
-  .subpage-header-inner { flex-wrap: wrap !important; row-gap: 10px !important; }
-  .subpage-brand-group { flex: 1 1 auto !important; }
-  .subpage-nav {
-    order: 3;
-    flex: 1 1 100% !important;
-    justify-content: flex-start !important;
-    overflow-x: auto;
-    scrollbar-width: none;
-    padding-bottom: 2px;
-    -webkit-mask-image: linear-gradient(90deg, #000 85%, transparent);
-            mask-image: linear-gradient(90deg, #000 85%, transparent);
-  }
-  .subpage-nav::-webkit-scrollbar { display: none; }
-  .subpage-actions { margin-left: auto; }
-
-  .hero-header { flex-wrap: wrap !important; row-gap: 10px !important; }
-  .hero-header .section-nav {
-    order: 3;
-    flex: 1 1 100% !important;
-    justify-content: flex-start !important;
-    overflow-x: auto;
-    scrollbar-width: none;
-    -webkit-mask-image: linear-gradient(90deg, #000 85%, transparent);
-            mask-image: linear-gradient(90deg, #000 85%, transparent);
-  }
-  .hero-header .section-nav::-webkit-scrollbar { display: none; }
-  .hero-header .header-actions { margin-left: auto; }
-}
-
-@media (max-width: 980px) {
-  .campaign-grid { grid-template-columns: minmax(0, 1fr); }
-}
-
-@media (max-width: 640px) {
-  .chips-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .subpage-logo, .hero-header .brand-logo { max-width: 128px !important; }
-  .header-cta-link { padding: 9px 14px !important; font-size: 0.78rem !important; }
-  .campaign-cta-section { padding-block: 72px; }
-  .subpage-breadcrumb-bar { font-size: 0.72rem; overflow-x: auto; white-space: nowrap; }
-  /* Botones e inputs con área táctil cómoda */
-  .form-group input:not([type="checkbox"]):not([type="radio"]), .form-group select { min-height: 46px; font-size: 16px; }
-  .hero-btn, .hero-btn-secondary, .submit-btn, .subpage-cta-btn { min-height: 46px; }
-}
-
-@media (max-width: 380px) {
-  .chips-grid { grid-template-columns: minmax(0, 1fr); }
-  .hero-header .header-actions a:not(:last-child) { display: none; }
-}
-
-/* Pantallas muy grandes: contener la lectura */
-@media (min-width: 1800px) {
-  html { font-size: 17px; }
-}
-
-/* ==========================================================================
-   BOTÓN FLOTANTE DE WHATSAPP (esquina inferior derecha)
-   ========================================================================== */
-.wa-float {
-  position: fixed;
-  right: clamp(16px, 2.4vw, 32px);
-  bottom: calc(clamp(16px, 2.4vw, 32px) + env(safe-area-inset-bottom, 0px));
-  z-index: 5000;
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  height: 58px;
-  padding: 0 17px;
-  border-radius: 999px;
-  background: #1A1918;
-  color: #F7F3EA;
-  text-decoration: none;
-  border: 1px solid rgba(247, 243, 234, 0.18);
-  box-shadow: 0 12px 32px rgba(26, 25, 24, 0.28), 0 2px 6px rgba(26, 25, 24, 0.18);
-  transition: transform 0.4s var(--ease-premium), box-shadow 0.4s var(--ease-premium), background-color 0.4s ease;
-}
-.wa-float svg { width: 24px; height: 24px; flex-shrink: 0; fill: #25D366; }
-.wa-float-label {
-  font-size: 0.86rem;
-  font-weight: 550;
-  letter-spacing: 0.02em;
-  white-space: nowrap;
-}
-.wa-float:hover {
-  transform: translateY(-3px);
-  background: #000;
-  box-shadow: 0 18px 40px rgba(26, 25, 24, 0.34), 0 3px 8px rgba(26, 25, 24, 0.2);
-}
-.wa-float:focus-visible { outline: 2px solid #25D366; outline-offset: 4px; }
-@media (max-width: 640px) {
-  .wa-float { width: 56px; height: 56px; padding: 0; justify-content: center; }
-  .wa-float-label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
-  .wa-float svg { width: 27px; height: 27px; }
-}
-@media print { .wa-float { display: none; } }
-
-@media (prefers-reduced-motion: reduce) {
-  .eco-card, .core-card, .closet-acc-card, .typology-card, .ma-orig-feature-card,
-  .ho-card-mueble, .subpage-return-card, .wa-float, .eco-card img, .core-card img {
-    transition: none !important;
-  }
-}
-
-/* Galerías de proyectos: la caja de foto se ajusta a la foto y no se encima con el texto */
-.island-img-pair { height: auto; overflow: hidden; }
-@media (max-width: 640px) {
-  .island-img-pair img[style*="span 2"] { height: 220px !important; }
-}
-
-/* ==========================================================================
-   HERO REDISEÑADO PARA CONTRASTE (nov-2026)
-   Texto marfil siempre sobre un velo oscuro cinematográfico, sin importar
-   qué tan clara sea la foto en turno. Sustituye al velo crema anterior.
-   ========================================================================== */
-/* 1. Velo único (.hero::before): oscuro a la izquierda, donde vive el texto,
-      y oscuro abajo para el pie de fotos. El selector "html body" gana a la
-      regla con !important que landing.html trae en su propio <style>. */
-html body .hero::before {
-  content: "" !important;
-  top: 0 !important;
-  left: 0 !important;
-  right: 0 !important;
-  bottom: 0 !important;
-  z-index: 2 !important;
-  background:
-    linear-gradient(90deg,
-      rgba(16, 14, 12, 0.84) 0%,
-      rgba(16, 14, 12, 0.70) 30%,
-      rgba(16, 14, 12, 0.36) 56%,
-      rgba(16, 14, 12, 0.10) 80%,
-      rgba(16, 14, 12, 0.04) 100%),
-    linear-gradient(180deg,
-      rgba(16, 14, 12, 0.30) 0%,
-      rgba(16, 14, 12, 0) 22%,
-      rgba(16, 14, 12, 0) 72%,
-      rgba(16, 14, 12, 0.50) 100%) !important;
-}
-/* Orden de capas: fotos (1) < velo (2) < texto (3) < menú y pie de fotos (4) */
-html body .hero .hero-editorial { z-index: 3 !important; }
-html body .hero .hero-header,
-html body .hero .hero-footer { z-index: 4 !important; }
-
-/* "Ver Portada" sigue despejando la foto */
-html body .hero.is-cover-clean::before { opacity: 0 !important; }
-
-/* 3. Tipografía con más cuerpo y sombra difusa (legible, sin halo duro) */
-.hero-editorial .section-title {
-  color: #FBF8F2 !important;
-  text-shadow: 0 2px 24px rgba(0, 0, 0, 0.45), 0 1px 2px rgba(0, 0, 0, 0.25);
-}
-.hero-editorial .section-title em { color: #E9D6B8 !important; }
-.hero-editorial .section-copy {
-  color: #F3EEE5 !important;
-  font-weight: 450;
-  text-shadow: 0 1px 12px rgba(0, 0, 0, 0.55);
-}
-.hero-editorial .hero-tag {
-  color: #F3EEE5 !important;
-  background: rgba(16, 14, 12, 0.55);
-  border-color: rgba(247, 243, 234, 0.28);
-}
-.hero-editorial .hero-btn {
-  background: #F7F3EA;
-  color: #1A1918;
-  border-color: #F7F3EA;
-}
-.hero-editorial .hero-btn:hover { background: #FFFFFF; color: #000; }
-.hero-editorial .hero-btn-secondary {
-  background: rgba(16, 14, 12, 0.40) !important;
-  border-color: rgba(247, 243, 234, 0.6) !important;
-}
-
-/* 4. Pie de fotos (contador, leyenda y controles) en vidrio oscuro */
-.hero-footer {
-  background: rgba(16, 14, 12, 0.58);
-  border-top: 1px solid rgba(247, 243, 234, 0.14);
-}
-.hero-footer .scene-counter { color: #F7F3EA !important; }
-.hero-footer .scene-caption { color: rgba(247, 243, 234, 0.82) !important; }
-.hero-footer .scene-arrow {
-  color: #F7F3EA;
-  border-color: rgba(247, 243, 234, 0.35);
-  background: rgba(247, 243, 234, 0.06);
-}
-.hero-footer .scene-arrow:hover { background: rgba(247, 243, 234, 0.18); }
-.hero-footer .scene-dot-num { color: rgba(247, 243, 234, 0.7) !important; }
-.hero-footer .scene-dot-bar { background: rgba(247, 243, 234, 0.35); }
-
-/* 5. Celular: el texto está abajo, así que el velo oscuro sube desde abajo */
-@media (max-width: 760px) {
-  html body .hero::before {
-    background: linear-gradient(0deg,
-      rgba(16, 14, 12, 0.88) 0%,
-      rgba(16, 14, 12, 0.74) 40%,
-      rgba(16, 14, 12, 0.46) 64%,
-      rgba(16, 14, 12, 0.18) 84%,
-      rgba(16, 14, 12, 0.06) 100%) !important;
-  }
-}
-
-/* ==========================================================================
-   HERO: TEXTO A UN VISTAZO (nov-2026)
-   El título escala con el ancho Y con el alto de la ventana, y el bloque de
-   texto usa más ancho, para que todo quepa en la primera pantalla sin
-   importar si el monitor es ancho y bajo, una laptop o un celular.
-   ========================================================================== */
-.hero { min-height: 100svh; }
-.hero .hero-editorial {
-  max-width: min(960px, 64vw);
-  padding-block: clamp(92px, 13vh, 132px) clamp(70px, 10vh, 100px);
-}
-.hero .hero-editorial .hero-tag { margin-bottom: clamp(12px, 2.2vh, 22px); }
-.hero .hero-editorial .section-title {
-  font-size: clamp(40px, min(5.6vw, 10.2vh), 98px);
-  line-height: 0.96;
-  margin-bottom: clamp(14px, 2.6vh, 26px);
-}
-.hero .hero-editorial .section-title {
-  max-width: 9.4em;   /* "Arquitectura" | "interior que" | "eleva tu forma de vivir." */
-  text-wrap: balance;
-}
-.hero .hero-editorial .section-title em { display: inline; }
-.hero .hero-editorial .section-copy {
-  max-width: 540px;
-  font-size: clamp(0.95rem, 0.62rem + 0.9vh, 1.1rem);
-  line-height: 1.5;
-  margin-bottom: clamp(18px, 3.4vh, 32px);
-}
-
-/* Celular y tablet vertical */
-@media (max-width: 760px) {
-  .hero .hero-editorial {
-    max-width: 100%;
-    padding-block: clamp(96px, 15vh, 120px) clamp(68px, 10vh, 84px);
-  }
-  .hero .hero-editorial .section-title { font-size: clamp(32px, min(9.2vw, 6.6vh), 58px); }
-  .hero .hero-editorial .section-copy { font-size: 0.95rem; }
-}
-
-/* ==========================================================================
-   SISTEMA DE COMPONENTES PREMIUM (nov-2026)
-   Una sola gramática para todo el sitio:
-   · Botones: rectángulo casi recto, mayúsculas espaciadas, filo dorado al pasar.
-   · Filtros: píldora con contorno fino; la activa en tinta.
-   · Etiquetas: versalitas pequeñas, sin ruido.
-   · Esquinas: más rectas (2–4 px), propio del mobiliario italiano.
-   ========================================================================== */
-:root {
-  --radius-sm: 2px;
-  --radius-md: 3px;
-  --radius-lg: 4px;
-  --radius-max: 3px;
-  --gold: #B08D57;
-  --gold-soft: rgba(176, 141, 87, 0.55);
-  --ink: #1A1918;
-  --ivory: #F7F3EA;
-  --btn-type: 600 0.74rem/1.2 var(--font-sans);
-  --btn-track: 0.14em;
-}
-
-/* ---------- 1. Botones principales (tinta sobre fondo claro) ---------- */
-.submit-btn,
-.header-cta-link,
-.ho-btn-cotizar-directo,
-.ho-btn-galeria,
-.ma-plp-btn-quote,
-.back-home-pill,
-.subpage-return-strip .back-home-pill {
-  font: var(--btn-type) !important;
-  letter-spacing: var(--btn-track) !important;
-  text-transform: uppercase !important;
-  border-radius: var(--radius-sm) !important;
-  background: var(--ink) !important;
-  color: var(--ivory) !important;
-  border: 1px solid var(--ink) !important;
-  box-shadow: none;
-  transition: background-color 0.4s var(--ease-premium), box-shadow 0.4s var(--ease-premium),
-              transform 0.4s var(--ease-premium), color 0.3s ease !important;
-}
-.submit-btn { padding: 18px 28px !important; min-height: 54px; }
-.header-cta-link { padding: 11px 18px !important; }
-.ho-btn-cotizar-directo, .ho-btn-galeria { padding: 13px 18px !important; }
-.ma-plp-btn-quote { padding: 9px 14px !important; }
-.back-home-pill { padding: 12px 20px !important; }
-
-/* ---------- 2. Botones del hero (marfil sobre la foto oscura) ---------- */
-.hero .hero-editorial .hero-btn,
-.hero .hero-editorial .hero-btn-secondary {
-  font: var(--btn-type) !important;
-  letter-spacing: var(--btn-track) !important;
-  text-transform: uppercase !important;
-  border-radius: var(--radius-sm) !important;
-  padding: 18px 28px !important;
-  min-height: 54px;
-  gap: 12px;
-}
-.hero .hero-editorial .hero-btn {
-  background: var(--ivory) !important;
-  color: var(--ink) !important;
-  border: 1px solid var(--ivory) !important;
-}
-.hero .hero-editorial .hero-btn-secondary {
-  background: rgba(16, 14, 12, 0.28) !important;
-  color: var(--ivory) !important;
-  border: 1px solid rgba(247, 243, 234, 0.55) !important;
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-}
-
-/* ---------- 3. Botones secundarios (contorno) ---------- */
-.subpage-cta-btn,
-.ho-btn-configurar,
-.ma-plp-btn-spec,
-.ma-extra-pill {
-  font: var(--btn-type) !important;
-  letter-spacing: var(--btn-track) !important;
-  text-transform: uppercase !important;
-  border-radius: var(--radius-sm) !important;
-  transition: background-color 0.4s var(--ease-premium), color 0.4s var(--ease-premium),
-              border-color 0.4s var(--ease-premium), transform 0.4s var(--ease-premium) !important;
-}
-.subpage-cta-btn, .ho-btn-configurar, .ma-plp-btn-spec {
-  background: transparent !important;
-  color: var(--ink) !important;
-  border: 1px solid rgba(26, 25, 24, 0.45) !important;
-}
-.subpage-cta-btn { padding: 13px 20px !important; }
-.ho-btn-configurar { padding: 13px 18px !important; }
-.ma-plp-btn-spec { padding: 9px 12px !important; }
-.ma-extra-pill { padding: 14px 18px !important; }
-
-/* ---------- Estados (solo con mouse; en táctil no se quedan "pegados") ---------- */
-@media (hover: hover) {
-  .submit-btn:hover, .header-cta-link:hover, .ho-btn-cotizar-directo:hover,
-  .ho-btn-galeria:hover, .ma-plp-btn-quote:hover, .back-home-pill:hover {
-    background: #000 !important;
-    box-shadow: inset 0 0 0 1px var(--gold-soft), 0 14px 30px rgba(26, 25, 24, 0.22) !important;
-    transform: translateY(-2px);
-    opacity: 1 !important;
-  }
-  .hero .hero-editorial .hero-btn:hover {
-    background: #FFFFFF !important;
-    box-shadow: 0 0 0 1px var(--gold-soft), 0 16px 36px rgba(0, 0, 0, 0.35) !important;
-    transform: translateY(-2px);
-  }
-  .hero .hero-editorial .hero-btn-secondary:hover {
-    background: var(--ivory) !important;
-    color: var(--ink) !important;
-    border-color: var(--ivory) !important;
-    transform: translateY(-2px);
-  }
-  .subpage-cta-btn:hover, .ho-btn-configurar:hover, .ma-plp-btn-spec:hover {
-    background: var(--ink) !important;
-    color: var(--ivory) !important;
-    border-color: var(--ink) !important;
-    transform: translateY(-2px);
-  }
-  .ma-extra-pill:hover { background: var(--ivory) !important; color: var(--ink) !important; }
-}
-.submit-btn:active, .header-cta-link:active, .hero-btn:active, .hero-btn-secondary:active,
-.subpage-cta-btn:active, .ho-btn-configurar:active { transform: translateY(0) scale(0.99); }
-
-/* Flecha de los botones: se desliza al pasar */
-.hero-btn svg, .submit-btn svg, .hero-btn span[aria-hidden], .submit-btn span[aria-hidden] {
-  transition: transform 0.45s var(--ease-premium);
-}
-.hero-btn:hover svg, .submit-btn:hover svg { transform: translateX(4px); }
-
-/* ---------- 4. Enlaces con flecha: subrayado que se dibuja ---------- */
-.link-arrow {
-  font-size: 0.72rem !important;
-  font-weight: 600 !important;
-  letter-spacing: var(--btn-track);
-  text-transform: uppercase;
-  border-bottom: 0 !important;
-  padding-bottom: 6px;
-  background-image: linear-gradient(var(--ink), var(--ink)), linear-gradient(var(--gold), var(--gold));
-  background-size: 100% 1px, 0% 1px;
-  background-position: 0 100%, 0 100%;
-  background-repeat: no-repeat;
-  transition: background-size 0.5s var(--ease-premium) !important;
-}
-@media (hover: hover) {
-  .link-arrow:hover { background-size: 100% 1px, 100% 1px; }
-}
-
-/* ---------- 5. Filtros y pestañas (píldoras) ---------- */
-.eco-tab,
-.closet-line-tab,
-.acc-filter-btn,
-.tech-tab-btn,
-.subpage-quick-pill,
-.ma-qv-thumb,
-.demo-switcher {
-  font: 600 0.7rem/1.2 var(--font-sans) !important;
-  letter-spacing: 0.12em !important;
-  text-transform: uppercase !important;
-  border-radius: 999px !important;
-  padding: 11px 18px !important;
-  background: transparent !important;
-  color: var(--text-secondary) !important;
-  border: 1px solid rgba(26, 25, 24, 0.22) !important;
-  transition: background-color 0.35s var(--ease-premium), color 0.35s var(--ease-premium),
-              border-color 0.35s var(--ease-premium) !important;
-}
-@media (hover: hover) {
-  .eco-tab:hover, .closet-line-tab:hover, .acc-filter-btn:hover, .tech-tab-btn:hover,
-  .subpage-quick-pill:hover, .ma-qv-thumb:hover, .demo-switcher:hover {
-    color: var(--ink) !important;
-    border-color: var(--ink) !important;
-  }
-}
-.eco-tab.active, .eco-tab[aria-selected="true"],
-.closet-line-tab.active, .acc-filter-btn.active, .tech-tab-btn.active, .ma-qv-thumb.active {
-  background: var(--ink) !important;
-  color: var(--ivory) !important;
-  border-color: var(--ink) !important;
-}
-/* En secciones oscuras, el contorno pasa a marfil */
-.tech-tab-btn:not(.active) { color: rgba(247, 243, 234, 0.75) !important; border-color: rgba(247, 243, 234, 0.25) !important; }
-.tech-tab-btn.active { background: var(--ivory) !important; color: var(--ink) !important; border-color: var(--ivory) !important; }
-@media (hover: hover) { .tech-tab-btn:not(.active):hover { color: var(--ivory) !important; border-color: var(--ivory) !important; } }
-.demo-switcher { background: rgba(247, 243, 234, 0.7) !important; padding: 9px 16px !important; }
-
-/* ---------- 6. Etiquetas y distintivos ---------- */
-.eco-tags span,
-.ho-card-gallery-tag,
-.acc-dim-pill,
-.ma-plp-dims-badge,
-.d-badge {
-  font: 600 0.62rem/1.3 var(--font-sans) !important;
-  letter-spacing: 0.1em !important;
-  text-transform: uppercase !important;
-  border-radius: var(--radius-sm) !important;
-  padding: 5px 9px !important;
-  background: transparent !important;
-  color: var(--text-secondary) !important;
-  border: 1px solid rgba(26, 25, 24, 0.16) !important;
-}
-.core-badge, .caption-tag, .island-badge, .depth-pill, .line-num-badge, .line-tech-badge,
-.acc-finish-tag, .ho-card-family-tag, .pill-index, .ho-pillar-num {
-  font-size: 0.6rem !important;
-  font-weight: 600 !important;
-  letter-spacing: 0.16em !important;
-  text-transform: uppercase !important;
-  border-radius: var(--radius-sm) !important;
-  padding: 5px 10px !important;
-}
-.hero-editorial .hero-tag { border-radius: var(--radius-sm) !important; letter-spacing: 0.16em !important; }
-
-/* ---------- 7. Formulario: chips de espacios e inputs ---------- */
-.chip-checkbox span {
-  font-size: 0.74rem !important;
-  font-weight: 550 !important;
-  letter-spacing: 0.04em;
-  border-radius: var(--radius-sm) !important;
-  border-color: rgba(26, 25, 24, 0.16) !important;
-  background: #FFFDF9 !important;
-  transition: background-color 0.3s var(--ease-premium), color 0.3s ease, border-color 0.3s ease !important;
-}
-@media (hover: hover) { .chip-checkbox:hover span { border-color: var(--ink) !important; } }
-.chip-checkbox input:checked + span {
-  background: var(--ink) !important;
-  color: var(--ivory) !important;
-  border-color: var(--ink) !important;
-  box-shadow: inset 0 -2px 0 var(--gold);
-}
-.chip-checkbox input:focus-visible + span { outline: 2px solid var(--gold); outline-offset: 2px; }
-.form-group input:not([type="checkbox"]):not([type="radio"]),
-.form-group select,
-.form-group textarea {
-  background: #FFFDF9 !important;
-  border-color: rgba(26, 25, 24, 0.18) !important;
-  border-radius: var(--radius-sm) !important;
-}
-.form-group label { letter-spacing: 0.02em; }
-
-/* ---------- 8. Selectores de paleta (sección oscura) ---------- */
-.palette-btn { border-radius: var(--radius-md) !important; transition: background-color 0.35s var(--ease-premium), border-color 0.35s var(--ease-premium) !important; }
-.palette-btn.active { box-shadow: inset 2px 0 0 var(--gold); }
-
-/* ---------- 9. Tarjetas: esquinas y filo coherentes ---------- */
-.eco-card, .core-card, .closet-acc-card, .typology-card, .ma-orig-feature-card, .ho-card-mueble,
-.subpage-return-card, .palette-card, .ma-pdf-card, .campaign-form-card, .showrooms-box,
-.island-2025-card, .ho-pillar-item, .closet-summary-pill {
-  border-radius: var(--radius-lg) !important;
-}
-
-/* ---------- 10. Flechas de navegación de escenas ---------- */
-.scene-arrow, .ma-feat-arrow { border-radius: 999px !important; transition: background-color 0.3s ease, border-color 0.3s ease !important; }
-
-/* Celular: botones a lo ancho para un toque cómodo */
-@media (max-width: 640px) {
-  .hero .hero-editorial .hero-actions { flex-direction: column; align-items: stretch; }
-  .hero .hero-editorial .hero-btn,
-  .hero .hero-editorial .hero-btn-secondary { justify-content: center; width: 100%; padding: 17px 20px !important; }
-  .submit-btn { width: 100%; }
-}
-
-/* Botones con clase de hero usados fuera del hero (subpáginas): misma gramática, en tinta */
-.hero-btn,
-.hero-btn-secondary {
-  font: var(--btn-type) !important;
-  letter-spacing: var(--btn-track) !important;
-  text-transform: uppercase !important;
-  border-radius: var(--radius-sm) !important;
-  padding: 17px 26px !important;
-  min-height: 52px;
-  gap: 12px;
+  gap: 5px;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-max);
+  border: 1px solid var(--border-strong);
+  background: rgba(247, 243, 234, 0.92);
   cursor: pointer;
+  padding: 0;
+  transition: background 0.2s ease, border-color 0.2s ease;
 }
-:not(.hero-editorial) > .hero-btn:not(.hero .hero-btn),
-.hero-btn:not(.hero .hero-btn) {
-  background: var(--ink) !important;
-  color: var(--ivory) !important;
-  border: 1px solid var(--ink) !important;
+
+.mobile-menu-btn span {
+  display: block;
+  width: 18px;
+  height: 1.6px;
+  background: var(--accent);
+  border-radius: 2px;
+  transition: transform 0.25s ease, opacity 0.2s ease;
 }
-.hero-btn-secondary:not(.hero .hero-btn-secondary) {
-  background: transparent !important;
-  color: var(--ink) !important;
-  border: 1px solid rgba(26, 25, 24, 0.45) !important;
+
+.mobile-menu-btn[aria-expanded="true"] span:nth-child(1) {
+  transform: translateY(6.6px) rotate(45deg);
 }
-@media (hover: hover) {
-  .hero-btn:not(.hero .hero-btn):hover {
-    background: #000 !important;
-    box-shadow: inset 0 0 0 1px var(--gold-soft), 0 14px 30px rgba(26, 25, 24, 0.22) !important;
-    transform: translateY(-2px);
+
+.mobile-menu-btn[aria-expanded="true"] span:nth-child(2) {
+  opacity: 0;
+}
+
+.mobile-menu-btn[aria-expanded="true"] span:nth-child(3) {
+  transform: translateY(-6.6px) rotate(-45deg);
+}
+
+.mobile-menu-drawer {
+  position: absolute;
+  top: 74px;
+  left: 0;
+  right: 0;
+  z-index: 19;
+  background: rgba(247, 243, 234, 0.98);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border-strong);
+  box-shadow: 0 24px 48px rgba(22, 21, 20, 0.16);
+}
+
+.mobile-menu-drawer[hidden] {
+  display: none;
+}
+
+.mobile-menu-inner {
+  padding: 20px clamp(20px, 4vw, 40px) 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.mobile-menu-label {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.mobile-menu-core {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.mobile-menu-core a {
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #F7F3EA;
+  background: #1B1A18;
+  padding: 13px 16px;
+  border-radius: var(--radius-max);
+  text-align: center;
+}
+
+.mobile-menu-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+}
+
+.mobile-menu-grid a {
+  text-decoration: none;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-hairline);
+  padding: 10px 14px;
+  border-radius: var(--radius-max);
+}
+
+.mobile-menu-cta {
+  text-decoration: none;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  padding: 12px 16px;
+  border-radius: var(--radius-max);
+  text-align: center;
+  margin-top: 4px;
+}
+
+@media (max-width: 900px) {
+  .hero-header .section-nav {
+    display: none !important;
   }
-  .hero-btn-secondary:not(.hero .hero-btn-secondary):hover {
-    background: var(--ink) !important;
-    color: var(--ivory) !important;
-    border-color: var(--ink) !important;
-    transform: translateY(-2px);
+
+  .mobile-menu-btn {
+    display: inline-flex;
   }
 }
-.link-arrow { letter-spacing: 0.11em; }
-@media (max-width: 640px) {
-  .hero .hero-editorial .hero-btn,
-  .hero .hero-editorial .hero-btn-secondary,
-  .submit-btn {
-    font-size: 0.7rem !important;
-    letter-spacing: 0.1em !important;
-    text-align: center;
-    white-space: nowrap;
+
+@media (max-width: 760px) {
+  .hero-header .brand-logo {
+    max-width: 145px;
+  }
+
+  .hero-header .header-cta-link {
+    display: none;
+  }
+
+  .mobile-menu-drawer {
+    top: 66px;
   }
 }
-@media (max-width: 340px) {
-  .hero .hero-editorial .hero-btn, .submit-btn { white-space: normal; }
+
+/* ==========================================================================
+   RETÍCULA EDITORIAL UNIFICADA (COCINAS & CLOSETS DESTACADOS + 7 ESPACIOS)
+   ========================================================================== */
+.ecosystem-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 24px;
+}
+
+.ecosystem-grid .eco-card {
+  grid-column: span 4;
+}
+
+.ecosystem-grid .eco-card--featured {
+  grid-column: span 6;
+  background: #F4EFE5;
+  border-color: rgba(34, 34, 34, 0.22);
+  box-shadow: 0 12px 32px rgba(26, 25, 24, 0.05);
+}
+
+.ecosystem-grid .eco-card--featured:hover {
+  box-shadow: 0 22px 44px rgba(26, 25, 24, 0.1);
+}
+
+.eco-card--featured .eco-img-wrap {
+  aspect-ratio: 16 / 10;
+}
+
+.eco-core-pill {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background: rgba(247, 243, 234, 0.94);
+  color: var(--accent);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  padding: 6px 11px;
+  border-radius: 4px;
+  border: 1px solid var(--border-hairline);
+}
+
+.eco-card--featured .eco-body {
+  padding: 28px 30px 30px;
+}
+
+.eco-featured-head h3 {
+  font-size: 1.55rem;
+  font-weight: 560;
+  margin-bottom: 4px;
+}
+
+.eco-featured-sub {
+  display: block;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.02rem;
+  color: var(--text-secondary);
+  margin-bottom: 14px;
+}
+
+.eco-card--featured .eco-body p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.eco-featured-list {
+  list-style: none;
+  margin-bottom: 18px;
+  padding-top: 14px;
+  border-top: 1px solid var(--border-hairline);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.eco-featured-list li {
+  font-size: 0.84rem;
+  color: var(--text-primary);
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  line-height: 1.45;
+}
+
+.eco-featured-list li::before {
+  content: '—';
+  color: var(--text-muted);
+  flex-shrink: 0;
+}
+
+.eco-card-actions {
+  margin-top: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+}
+
+.link-arrow--subtle {
+  opacity: 0.78;
+  font-weight: 500;
+}
+
+.link-arrow--subtle:hover {
+  opacity: 1;
+}
+
+/* Tarjeta 09 Outdoor en formato horizontal ancho cuando se muestran los 9 espacios */
+.ecosystem-grid:not(.is-filtered) .eco-card--wide {
+  grid-column: span 12;
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+}
+
+.ecosystem-grid:not(.is-filtered) .eco-card--wide .eco-img-wrap {
+  aspect-ratio: auto;
+  min-height: 280px;
+  height: 100%;
+}
+
+.ecosystem-grid:not(.is-filtered) .eco-card--wide .eco-body {
+  padding: 32px 36px;
+  justify-content: center;
+}
+
+.ecosystem-grid:not(.is-filtered) .eco-card--wide .eco-body h3 {
+  font-size: 1.4rem;
+}
+
+/* Cuando se aplica un filtro de 2 tarjetas (privado / funcional), que se repartan 50/50 */
+.ecosystem-grid.is-filtered .eco-card {
+  grid-column: span 6;
+}
+
+.ecosystem-grid.is-filtered[data-visible-count="3"] .eco-card {
+  grid-column: span 4;
+}
+
+@media (max-width: 1024px) {
+  .ecosystem-grid .eco-card,
+  .ecosystem-grid .eco-card--featured,
+  .ecosystem-grid.is-filtered .eco-card,
+  .ecosystem-grid.is-filtered[data-visible-count="3"] .eco-card {
+    grid-column: span 6;
+  }
+
+  .ecosystem-grid:not(.is-filtered) .eco-card--wide {
+    grid-column: span 12;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  .ecosystem-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ecosystem-grid .eco-card,
+  .ecosystem-grid .eco-card--featured,
+  .ecosystem-grid:not(.is-filtered) .eco-card--wide,
+  .ecosystem-grid.is-filtered .eco-card,
+  .ecosystem-grid.is-filtered[data-visible-count="3"] .eco-card {
+    grid-column: span 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .ecosystem-grid:not(.is-filtered) .eco-card--wide .eco-img-wrap {
+    aspect-ratio: 4 / 3;
+    min-height: 0;
+  }
+
+  .ecosystem-grid:not(.is-filtered) .eco-card--wide .eco-body,
+  .eco-card--featured .eco-body {
+    padding: 22px;
+  }
 }

@@ -17,7 +17,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wdth,wght@0,75..100,400..700&display=swap">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..500;1,6..72,300..400&display=swap">
 
-  <link rel="stylesheet" href="styles.css?v=20261119">
+  <link rel="stylesheet" href="styles.css">
   <style>
     /* Eliminar cualquier velo claro en la portada de la Landing Page */
     .hero-edge {
@@ -50,7 +50,8 @@
        HERO DE CONVERSIÓN (SIN MENÚS DE FUGA • ENFOQUE 100% EN CITA SHOWROOM)
        ========================================================================== -->
   <section class="hero" id="inicio" aria-label="Finezza Quer&eacute;taro — Dise&ntilde;o Moderno Italiano a la Medida">
-         <div class="hero-slide is-active" data-motion="zoom-in" data-type="wide" data-label="PERSPECTIVA INTEGRAL &bull; COCINA EN ISLA DE M&Aacute;RMOL, LIBRERO DOBLE ALTURA &amp; LIVING">
+    <div class="hero-stage" id="heroStage" aria-live="off">
+      <div class="hero-slide is-active" data-motion="zoom-in" data-type="wide" data-label="PERSPECTIVA INTEGRAL &bull; COCINA EN ISLA DE M&Aacute;RMOL, LIBRERO DOBLE ALTURA &amp; LIVING">
         <img 
           class="hero-cover" 
           src="assets/portada-finezza.jpg" 
@@ -124,6 +125,9 @@
       </a>
 
       <div class="header-actions">
+        <a href="https://wa.me/524427197102?text=Hola%20Finezza%20Quer%C3%A9taro,%20vengo%20de%20su%20campa%C3%B1a%20y%20me%20gustar%C3%ADa%20agendar%20una%20cita%20de%20dise%C3%B1o." target="_blank" rel="noopener" class="demo-switcher" title="Escribir directamente por WhatsApp">
+          <span>WhatsApp Directo</span>
+        </a>
         <a href="#cotizar" class="header-cta-link">Agendar Cita</a>
       </div>
     </header>
@@ -257,42 +261,60 @@
 
       <div class="ecosystem-grid" id="ecosystemGrid">
 
-        <!-- 01. Cocinas -->
-        <article class="eco-card" data-category="core">
+        <!-- 01. Cocinas (DESTACADA CORE) -->
+        <article class="eco-card eco-card--featured" data-category="core">
           <a href="#cotizar" class="eco-img-wrap" data-select-space="Cocinas" style="display:block;">
-            <img src="assets/portada-cocinas.webp" alt="Cocina de autor Finezza con isla monol&iacute;tica, cava iluminada y comedor" loading="lazy">
+            <img src="assets/portada-04-cocina-comedor.jpg" alt="Cocina de autor Finezza con isla monol&iacute;tica, cava iluminada y comedor" loading="lazy">
+            <span class="eco-core-pill">CORE 01 &bull; EL CORAZ&Oacute;N DEL HOGAR</span>
             <span class="eco-num">01 / COCINAS</span>
           </a>
           <div class="eco-body">
-            <h3>Cocinas</h3>
-            <p>El coraz&oacute;n arquitect&oacute;nico del hogar. Islas monol&iacute;ticas en piedra natural o sinterizada con corte a 45&deg;, columnas ocultas (<em>pocket doors</em>) y herrajes europeos de precisi&oacute;n.</p>
+            <div class="eco-featured-head">
+              <h3>Cocinas de Autor</h3>
+              <span class="eco-featured-sub">Islas monol&iacute;ticas, columnas ocultas y ergonom&iacute;a italiana</span>
+            </div>
+            <p>El coraz&oacute;n arquitect&oacute;nico del hogar. Islas monol&iacute;ticas en piedra natural o sinterizada con corte a 45&deg;, columnas ocultas (<em>pocket doors</em>), iluminaci&oacute;n lineal c&aacute;lida y herrajes europeos de precisi&oacute;n.</p>
+            <ul class="eco-featured-list">
+              <li>Continuidad de veta en frentes e islas a 45&deg; (corte inglete)</li>
+              <li>Electrodom&eacute;sticos panelables e integraci&oacute;n invisible</li>
+              <li>Golas arquitect&oacute;nicas, aperturas push-to-open y perfiles anodizados</li>
+            </ul>
             <div class="eco-tags">
               <span>Islas a 45&deg;</span>
               <span>Pocket Doors</span>
               <span>Piedra &amp; Nogal</span>
             </div>
-            <div style="margin-top: 14px;">
-              <a href="#cotizar" class="link-arrow" data-select-space="Cocinas">Incluir en mi Proyecto <span>&rarr;</span></a>
+            <div class="eco-card-actions">
+              <a href="#cotizar" class="link-arrow" data-select-space="Cocinas">Incluir Cocinas en mi Proyecto <span>&rarr;</span></a>
             </div>
           </div>
         </article>
 
-        <!-- 02. Closets -->
-        <article class="eco-card" data-category="core">
+        <!-- 02. Closets (DESTACADA CORE) -->
+        <article class="eco-card eco-card--featured" data-category="core">
           <a href="#cotizar" class="eco-img-wrap" data-select-space="Closets" style="display:block;">
             <img src="assets/portada-vestidores-finezza.jpg" alt="Closets, Vestidores y Walk-in Closets Finezza" loading="lazy">
+            <span class="eco-core-pill">CORE 02 &bull; 3 L&Iacute;NEAS DE F&Aacute;BRICA 2025</span>
             <span class="eco-num">02 / CLOSETS</span>
           </a>
           <div class="eco-body">
-            <h3>Closets &amp; Vestidores</h3>
-            <p>Closets, vestidores y <em>walk-in closets</em> con islas centrales de dise&ntilde;o moderno e inspiraci&oacute;n europea. Tres sistemas constructivos (Modular, Libre y Light) con iluminaci&oacute;n LED.</p>
+            <div class="eco-featured-head">
+              <h3>Closets &amp; Walk-in Closets</h3>
+              <span class="eco-featured-sub">El arte de dise&ntilde;ar cl&oacute;sets: Modular, Libre y Light</span>
+            </div>
+            <p>Closets, vestidores y <em>walk-in closets</em> con islas centrales de dise&ntilde;o moderno e inspiraci&oacute;n europea. Tres sistemas constructivos (Modular, Libre y Light) con sastrer&iacute;a interior e iluminaci&oacute;n LED.</p>
+            <ul class="eco-featured-list">
+              <li>3 l&iacute;neas de f&aacute;brica: Modular, Libre (Rafix interno) y Light (400/600 mm)</li>
+              <li>Islas centrales dobles y cu&aacute;druples con cubierta de cristal</li>
+              <li>16 accesorios extra&iacute;bles &amp; LED + Merino Super Mate y Chapas Naturales</li>
+            </ul>
             <div class="eco-tags">
               <span>Walk-in Closets</span>
               <span>Islas Centrales</span>
               <span>3 L&iacute;neas Europeas</span>
             </div>
-            <div style="margin-top: 14px;">
-              <a href="#cotizar" class="link-arrow" data-select-space="Closets">Incluir en mi Proyecto <span>&rarr;</span></a>
+            <div class="eco-card-actions">
+              <a href="#cotizar" class="link-arrow" data-select-space="Closets">Incluir Closets en mi Proyecto <span>&rarr;</span></a>
             </div>
           </div>
         </article>
@@ -300,7 +322,7 @@
         <!-- 03. Living -->
         <article class="eco-card" data-category="social">
           <a href="#cotizar" class="eco-img-wrap" data-select-space="Living" style="display:block;">
-            <img src="assets/portada-living.jpg" onerror="if(this.src.endsWith('.jpg')){this.src='assets/portada-living.webp';}else{this.onerror=null;this.src='assets/portada-02-estancia.jpg';}" alt="Libreros, Sistemas de Pared, Aparadores y Credenzas para Living Finezza" loading="lazy">
+            <img src="assets/portada-living.webp" alt="Libreros, Sistemas de Pared, Aparadores y Credenzas para Living Finezza" loading="lazy">
             <span class="eco-num">03 / LIVING</span>
           </a>
           <div class="eco-body">
@@ -311,7 +333,7 @@
               <span>Sistemas de Pared</span>
               <span>Aparadores &amp; Credenzas</span>
             </div>
-            <div style="margin-top: 14px;">
+            <div class="eco-card-actions">
               <a href="#cotizar" class="link-arrow" data-select-space="Living">Incluir en mi Proyecto <span>&rarr;</span></a>
             </div>
           </div>
@@ -320,7 +342,7 @@
         <!-- 04. Entretenimiento -->
         <article class="eco-card" data-category="social">
           <a href="#cotizar" class="eco-img-wrap" data-select-space="Entretenimiento" style="display:block;">
-            <img src="assets/portada-entretenimiento.jpg" onerror="if(this.src.endsWith('.jpg')){this.src='assets/portada-entretenimiento.webp';}else{this.onerror=null;this.src='assets/portada-finezza.jpg';}" alt="Configuraciones y M&oacute;dulos para Sistemas Multimedia y TV" loading="lazy">
+            <img src="assets/portada-entretenimiento.webp" alt="Configuraciones y M&oacute;dulos para Sistemas Multimedia y TV" loading="lazy">
             <span class="eco-num">04 / ENTRETENIMIENTO</span>
           </a>
           <div class="eco-body">
@@ -331,7 +353,7 @@
               <span>M&oacute;dulos de TV</span>
               <span>Cero Cables Visibles</span>
             </div>
-            <div style="margin-top: 14px;">
+            <div class="eco-card-actions">
               <a href="#cotizar" class="link-arrow" data-select-space="Entretenimiento">Incluir en mi Proyecto <span>&rarr;</span></a>
             </div>
           </div>
@@ -351,16 +373,16 @@
               <span>Escritorios de Autor</span>
               <span>Estudios a Medida</span>
             </div>
-            <div style="margin-top: 14px;">
+            <div class="eco-card-actions">
               <a href="#cotizar" class="link-arrow" data-select-space="Home Office">Incluir en mi Proyecto <span>&rarr;</span></a>
             </div>
           </div>
         </article>
 
-        <!-- 0<!-- 06. Recámaras -->
+        <!-- 06. Recámaras -->
         <article class="eco-card" data-category="privado">
           <a href="#cotizar" class="eco-img-wrap" data-select-space="Rec&aacute;maras" style="display:block;">
-            <img src="assets/portada-recamaras.webp" onerror="if(this.src.endsWith('recamaras.webp')){this.src='assets/portada-recamaras.jpg';}else if(this.src.endsWith('recamaras.jpg')){this.src='assets/portada-recamara.jpg';}else{this.onerror=null;this.src='assets/home-office/night-collection-principal.jpeg';}" alt="Bur&oacute;s, Cabeceras, Cajoneras y Mobiliario para Rec&aacute;maras" loading="lazy" style="object-position: center 45%;">
+            <img src="assets/portada-recamara.webp" alt="Bur&oacute;s, Cabeceras, Cajoneras y Mobiliario para Rec&aacute;maras" loading="lazy" style="object-position: center 45%;">
             <span class="eco-num">06 / REC&Aacute;MARAS</span>
           </a>
           <div class="eco-body">
@@ -371,7 +393,7 @@
               <span>Bur&oacute;s &amp; Cajoneras</span>
               <span>Mobiliario Complementario</span>
             </div>
-            <div style="margin-top: 14px;">
+            <div class="eco-card-actions">
               <a href="#cotizar" class="link-arrow" data-select-space="Rec&aacute;maras">Incluir en mi Proyecto <span>&rarr;</span></a>
             </div>
           </div>
@@ -380,7 +402,7 @@
         <!-- 07. Puertas Intercomunicación -->
         <article class="eco-card" data-category="privado">
           <a href="#cotizar" class="eco-img-wrap" data-select-space="Puertas Intercomunicaci&oacute;n" style="display:block;">
-            <img src="assets/portada-puertas.jpg" alt="Puertas de Intercomunicaci&oacute;n Abatibles, Deslizables y Extra Altas" loading="lazy" style="object-position: center 35%;">
+            <img src="assets/portada-puertas.webp" alt="Puertas de Intercomunicaci&oacute;n Abatibles, Deslizables y Extra Altas" loading="lazy" style="object-position: center 35%;">
             <span class="eco-num">07 / PUERTAS</span>
           </a>
           <div class="eco-body">
@@ -391,7 +413,7 @@
               <span>Extra Altas</span>
               <span>Coplanares en Lambr&iacute;n</span>
             </div>
-            <div style="margin-top: 14px;">
+            <div class="eco-card-actions">
               <a href="#cotizar" class="link-arrow" data-select-space="Puertas Intercomunicaci&oacute;n">Incluir en mi Proyecto <span>&rarr;</span></a>
             </div>
           </div>
@@ -400,7 +422,7 @@
         <!-- 08. Mobiliario de Autor -->
         <article class="eco-card" data-category="social">
           <a href="#cotizar" class="eco-img-wrap" data-select-space="Mobiliario de Autor" style="display:block;">
-            <img src="assets/portada-mobiliario-autor.jpg" onerror="if(this.src.endsWith('.jpg')){this.src='assets/portada-mobiliario-autor.webp';}else{this.onerror=null;this.src='assets/portada-detalle-mesa-chimenea.jpg';}" alt="Colecciones de Mobiliario de Autor Inspiradas en el Dise&ntilde;o Italiano" loading="lazy">
+            <img src="assets/portada-mobiliario-autor.webp" alt="Colecciones de Mobiliario de Autor Inspiradas en el Dise&ntilde;o Italiano" loading="lazy">
             <span class="eco-num">08 / AUTOR</span>
           </a>
           <div class="eco-body">
@@ -411,14 +433,14 @@
               <span>Mood Board a Medida</span>
               <span>Piezas Singulares</span>
             </div>
-            <div style="margin-top: 14px;">
+            <div class="eco-card-actions">
               <a href="#cotizar" class="link-arrow" data-select-space="Mobiliario de Autor">Incluir en mi Proyecto <span>&rarr;</span></a>
             </div>
           </div>
         </article>
 
         <!-- 09. Outdoor -->
-        <article class="eco-card" data-category="funcional">
+        <article class="eco-card eco-card--wide" data-category="funcional">
           <a href="#cotizar" class="eco-img-wrap" data-select-space="Outdoor" style="display:block;">
             <img src="assets/portada-outdoor-finezza.jpg" alt="Mobiliario y Equipos Outdoor de Alta Gama Mont Alpi y Thor" loading="lazy" style="object-position: center 58%;">
             <span class="eco-num">09 / OUTDOOR</span>
@@ -431,7 +453,7 @@
               <span>Equipos THOR&reg;</span>
               <span>Cocinas Exteriores</span>
             </div>
-            <div style="margin-top: 14px;">
+            <div class="eco-card-actions">
               <a href="#cotizar" class="link-arrow" data-select-space="Outdoor">Incluir en mi Proyecto <span>&rarr;</span></a>
             </div>
           </div>
@@ -683,7 +705,7 @@
     <p>&copy; 2026 FINEZZA Quer&eacute;taro &bull; Blvd. Bernardo Quintana 7 D, Col. &Aacute;lamos 2da. Secci&oacute;n, Quer&eacute;taro, Qro.</p>
   </div>
 
-  <script src="script.js?v=20261119"></script>
+  <script src="script.js"></script>
   <script>
     // Preselección automática de categoría al hacer clic en cualquier tarjeta o botón de colección
     document.querySelectorAll('[data-select-space]').forEach((trigger) => {
@@ -697,7 +719,5 @@
       });
     });
   </script>
-
-  <a class="wa-float" href="https://wa.me/524427197102?text=Hola%20Finezza%20Quer%C3%A9taro,%20vengo%20de%20su%20campa%C3%B1a%20y%20me%20gustar%C3%ADa%20agendar%20una%20cita%20de%20dise%C3%B1o." target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp"><svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path d="M16.04 3C8.86 3 3.03 8.82 3.03 16c0 2.29.6 4.53 1.74 6.5L3 29l6.68-1.75A12.95 12.95 0 0 0 16.04 29C23.2 29 29 23.18 29 16S23.2 3 16.04 3Zm0 23.62c-1.95 0-3.86-.52-5.53-1.52l-.4-.24-3.96 1.04 1.06-3.86-.26-.4A10.6 10.6 0 0 1 5.4 16c0-5.86 4.77-10.62 10.64-10.62 5.86 0 10.6 4.76 10.6 10.62 0 5.87-4.76 10.62-10.6 10.62Zm5.83-7.95c-.32-.16-1.88-.93-2.17-1.03-.3-.11-.5-.16-.72.16-.21.32-.82 1.03-1 1.24-.19.21-.37.24-.69.08-.32-.16-1.35-.5-2.56-1.58-.95-.85-1.59-1.89-1.77-2.21-.19-.32-.02-.5.14-.65.14-.14.32-.37.48-.56.16-.19.21-.32.32-.53.1-.21.05-.4-.03-.56-.08-.16-.72-1.73-.98-2.37-.26-.62-.52-.54-.72-.55h-.61c-.21 0-.56.08-.85.4-.3.32-1.12 1.09-1.12 2.66s1.14 3.09 1.3 3.3c.16.21 2.25 3.43 5.45 4.81.76.33 1.36.53 1.82.67.77.24 1.46.21 2.01.13.61-.09 1.88-.77 2.15-1.51.27-.74.27-1.38.19-1.51-.08-.13-.29-.21-.61-.37Z"/></svg><span class="wa-float-label">WhatsApp</span></a>
 </body>
 </html>
