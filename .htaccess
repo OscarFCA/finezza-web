@@ -15,6 +15,10 @@ RewriteCond %{THE_REQUEST} \s/landing(-cocinas)?\.html[\s?] [NC]
 RewriteRule ^ /landing-cocinas [L,R=301]
 # /landing-cocinas sirve el archivo landing-cocinas.html
 RewriteRule ^landing-cocinas/?$ landing-cocinas.html [L]
+# Landing de vestidores: /landing-vestidores.html -> /landing-vestidores
+RewriteCond %{THE_REQUEST} \s/landing-vestidores\.html[\s?] [NC]
+RewriteRule ^ /landing-vestidores [L,R=301]
+RewriteRule ^landing-vestidores/?$ landing-vestidores.html [L]
 </IfModule>
 
 <IfModule mod_deflate.c>
