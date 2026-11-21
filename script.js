@@ -1158,3 +1158,14 @@ const initWaLift = function () {
 };
 if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', initWaLift);
 else initWaLift();
+
+// Menú deslizable en celular: mostrar la página actual aunque esté al final de la tira
+(function () {
+  const run = () => {
+    const nav = document.querySelector('.subpage-nav');
+    const cur = nav && nav.querySelector('[aria-current="page"], a.active');
+    if (!nav || !cur || nav.scrollWidth <= nav.clientWidth) return;
+    nav.scrollLeft = Math.max(0, cur.offsetLeft - (nav.clientWidth - cur.offsetWidth) / 2);
+  };
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', run); else run();
+})();

@@ -6342,3 +6342,127 @@ html body .thor-cat-link.active {
   text-underline-offset: 6px;
   text-decoration-thickness: 2px;
 }
+
+/* ==========================================================================
+   ENCABEZADO HOMOLOGADO: portada, subpáginas y landings se ven igual
+   ========================================================================== */
+html body .hero-header,
+html body .subpage-header {
+  background: rgba(247, 243, 234, 0.94) !important;
+  backdrop-filter: blur(14px) !important;
+  -webkit-backdrop-filter: blur(14px) !important;
+  border-bottom: 1px solid rgba(26, 25, 24, 0.12) !important;
+  box-shadow: 0 6px 20px rgba(26, 25, 24, 0.04) !important;
+}
+html body .hero-header {
+  padding: 14px clamp(20px, 2.5vw, 40px) !important;
+  gap: 24px !important;
+}
+html body .subpage-header { padding: 14px 0 !important; }
+html body .subpage-header .subpage-header-inner {
+  max-width: none !important;
+  width: 100% !important;
+  padding-inline: clamp(20px, 2.5vw, 40px) !important;
+  gap: 24px !important;
+  flex-wrap: nowrap;
+}
+
+/* Logo: mismo tamaño y proporción en todas las páginas */
+html body .hero-header .brand-logo,
+html body .subpage-header .subpage-logo {
+  height: 42px !important;
+  width: auto !important;
+  max-width: none !important;
+}
+
+/* Menú: mismo tipo, mismo color, mismo indicador de página actual */
+html body .hero-header .section-nav,
+html body .subpage-header .subpage-nav {
+  flex: 1 1 auto;
+  justify-content: center !important;
+  gap: clamp(14px, 1.6vw, 28px) !important;
+}
+html body .hero-header .section-nav a,
+html body .subpage-header .subpage-nav a {
+  font-family: var(--font-sans) !important;
+  font-size: 0.74rem !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+  color: #76716a !important;
+  padding: 8px 0 !important;
+  border-bottom: 2px solid transparent !important;
+  white-space: nowrap;
+  opacity: 1 !important;
+  transition: color 0.25s ease, border-color 0.25s ease !important;
+}
+html body .hero-header .section-nav a::after { display: none !important; }
+html body .hero-header .section-nav a:hover,
+html body .subpage-header .subpage-nav a:hover { color: #1A1918 !important; }
+html body .subpage-header .subpage-nav a.active,
+html body .subpage-header .subpage-nav a[aria-current="page"] {
+  color: #1A1918 !important;
+  border-bottom-color: #B08D57 !important;
+}
+
+/* Botón de cita: el mismo en todas las páginas */
+html body .hero-header .header-cta-link,
+html body .subpage-header .subpage-cta-btn {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0 20px !important;
+  background: #1A1918 !important;
+  color: #F7F3EA !important;
+  border: 1px solid #1A1918 !important;
+  border-radius: var(--radius-sm, 2px) !important;
+  font-family: var(--font-sans) !important;
+  font-size: 0.74rem !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.14em !important;
+  text-transform: uppercase !important;
+  text-decoration: none !important;
+  white-space: nowrap;
+  opacity: 1 !important;
+}
+@media (hover: hover) {
+  html body .hero-header .header-cta-link:hover,
+  html body .subpage-header .subpage-cta-btn:hover {
+    background: #2b2926 !important;
+    border-color: #B08D57 !important;
+  }
+}
+
+/* Tablet y celular: logo + cita arriba, menú deslizable abajo (igual en todas) */
+@media (max-width: 1100px) {
+  html body .hero-header,
+  html body .subpage-header .subpage-header-inner { flex-wrap: wrap !important; row-gap: 8px !important; }
+  html body .hero-header .section-nav,
+  html body .subpage-header .subpage-nav {
+    order: 3;
+    flex: 1 1 100% !important;
+    justify-content: flex-start !important;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -webkit-mask-image: linear-gradient(90deg, #000 85%, transparent);
+            mask-image: linear-gradient(90deg, #000 85%, transparent);
+  }
+  html body .hero-header .header-actions,
+  html body .subpage-header .subpage-actions { margin-left: auto; }
+}
+@media (max-width: 760px) {
+  html body .hero-header,
+  html body .subpage-header { padding-block: 12px !important; }
+  html body .hero-header .brand-logo,
+  html body .subpage-header .subpage-logo { height: 34px !important; }
+  html body .hero-header .section-nav { display: flex !important; }
+  html body .hero-header .header-cta-link,
+  html body .subpage-header .subpage-cta-btn { min-height: 40px; padding: 0 14px !important; font-size: 0.7rem !important; letter-spacing: 0.1em !important; }
+}
+/* Ruta de navegación alineada con el logo */
+html body .subpage-breadcrumb-inner {
+  max-width: none !important;
+  width: 100% !important;
+  padding-inline: clamp(20px, 2.5vw, 40px) !important;
+}
