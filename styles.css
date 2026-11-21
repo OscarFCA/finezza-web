@@ -6301,3 +6301,44 @@ html body .hero.is-cover-clean::before { opacity: 0 !important; }
    ========================================================================== */
 .wa-float { transition: transform 0.4s var(--ease-premium), box-shadow 0.4s var(--ease-premium), background-color 0.4s ease, bottom 0.35s var(--ease-premium); }
 .wa-float.is-lifted { bottom: calc(var(--wa-lift, 72px) + env(safe-area-inset-bottom, 0px)); }
+
+/* ==========================================================================
+   NAVEGACIÓN UNIFICADA (logo + 5 secciones + cita)
+   ========================================================================== */
+html body .subpage-nav a[aria-current="page"] { color: var(--ink, #1A1918); }
+@media (max-width: 760px) {
+  html body .subpage-header-inner { row-gap: 10px; }
+  html body .subpage-nav {
+    flex-wrap: nowrap !important;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+    justify-content: flex-start !important;
+    width: 100%;
+    mask-image: linear-gradient(90deg, #000 88%, transparent);
+    -webkit-mask-image: linear-gradient(90deg, #000 88%, transparent);
+  }
+  html body .subpage-nav::-webkit-scrollbar { display: none; }
+  html body .subpage-nav a { white-space: nowrap; flex-shrink: 0; }
+}
+
+/* Filtros THOR: mismo estilo que los de Mont Alpi (antes salían como botón del navegador) */
+html body .thor-cat-link {
+  background: transparent;
+  border: none;
+  padding: 6px 10px;
+  font-family: var(--font-sans);
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: #555555;
+  cursor: pointer;
+  transition: color 0.18s ease;
+}
+html body .thor-cat-link:hover { color: #000000; }
+html body .thor-cat-link.active {
+  font-weight: 700;
+  color: #000000;
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  text-decoration-thickness: 2px;
+}
