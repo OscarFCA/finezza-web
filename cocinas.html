@@ -3,9 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cocinas Integrales de Autor | Dise&ntilde;o Moderno Italiano FINEZZA</title>
-  <meta name="description" content="Divisi&oacute;n Cocinas Integrales de Autor Finezza: Islas monol&iacute;ticas en piedra natural y sinterizada con corte a 45&deg;, puertas escamoteables pocket doors y ebanister&iacute;a italiana.">
+  <title>Cocinas Integrales a Medida | Especialistas en Cocinas FINEZZA Quer&eacute;taro</title>
+  <meta name="description" content="Finezza Quer&eacute;taro: Especialistas en cocinas integrales contempor&aacute;neas. Ingenier&iacute;a digital y planta automatizada, herrajes europeos Blum, Hettich y H&auml;fele, lacas de m&aacute;xima calidad y 10 a&ntilde;os de garant&iacute;a.">
+  <meta property="og:title" content="Cocinas Integrales a Medida | FINEZZA Quer&eacute;taro">
+  <meta property="og:description" content="Especialistas en cocinas contempor&aacute;neas en Quer&eacute;taro. Manufactura automatizada certificada, herrajes Blum, Hettich y H&auml;fele y 10 a&ntilde;os de garant&iacute;a.">
+  <meta property="og:image" content="Fotos_Cocinas/portada_cocinas_2.webp">
+  <meta property="og:type" content="website">
+
   <link rel="icon" type="image/png" href="assets/favicon-finezza.png">
+  <link rel="preload" as="image" href="Fotos_Cocinas/portada_cocinas_2.webp" fetchpriority="high" type="image/webp">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wdth,wght@0,75..100,400..700&display=swap">
@@ -14,558 +20,1147 @@
 </head>
 <body class="subpage-body">
 
- <!-- BARRA SUPERIOR FIJA DE NAVEGACIÓN HOMOLOGADA CON INDEX.HTML (9 CATEGORÍAS OFICIALES) -->
+  <!-- BARRA SUPERIOR FIJA DE NAVEGACIÓN HOMOLOGADA CON INDEX.HTML (9 CATEGORÍAS OFICIALES) -->
   <header class="subpage-header" id="topSubpage">
-    <div class="container subpage-header-inner" style="max-width: 100%; padding-inline: clamp(20px, 2.5vw, 40px); flex-wrap: nowrap; gap: 16px;">
-      <div class="subpage-brand-group" style="flex-shrink: 0;">
-        <a href="index.html" class="subpage-logo-link" aria-label="FINEZZA Quer&eacute;taro &mdash; Volver a la p&aacute;gina de inicio">
-          <img src="assets/logo-finezza.png" alt="FINEZZA Quer&eacute;taro" class="subpage-logo" width="185" height="52" style="max-width: 185px; height: auto;">
+    <div class="container subpage-header-inner">
+      <div class="subpage-brand-group">
+        <a href="index.html" class="subpage-logo-link" aria-label="FINEZZA Interiores &mdash; Volver a la p&aacute;gina de inicio">
+          <img src="assets/logo-finezza.png" alt="FINEZZA Interiores" class="subpage-logo" width="185" height="52">
         </a>
       </div>
 
-      <nav class="subpage-nav" aria-label="Categor&iacute;as principales Finezza" style="flex: 1; justify-content: center; flex-wrap: nowrap; gap: clamp(10px, 1.1vw, 18px);">
-        <a href="cocinas.html" class="active" style="font-size: 0.8rem; white-space: nowrap;">Cocinas</a>
-        <a href="vestidores.html" style="font-size: 0.8rem; white-space: nowrap;">Closets</a>
-        <a href="espacios-residenciales.html#living" style="font-size: 0.8rem; white-space: nowrap;">Living</a>
-        <a href="espacios-residenciales.html#entretenimiento" style="font-size: 0.8rem; white-space: nowrap;">Entretenimiento</a>
-        <a href="home-office.html" style="font-size: 0.8rem; white-space: nowrap;">Home Office</a>
-        <a href="espacios-residenciales.html#recamara" style="font-size: 0.8rem; white-space: nowrap;">Rec&aacute;maras</a>
-        <a href="espacios-residenciales.html#pasillos" style="font-size: 0.8rem; white-space: nowrap;">Puertas Intercomunicaci&oacute;n</a>
-        <a href="espacios-residenciales.html#libreros" style="font-size: 0.8rem; white-space: nowrap;">Mobiliario de Autor</a>
-        <a href="outdoor.html" style="font-size: 0.8rem; white-space: nowrap;">Outdoor</a>
+      <nav class="subpage-nav" aria-label="Categor&iacute;as principales Finezza">
+        <a href="cocinas.html" class="active">Cocinas</a>
+        <a href="vestidores.html">Closets</a>
+        <a href="living.html">Living</a>
+        <a href="entretenimiento.html">Entretenimiento</a>
+        <a href="home-office.html">Home Office</a>
+        <a href="recamaras.html">Rec&aacute;maras</a>
+        <a href="puertas.html">Puertas Intercomunicaci&oacute;n</a>
+        <a href="mobiliario-autor.html">Mobiliario de Autor</a>
+        <a href="outdoor.html">Outdoor</a>
       </nav>
 
-      <div class="subpage-actions" style="flex-shrink: 0;">
-        <a href="index.html#cotizar" class="header-cta-link">Agendar Cita</a>
+      <div class="subpage-actions">
+        <a href="#cotizar" class="header-cta-link">Agendar Cita</a>
+        <button type="button" class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir men&uacute; de navegaci&oacute;n" aria-expanded="false" aria-controls="mobileMenuDrawer">
+          <span></span><span></span><span></span>
+        </button>
       </div>
     </div>
   </header>
-  
+
+  <nav class="mobile-menu-drawer" id="mobileMenuDrawer" aria-label="Men&uacute; m&oacute;vil Finezza" hidden>
+    <div class="mobile-menu-inner">
+      <span class="mobile-menu-label">Colecciones Core</span>
+      <div class="mobile-menu-core">
+        <a href="cocinas.html">Cocinas Integrales</a>
+        <a href="vestidores.html">Closets &amp; Vestidores</a>
+      </div>
+      <span class="mobile-menu-label">Otros Espacios</span>
+      <div class="mobile-menu-grid">
+        <a href="living.html">Living</a>
+        <a href="entretenimiento.html">Entretenimiento</a>
+        <a href="home-office.html">Home Office</a>
+        <a href="recamaras.html">Rec&aacute;maras</a>
+        <a href="puertas.html">Puertas</a>
+        <a href="mobiliario-autor.html">Mobiliario de Autor</a>
+        <a href="outdoor.html">Outdoor</a>
+        <a href="index.html">Inicio</a>
+      </div>
+      <a href="#cotizar" class="mobile-menu-cta">Agendar Cita en Showroom &rarr;</a>
+    </div>
+  </nav>
+
   <!-- CINTILLO DE RUTA DE NAVEGACIÓN (BREADCRUMB) -->
   <div class="subpage-breadcrumb-bar">
     <div class="container subpage-breadcrumb-inner">
       <div class="breadcrumb-trail">
         <a href="index.html">Inicio Finezza</a>
         <span class="breadcrumb-sep">/</span>
-        <a href="index.html#colecciones">10 Espacios Residenciales</a>
+        <a href="index.html#colecciones">9 Espacios Residenciales</a>
         <span class="breadcrumb-sep">/</span>
-        <strong class="breadcrumb-current">Core 01: Cocinas Integrales de Autor</strong>
+        <strong class="breadcrumb-current">Especialidad 01: Cocinas Integrales</strong>
       </div>
       <a href="index.html" class="breadcrumb-back-link">&larr; Regresar a la p&aacute;gina principal</a>
     </div>
   </div>
 
-  <!-- ==========================================================================
-       DIVISIÓN COCINAS INTEGRALES DE AUTOR FINEZZA (CORE BUSINESS 01)
-       ========================================================================== -->
-  <section class="closets-section" id="cocinas-autor" aria-label="Divisi&oacute;n Cocinas Integrales de Autor Finezza">
-    <div class="container">
+  <main>
+    <!-- ==========================================================================
+         DIVISIÓN COCINAS INTEGRALES FINEZZA (ESPECIALIDAD PRINCIPAL)
+         ========================================================================== -->
+    <section class="closets-section" id="cocinas-autor" aria-label="Divisi&oacute;n Cocinas Integrales Finezza">
+      <div class="container">
 
-      <div class="closets-cover-hero">
-        <div class="closets-cover-content">
-          <span class="eyebrow">CORE 01 / DIVISI&Oacute;N COCINAS INTEGRALES DE AUTOR &bull; DISE&Ntilde;O MODERNO ITALIANO</span>
-          <h2 class="editorial-h2">La cocina es el coraz&oacute;n del hogar: <em>arquitectura, piedra y precisi&oacute;n.</em></h2>
-          <p class="closets-cover-lead">
-            Dise&ntilde;adas como el epicentro arquitect&oacute;nico y social de la residencia. En <strong>Finezza</strong> integramos superficies ultracompactas (Dekton, Neolith, cuarzos y m&aacute;rmoles seleccionados), sistemas de puertas escamoteables (<em>pocket doors</em>), iluminaci&oacute;n lineal c&aacute;lida empotrada y herrajes europeos de cierre silencioso que transforman la gastronom&iacute;a en un ritual est&eacute;tico.
-          </p>
+        <div class="closets-cover-hero">
+          <div class="closets-cover-content">
+            <span class="eyebrow">ESPECIALIDAD 01 / COCINAS INTEGRALES &bull; QUER&Eacute;TARO</span>
+            <h1 class="editorial-h2">La cocina es el coraz&oacute;n del hogar: <em>dise&ntilde;o, funci&oacute;n y precisi&oacute;n.</em></h1>
+            <p class="closets-cover-lead">
+              En <strong>Finezza</strong> somos especialistas en cocinas contempor&aacute;neas proyectadas para vivirse todos los d&iacute;as. Combinamos dise&ntilde;o a la medida &mdash;islas en piedra natural, cuarzo o superficies sinterizadas, desayunadores ocultos (<em>pocket doors</em>), estaciones de caf&eacute; e iluminaci&oacute;n LED c&aacute;lida&mdash; con manufactura automatizada de vanguardia, adaptada a tu espacio y presupuesto.
+            </p>
 
-          <div class="closets-lines-summary">
-            <div class="closet-summary-pill">
-              <span class="pill-index">INGENIER&Iacute;A 01</span>
-              <div>
-                <strong>Islas Monol&iacute;ticas con Corte a 45&deg; (Inglete)</strong>
-                <small>Continuidad absoluta de veta en frentes, cubiertas y cascadas laterales en piedra natural o sinterizada.</small>
+            <div class="closets-lines-summary">
+              <div class="closet-summary-pill">
+                <span class="pill-index">INGENIER&Iacute;A 01</span>
+                <div>
+                  <strong>Dise&ntilde;o Digital &amp; Planta Automatizada</strong>
+                  <small>Nuestro software especializado resuelve toda la ingenier&iacute;a de fabricaci&oacute;n antes de entrar a planta, ejecutando cada mueble mediante procesos automatizados de alta precisi&oacute;n.</small>
+                </div>
+              </div>
+              <div class="closet-summary-pill">
+                <span class="pill-index">INGENIER&Iacute;A 02</span>
+                <div>
+                  <strong>Herrajes Europeos &amp; Acabados Superiores</strong>
+                  <small>Equipamos cada cocina con herrajes originales Blum, Hettich y H&auml;fele, p&aacute;neles de los mejores fabricantes y lacas con la m&aacute;s alta calidad en M&eacute;xico.</small>
+                </div>
+              </div>
+              <div class="closet-summary-pill">
+                <span class="pill-index">INGENIER&Iacute;A 03</span>
+                <div>
+                  <strong>Calidad Certificada &amp; 10 A&ntilde;os de Garant&iacute;a</strong>
+                  <small>Procesos de planta respaldados por certificaciones de calidad, ingenier&iacute;a durable en cada componente y 10 a&ntilde;os de garant&iacute;a directa Finezza.</small>
+                </div>
               </div>
             </div>
-            <div class="closet-summary-pill">
-              <span class="pill-index">INGENIER&Iacute;A 02</span>
-              <div>
-                <strong>Columnas Ocultas &amp; Sistemas Pocket Doors</strong>
-                <small>Puertas escamoteables que ocultan estaciones de desayuno, hornos, cavas y &aacute;reas de preparaci&oacute;n cuando no est&aacute;n en uso.</small>
-              </div>
-            </div>
-            <div class="closet-summary-pill is-highlight">
-              <span class="pill-index">INGENIER&Iacute;A 03</span>
-              <div>
-                <strong>Continuidad de Boiserie &amp; Puertas Coplanares</strong>
-                <small>El mismo nogal o lacado mate de la cocina reviste muros, pasillos, cavas y comedores integrados sin interrupciones.</small>
-              </div>
+
+            <div class="closets-cover-actions">
+              <a href="#cotizar" class="hero-btn">
+                <span>Dise&ntilde;ar y Cotizar mi Cocina</span>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                  <path d="M3.5 8H12.5M12.5 8L8.5 4M12.5 8L8.5 12" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+              <button type="button" class="hero-btn-secondary" id="openCocinasGalleryBtn">
+                Explorar Galer&iacute;a de Proyectos
+              </button>
+              <a href="#herrajes-select-cocina" class="hero-btn-secondary">
+                Accesorios &ldquo;Select&rdquo; 2026&ndash;2027
+              </a>
             </div>
           </div>
 
-          <div class="closets-cover-actions">
+          <div class="closets-cover-media-wrap">
+            <figure class="closets-cover-main-fig">
+              <button
+                type="button"
+                class="kitchen-zoom-trigger"
+                data-zoom-src="Fotos_Cocinas/portada_cocinas_2.webp"
+                data-zoom-caption="Cocina integral Finezza en nogal con isla de cubierta veteada, alacenas mate sin jaladera y torre de hornos integrada."
+                aria-label="Ampliar fotograf&iacute;a principal de cocina integral Finezza">
+                <img
+                  src="Fotos_Cocinas/portada_cocinas_2.webp"
+                  alt="Cocina integral contempor&aacute;nea Finezza en nogal con isla en piedra veteada, alacenas mate en tono greige y torre de hornos integrada"
+                  class="closets-cover-img"
+                  width="2752"
+                  height="1536"
+                  fetchpriority="high"
+                  loading="eager">
+              </button>
+              <figcaption class="closets-cover-caption">
+                <span class="caption-tag">PROYECTO RESIDENCIAL FINEZZA</span>
+                <span>Isla en nogal con cubierta veteada &bull; Alacenas mate sin jaladera &bull; Torre de hornos y refrigerador integrados</span>
+              </figcaption>
+            </figure>
+
+            <div class="closets-cover-secondary-grid">
+              <figure class="closets-cover-sketch-card">
+                <button
+                  type="button"
+                  class="kitchen-zoom-trigger"
+                  data-zoom-src="Fotos_Cocinas/portada_cocinas_6.webp"
+                  data-zoom-caption="Desayunador oculto con puertas escamoteables (pocket doors), bandeja extra&iacute;ble para electrodom&eacute;sticos e iluminaci&oacute;n LED vertical."
+                  aria-label="Ampliar detalle de desayunador oculto con puertas escamoteables">
+                  <img
+                    src="Fotos_Cocinas/portada_cocinas_6.webp"
+                    alt="Detalle de desayunador oculto en roble con puertas escamoteables, bandeja extra&iacute;ble y luz LED vertical"
+                    width="1376"
+                    height="768"
+                    loading="eager">
+                </button>
+                <figcaption>
+                  <strong>Desayunador Oculto</strong>
+                  <span>Puertas <em>pocket doors</em>, bandeja extra&iacute;ble e iluminaci&oacute;n LED</span>
+                </figcaption>
+              </figure>
+
+              <figure class="closets-cover-sketch-card">
+                <button
+                  type="button"
+                  class="kitchen-zoom-trigger"
+                  data-zoom-src="Fotos_Cocinas/portada_cocinas_5.webp"
+                  data-zoom-caption="Isla con cubierta y laterales en cascada de piedra oscura, parrilla integrada, torre en roble y barra de caf&eacute; en tono arena."
+                  aria-label="Ampliar detalle de isla en cascada oscura y barra de caf&eacute;">
+                  <img
+                    src="Fotos_Cocinas/portada_cocinas_5.webp"
+                    alt="Cocina con isla en cascada de piedra oscura, campana de isla negra, roble natural y nicho de caf&eacute; iluminado"
+                    width="1365"
+                    height="768"
+                    loading="eager">
+                </button>
+                <figcaption>
+                  <strong>Isla en Cascada 45&deg;</strong>
+                  <span>Piedra oscura continua, parrilla en isla y calidez en roble</span>
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+
+        <!-- Galería de Proyectos Reales de Cocinas Finezza -->
+        <div class="closets-block" id="galeriaCocinas">
+          <div class="section-header-row">
+            <div>
+              <span class="eyebrow">PROYECTOS DE COCINAS &bull; PORTAFOLIO FINEZZA</span>
+              <h2 class="editorial-h2">Soluciones pensadas para <em>cada espacio y estilo de vida.</em></h2>
+            </div>
+            <p class="section-intro-copy">
+              Cada cocina Finezza se dise&ntilde;a desde la distribuci&oacute;n real de tu casa: zonas de trabajo ergon&oacute;micas, almacenamiento inteligente, iluminaci&oacute;n c&aacute;lida y materiales durables. Haz clic en cualquier imagen para verla en detalle.
+            </p>
+          </div>
+
+          <div class="kitchen-showcase-grid">
+            <article class="kitchen-showcase-card">
+              <div class="kitchen-showcase-media">
+                <button
+                  type="button"
+                  class="kitchen-zoom-trigger"
+                  data-zoom-src="Fotos_Cocinas/portada_cocinas_1.webp"
+                  data-zoom-caption="Cocina abierta hacia terraza: isla en nogal con cubierta clara veteada, alacenas mate y conexi&oacute;n directa con el exterior."
+                  aria-label="Ampliar proyecto Cocina Abierta hacia Terraza">
+                  <img
+                    src="Fotos_Cocinas/portada_cocinas_1.webp"
+                    alt="Cocina integral abierta con isla en nogal, cubierta blanca veteada, alacenas greige mate y ventanal hacia terraza exterior"
+                    width="2752"
+                    height="1536"
+                    loading="lazy">
+                </button>
+              </div>
+              <div class="kitchen-showcase-body">
+                <span class="island-badge is-gold">CONEXI&Oacute;N INTERIOR&ndash;EXTERIOR</span>
+                <h3>Cocina Abierta hacia Terraza</h3>
+                <p>Isla en nogal con cubierta de piedra clara veteada, alacenas en tono greige mate y luminaria lineal suspendida en di&aacute;logo directo con la terraza y sala exterior.</p>
+              </div>
+            </article>
+
+            <article class="kitchen-showcase-card">
+              <div class="kitchen-showcase-media">
+                <button
+                  type="button"
+                  class="kitchen-zoom-trigger"
+                  data-zoom-src="Fotos_Cocinas/portada_cocinas_3.webp"
+                  data-zoom-caption="Cocina con muro en nogal veteado, isla monol&iacute;tica en piedra natural oscura y barra comedor volada integrada."
+                  aria-label="Ampliar proyecto Piedra Natural Oscura y Barra Integrada">
+                  <img
+                    src="Fotos_Cocinas/portada_cocinas_3.webp"
+                    alt="Cocina de doble altura con muro en nogal, nicho iluminado con piedra oscura, isla monol&iacute;tica y barra comedor volada en madera"
+                    width="4096"
+                    height="2288"
+                    loading="lazy">
+                </button>
+              </div>
+              <div class="kitchen-showcase-body">
+                <span class="island-badge">ISLA MONOL&Iacute;TICA &amp; BARRA</span>
+                <h3>Piedra Natural Oscura &amp; Comedor Integrado</h3>
+                <p>Muro piso a techo en nogal veteado con nicho retroiluminado, estufa semiprofesional, isla monol&iacute;tica en piedra oscura y barra comedor volada para convivir todos los d&iacute;as.</p>
+              </div>
+            </article>
+
+            <article class="kitchen-showcase-card">
+              <div class="kitchen-showcase-media">
+                <button
+                  type="button"
+                  class="kitchen-zoom-trigger"
+                  data-zoom-src="Fotos_Cocinas/portada_cocinas_4.webp"
+                  data-zoom-caption="Cocina bicolor en grafito y arena mate con estaci&oacute;n de caf&eacute; iluminada e isla con zoclo flotado en LED c&aacute;lido."
+                  aria-label="Ampliar proyecto Columnas Piso a Techo y Estaci&oacute;n de Caf&eacute;">
+                  <img
+                    src="Fotos_Cocinas/portada_cocinas_4.webp"
+                    alt="Cocina contempor&aacute;nea bicolor en grafito y arena mate con nicho iluminado para barra de caf&eacute; e isla con luz LED en zoclo"
+                    width="2752"
+                    height="1536"
+                    loading="lazy">
+                </button>
+              </div>
+              <div class="kitchen-showcase-body">
+                <span class="island-badge">DISE&Ntilde;O BICOLOR &amp; COFFEE BAR</span>
+                <h3>Columnas Piso a Techo &amp; Estaci&oacute;n de Caf&eacute;</h3>
+                <p>Composici&oacute;n minimalista en grafito y arena mate con nicho iluminado para barra de caf&eacute;, repisas superiores con luz ambiental e isla con zoclo flotado en LED c&aacute;lido.</p>
+              </div>
+            </article>
+
+            <article class="kitchen-showcase-card">
+              <div class="kitchen-showcase-media">
+                <button
+                  type="button"
+                  class="kitchen-zoom-trigger"
+                  data-zoom-src="Fotos_Cocinas/portada_cocinas_6.webp"
+                  data-zoom-caption="Desayunador oculto en roble con puertas escamoteables (pocket doors), bandeja extra&iacute;ble para electrodom&eacute;sticos e iluminaci&oacute;n LED vertical."
+                  aria-label="Ampliar proyecto Desayunador Oculto con Bandeja Extra&iacute;ble">
+                  <img
+                    src="Fotos_Cocinas/portada_cocinas_6.webp"
+                    alt="Detalle de cocina con desayunador oculto en roble natural, puertas escamoteables pocket doors, charola extra&iacute;ble y cubierta oscura"
+                    width="1376"
+                    height="768"
+                    loading="lazy">
+                </button>
+              </div>
+              <div class="kitchen-showcase-body">
+                <span class="island-badge">POCKET DOORS &amp; ORDEN</span>
+                <h3>Desayunador Oculto con Bandeja Extra&iacute;ble</h3>
+                <p>Puertas escamoteables que ocultan electrodom&eacute;sticos del d&iacute;a a d&iacute;a en segundos, con charola deslizable de trabajo, iluminaci&oacute;n LED vertical c&aacute;lida y cubierta oscura frente a ventanal.</p>
+              </div>
+            </article>
+
+            <article class="kitchen-showcase-card">
+              <div class="kitchen-showcase-media">
+                <button
+                  type="button"
+                  class="kitchen-zoom-trigger"
+                  data-zoom-src="Fotos_Cocinas/portada_cocinas_7.webp"
+                  data-zoom-caption="Cocina contempor&aacute;nea en acabado salvia mate con isla en cascada de piedra gris veteada, muro p&eacute;treo con repisas LED y vitrinas en cristal ahumado."
+                  aria-label="Ampliar proyecto Isla en Cascada, Repisas LED y Vitrinas">
+                  <img
+                    src="Fotos_Cocinas/portada_cocinas_7.webp"
+                    alt="Cocina contempor&aacute;nea en tono salvia mate con isla de piedra gris veteada, campana de isla, repisas retroiluminadas y vitrinas en cristal ahumado con vista al jard&iacute;n"
+                    width="2752"
+                    height="1536"
+                    loading="lazy">
+                </button>
+              </div>
+              <div class="kitchen-showcase-body">
+                <span class="island-badge is-gold">VITRINAS &amp; PIEDRA VETEADA</span>
+                <h3>Isla en Cascada, Repisas LED &amp; Vitrinas</h3>
+                <p>Acabado mate tono salvia con isla monol&iacute;tica en piedra gris veteada y campana arquitect&oacute;nica, muro p&eacute;treo con repisas retroiluminadas y vitrinas en cristal ahumado con vista al exterior.</p>
+              </div>
+            </article>
+
+            <article class="kitchen-showcase-card">
+              <div class="kitchen-showcase-media">
+                <button
+                  type="button"
+                  class="kitchen-zoom-trigger"
+                  data-zoom-src="Fotos_Cocinas/portada_cocinas_8.webp"
+                  data-zoom-caption="Cocina social con isla en piedra gris y mesa comedor en madera integrada, estaci&oacute;n barista con repisas iluminadas, vitrinas y puerta en madera."
+                  aria-label="Ampliar proyecto Estaci&oacute;n Espresso, Vitrinas y Mesa Integrada">
+                  <img
+                    src="Fotos_Cocinas/portada_cocinas_8.webp"
+                    alt="Cocina contempor&aacute;nea con isla y mesa comedor en madera para cuatro comensales, estaci&oacute;n de caf&eacute; espresso con repisas LED, vitrinas iluminadas y conexi&oacute;n con el living"
+                    width="2726"
+                    height="1536"
+                    loading="lazy">
+                </button>
+              </div>
+              <div class="kitchen-showcase-body">
+                <span class="island-badge">COCINA SOCIAL &amp; COMEDOR</span>
+                <h3>Estaci&oacute;n Espresso, Vitrinas &amp; Mesa Integrada</h3>
+                <p>Isla con parrilla y mesa comedor en madera para cuatro comensales, barra de caf&eacute; con repisas iluminadas, vitrinas de piso a techo y puerta en madera en di&aacute;logo con la estancia.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         LANZAMIENTO 2026-2027: HERRAJES Y ACCESORIOS "SELECT" PARA COCINA
+         ========================================================================== -->
+    <section class="select-catalog-section" id="herrajes-select-cocina" aria-labelledby="select-cocinas-heading">
+      <div class="container">
+        <div class="select-section-header">
+          <div class="select-header-copy">
+            <span class="eyebrow">02 / LANZAMIENTO 2026&ndash;2027 &bull; HERRAJES &amp; ACCESORIOS SELECT PARA COCINA</span>
+            <h2 class="editorial-h2" id="select-cocinas-heading">Accesorios <em>&ldquo;Select&rdquo;</em>: ingenier&iacute;a interior de alto desempe&ntilde;o.</h2>
+            <p class="section-intro-copy">
+              Incorporamos la nueva colecci&oacute;n <strong>Herrajes Select 2026&ndash;2027</strong>: 10 sistemas de equipamiento interior dise&ntilde;ados para multiplicar el orden, la ergonom&iacute;a y la accesibilidad en cada zona de tu cocina, desde despensas giratorias 360&deg; y alacenas motorizadas silenciosas hasta esquineros inteligentes, especieros de cristal y separaci&oacute;n oculta de residuos.
+            </p>
+          </div>
+          <div class="select-header-cta">
             <a href="#cotizar" class="hero-btn">
-              <span>Dise&ntilde;ar y Cotizar mi Cocina Finezza</span>
+              <span>Equipar mi Cocina con Select</span>
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
                 <path d="M3.5 8H12.5M12.5 8L8.5 4M12.5 8L8.5 12" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </a>
-            <a href="javascript:void(0)" class="hero-btn-secondary" onclick="abrirGaleriaCocinas()">Explorar Galer&iacute;a de Proyectos</a>
           </div>
         </div>
 
-        <div class="closets-cover-media-wrap">
-          <figure class="closets-cover-main-fig">
-            <img src="assets/portada-04-cocina-comedor.jpg" alt="Cocina de autor Finezza con isla monol&iacute;tica, cava iluminada y comedor" class="closets-cover-img" loading="eager">
-            <figcaption class="closets-cover-caption">
-              <span class="caption-tag">PROYECTO RESIDENCIAL FINEZZA</span>
-              <span>Isla desayunador en piedra natural &bull; Cava iluminada en nicho de nogal &bull; Comedor integrado</span>
-            </figcaption>
-          </figure>
-          <div class="closets-cover-secondary-grid">
-            <figure class="closets-cover-sketch-card">
-              <img src="assets/portada-detalle-marmol-isla.jpg" alt="Detalle macro de corte a 45 grados en isla monol&iacute;tica de m&aacute;rmol" loading="lazy">
-              <figcaption>
-                <strong>Corte Inglete 45&deg;</strong>
-                <span>Veta continua en isla monol&iacute;tica de piedra natural</span>
-              </figcaption>
-            </figure>
-            <figure class="closets-cover-sketch-card">
-              <img src="assets/portada-06-cocina-boiserie.jpg" alt="Elevaci&oacute;n arquitect&oacute;nica de cocina con boiserie y puertas coplanares ocultas" loading="lazy">
-              <figcaption>
-                <strong>Boiserie Continua</strong>
-                <span>Lambrines de muro a muro y puertas coplanares ocultas</span>
-              </figcaption>
-            </figure>
+        <div class="select-highlights-strip" aria-label="Beneficios clave de la colecci&oacute;n Herrajes Select">
+          <div class="select-highlight-pill">
+            <span class="pill-index">01 &bull; ACCESO TOTAL</span>
+            <strong>Giro 360&deg; &amp; Esquineros Sin Rinc&oacute;n Muerto</strong>
+            <small>Bandejas giratorias con retorno autom&aacute;tico y extracci&oacute;n en dos ejes para aprovechar cada cent&iacute;metro.</small>
+          </div>
+          <div class="select-highlight-pill">
+            <span class="pill-index">02 &bull; ALACENAS ALTAS</span>
+            <strong>Elevaci&oacute;n Manual y El&eacute;ctrica 38 dB</strong>
+            <small>Sistemas abatibles multiposici&oacute;n y elevador motorizado con sensor de movimiento, anti-obst&aacute;culos y luz LED.</small>
+          </div>
+          <div class="select-highlight-pill">
+            <span class="pill-index">03 &bull; MOVIMIENTO FLUIDO</span>
+            <strong>Cierre Suave &amp; Operaci&oacute;n Silenciosa</strong>
+            <small>Correderas de extensi&oacute;n total con amortiguaci&oacute;n integrada y superficies texturizadas anti-rayaduras.</small>
+          </div>
+          <div class="select-highlight-pill">
+            <span class="pill-index">04 &bull; ORDEN MODULAR</span>
+            <strong>Especieros, Divisores &amp; Residuos Ocultos</strong>
+            <small>Organizadores combinables de 100, 150 y 200 mm, costados de cristal y doble basurero oculto en caj&oacute;n.</small>
           </div>
         </div>
+
+        <div class="select-filter-row">
+          <div class="acc-filter-bar select-filter-bar" role="tablist" aria-label="Filtrar accesorios Select de cocina">
+            <button type="button" class="acc-filter-btn select-filter-btn active" role="tab" aria-selected="true" data-select-filter="all">Todos (10)</button>
+            <button type="button" class="acc-filter-btn select-filter-btn" role="tab" aria-selected="false" data-select-filter="despensa">Despensa &amp; Alacenas (3)</button>
+            <button type="button" class="acc-filter-btn select-filter-btn" role="tab" aria-selected="false" data-select-filter="esquineros">Esquineros (2)</button>
+            <button type="button" class="acc-filter-btn select-filter-btn" role="tab" aria-selected="false" data-select-filter="organizacion">Especieros &amp; Cajones (4)</button>
+            <button type="button" class="acc-filter-btn select-filter-btn" role="tab" aria-selected="false" data-select-filter="residuos">Residuos (1)</button>
+          </div>
+          <p class="select-filter-count" id="selectKitchenCount" aria-live="polite">Mostrando 10 sistemas Select para cocina &mdash; haz clic en cualquier foto para ampliarla.</p>
+        </div>
+
+        <div class="select-kitchen-grid" id="selectKitchenGrid">
+
+          <!-- 01. PANTRY SELECT -->
+          <article class="select-product-card" data-select-cat="despensa">
+            <div class="select-card-media is-studio-contain">
+              <button
+                type="button"
+                class="kitchen-zoom-trigger"
+                data-zoom-src="assets/herrajes-select/pantry-select.jpg"
+                data-zoom-caption="Pantry Select: Despensa giratoria 360&deg; con 5 niveles de bandejas ajustables, retorno autom&aacute;tico y 8 kg de carga por bandeja."
+                aria-label="Ampliar imagen de Pantry Select">
+                <img
+                  src="assets/herrajes-select/pantry-select.jpg"
+                  alt="Despensa alta Pantry Select con 5 niveles de bandejas giratorias 360 grados y estructura modular"
+                  width="433"
+                  height="800"
+                  loading="lazy">
+              </button>
+              <span class="acc-finish-tag">Despensa 360&deg;</span>
+            </div>
+            <div class="select-card-body">
+              <span class="select-card-kicker">01 &bull; DESPENSA VERTICAL</span>
+              <h3>Pantry Select</h3>
+              <p class="select-card-tagline">Toda tu despensa visible en un solo movimiento.</p>
+              <ul class="select-specs-list">
+                <li>Sistema giratorio <strong>360&deg; con acceso total</strong> y bandejas con retorno autom&aacute;tico.</li>
+                <li><strong>5 niveles</strong> de bandejas ajustables en altura (capacidad de carga de <strong>8 kg por bandeja</strong>).</li>
+                <li>Dise&ntilde;o circular anti-rayaduras con correderas de alta resistencia, suaves y silenciosas.</li>
+                <li>Estructura modular de f&aacute;cil instalaci&oacute;n con configuraci&oacute;n para apertura <strong>izquierda o derecha</strong>.</li>
+              </ul>
+              <div class="select-card-footer">
+                <span class="acc-dim-pill">5 niveles 360&deg; &bull; 8 kg / bandeja &bull; Izq. / Der.</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- 02. ELEVADOR DE ALACENA SELECT -->
+          <article class="select-product-card" data-select-cat="despensa">
+            <div class="select-card-media">
+              <button
+                type="button"
+                class="kitchen-zoom-trigger"
+                data-zoom-src="assets/herrajes-select/elevador-alacena-select.jpg"
+                data-zoom-caption="Elevador de Alacena Select: Sistema elevable manual con parada en cualquier posici&oacute;n, amortiguaci&oacute;n integrada y ajuste de peso en 3 niveles (0 a 18 kg)."
+                aria-label="Ampliar imagen de Elevador de Alacena Select">
+                <img
+                  src="assets/herrajes-select/elevador-alacena-select.jpg"
+                  alt="Elevador de Alacena Select desplegado desde gabinete superior de cocina con agarre ergon&oacute;mico"
+                  width="800"
+                  height="533"
+                  loading="lazy">
+              </button>
+              <span class="acc-finish-tag">Alacena Manual</span>
+            </div>
+            <div class="select-card-body">
+              <span class="select-card-kicker">02 &bull; ALACENAS SUPERIORES</span>
+              <h3>Elevador de Alacena Select</h3>
+              <p class="select-card-tagline">Movimiento controlado. Acceso sin esfuerzo.</p>
+              <ul class="select-specs-list">
+                <li>Sistema elevable manual con acceso total al gabinete superior que <strong>se detiene en cualquier posici&oacute;n</strong>.</li>
+                <li>Ajuste de peso en <strong>3 niveles</strong> mediante engranes manuales: Ligero (0&ndash;6 kg), Medio (6&ndash;12 kg) y Pesado (12&ndash;18 kg).</li>
+                <li>Amortiguaci&oacute;n integrada que estabiliza el recorrido al empujar y jalar.</li>
+                <li>Instalaci&oacute;n r&aacute;pida con ajuste de altura para alacenas de uso diario.</li>
+              </ul>
+              <div class="select-card-footer">
+                <span class="acc-dim-pill">3 niveles de carga (0&ndash;18 kg) &bull; Parada libre</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- 03. ELEVADOR ELÉCTRICO DE ALACENA SELECT -->
+          <article class="select-product-card is-select-featured" data-select-cat="despensa">
+            <div class="select-card-media">
+              <button
+                type="button"
+                class="kitchen-zoom-trigger"
+                data-zoom-src="assets/herrajes-select/elevador-electrico-select.jpg"
+                data-zoom-caption="Elevador El&eacute;ctrico de Alacena Select: Motor ultrasilencioso de 38 dB con sensor de movimiento, detecci&oacute;n de obst&aacute;culos, luz LED sincronizada y piso de cristal negro (15 kg)."
+                aria-label="Ampliar imagen de Elevador El&eacute;ctrico de Alacena Select">
+                <img
+                  src="assets/herrajes-select/elevador-electrico-select.jpg"
+                  alt="Elevador El&eacute;ctrico de Alacena Select descendido bajo gabinete oscuro con dos bandejas desmontables"
+                  width="533"
+                  height="560"
+                  loading="lazy">
+              </button>
+              <span class="acc-finish-tag is-gold-tag">Motorizado 38 dB &bull; LED</span>
+            </div>
+            <div class="select-card-body">
+              <span class="select-card-kicker">03 &bull; ALACENA MOTORIZADA INTELIGENTE</span>
+              <h3>Elevador El&eacute;ctrico de Alacena Select</h3>
+              <p class="select-card-tagline">Inteligencia que responde al movimiento.</p>
+              <ul class="select-specs-list">
+                <li>Sistema motorizado con <strong>sensor de movimiento</strong> (ascenso, descenso y pausa) y <strong>detecci&oacute;n de obst&aacute;culos</strong>.</li>
+                <li>Motor ultrasilencioso de <strong>38 dB (nivel biblioteca)</strong> con soporte total de <strong>15 kg</strong>.</li>
+                <li>Banda de <strong>luz LED c&aacute;lida</strong> en ambos rieles sincronizada: enciende al bajar y apaga al cerrar.</li>
+                <li><strong>2 bandejas desmontables</strong> de f&aacute;cil ajuste en altura con elegante <strong>piso de cristal negro</strong>.</li>
+              </ul>
+              <div class="select-card-footer">
+                <span class="acc-dim-pill">Motor 38 dB &bull; Soporte 15 kg &bull; Cristal negro + LED</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- 04. LEMANS SELECT -->
+          <article class="select-product-card" data-select-cat="esquineros">
+            <div class="select-card-media">
+              <button
+                type="button"
+                class="kitchen-zoom-trigger"
+                data-zoom-src="assets/herrajes-select/lemans-select.jpg"
+                data-zoom-caption="LeMans Select: Herraje esquinero de dos ejes y dos bandejas en media luna con piso texturizado, compatible con puertas de 450 mm (apertura izquierda o derecha)."
+                aria-label="Ampliar imagen de LeMans Select">
+                <img
+                  src="assets/herrajes-select/lemans-select.jpg"
+                  alt="Esquinero LeMans Select desplegado con dos niveles de bandejas en media luna en cocina contempor&aacute;nea oscura"
+                  width="800"
+                  height="521"
+                  loading="lazy">
+              </button>
+              <span class="acc-finish-tag">Esquinero 2 Ejes</span>
+            </div>
+            <div class="select-card-body">
+              <span class="select-card-kicker">04 &bull; ESQUINERO EN MEDIA LUNA</span>
+              <h3>LeMans Select</h3>
+              <p class="select-card-tagline">Hasta el rinc&oacute;n m&aacute;s dif&iacute;cil, completamente aprovechado.</p>
+              <ul class="select-specs-list">
+                <li>Mecanismo de <strong>rotaci&oacute;n en dos ejes</strong> que ofrece una trayectoria de salida precisa y fluida.</li>
+                <li><strong>2 niveles de bandejas en media luna</strong> con piso texturizado antideslizante en ambas canastillas.</li>
+                <li>Acceso total al gabinete esquinero con cero espacio perdido para ollas, sartenes y despensa.</li>
+                <li>Compatible con <strong>puertas de 450 mm de ancho</strong> &bull; Apertura <strong>izquierda o derecha</strong>.</li>
+              </ul>
+              <div class="select-card-footer">
+                <span class="acc-dim-pill">2 niveles media luna &bull; Puerta 450 mm &bull; Izq. / Der.</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- 05. MAGIC CORNER SELECT -->
+          <article class="select-product-card" data-select-cat="esquineros">
+            <div class="select-card-media">
+              <button
+                type="button"
+                class="kitchen-zoom-trigger"
+                data-zoom-src="assets/herrajes-select/magic-corner-select.jpg"
+                data-zoom-caption="Magic Corner Select: Sistema esquinero de extracci&oacute;n lateral dividida en dos niveles con desplazamiento independiente de canastillas, para puertas de 450 mm."
+                aria-label="Ampliar imagen de Magic Corner Select">
+                <img
+                  src="assets/herrajes-select/magic-corner-select.jpg"
+                  alt="Magic Corner Select con cuatro canastillas extra&iacute;bles en dos niveles dentro de gabinete esquinero blanco"
+                  width="800"
+                  height="533"
+                  loading="lazy">
+              </button>
+              <span class="acc-finish-tag">Esquinero Dividido</span>
+            </div>
+            <div class="select-card-body">
+              <span class="select-card-kicker">05 &bull; EXTRACCI&Oacute;N LATERAL DIVIDIDA</span>
+              <h3>Magic Corner Select</h3>
+              <p class="select-card-tagline">El fondo del gabinete, al alcance de la mano.</p>
+              <ul class="select-specs-list">
+                <li>Sistema de extracci&oacute;n lateral con dise&ntilde;o dividido que acerca el fondo en un solo movimiento.</li>
+                <li>Desplazamiento independiente de las canastillas para un acceso c&oacute;modo y ordenado.</li>
+                <li><strong>2 niveles de almacenamiento</strong> (4 canastillas) con extracci&oacute;n silenciosa.</li>
+                <li>Compatible con <strong>puertas de 450 mm de ancho</strong> &bull; Disponible en apertura <strong>izquierda o derecha</strong>.</li>
+              </ul>
+              <div class="select-card-footer">
+                <span class="acc-dim-pill">2 niveles (4 canastillas) &bull; Puerta 450 mm &bull; Izq. / Der.</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- 06. ESPECIERO PREMIUM SELECT -->
+          <article class="select-product-card" data-select-cat="organizacion">
+            <div class="select-card-media">
+              <button
+                type="button"
+                class="kitchen-zoom-trigger"
+                data-zoom-src="assets/herrajes-select/especiero-premium-select.jpg"
+                data-zoom-caption="Especiero Premium Select: 3 niveles y 6 zonas escalonadas con costados de cristal, portacuchillos de madera integrado, contenedores desmontables y cierre suave."
+                aria-label="Ampliar imagen de Especiero Premium Select">
+                <img
+                  src="assets/herrajes-select/especiero-premium-select.jpg"
+                  alt="Especiero Premium Select de 3 niveles con costados de cristal, portacuchillos de madera y espacio para tablas"
+                  width="727"
+                  height="720"
+                  loading="lazy">
+              </button>
+              <span class="acc-finish-tag">3 Niveles &bull; Cristal</span>
+            </div>
+            <div class="select-card-body">
+              <span class="select-card-kicker">06 &bull; GABINETE BAJO DE PREPARACI&Oacute;N</span>
+              <h3>Especiero Premium Select</h3>
+              <p class="select-card-tagline">Tres niveles. Seis zonas. Todo el gabinete organizado.</p>
+              <ul class="select-specs-list">
+                <li>Sistema de <strong>3 niveles y 6 zonas</strong> con distribuci&oacute;n escalonada para envases y tablas de distintas alturas.</li>
+                <li><strong>Costados de cristal</strong> y <strong>portacuchillos de madera</strong> integrado en el nivel superior.</li>
+                <li>Contenedores individuales desmontables para una limpieza pr&aacute;ctica y r&aacute;pida.</li>
+                <li>Rieles de extensi&oacute;n total con cierre suave y operaci&oacute;n silenciosa.</li>
+              </ul>
+              <div class="select-card-footer">
+                <span class="acc-dim-pill">3 niveles / 6 zonas &bull; Costados cristal &bull; Cierre suave</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- 07. ESPECIERO SELECT -->
+          <article class="select-product-card" data-select-cat="organizacion">
+            <div class="select-card-media">
+              <button
+                type="button"
+                class="kitchen-zoom-trigger"
+                data-zoom-src="assets/herrajes-select/especiero-select.jpg"
+                data-zoom-caption="Especiero Select: Organizador extra&iacute;ble de dos niveles para botellas, aceites y especias con instalaci&oacute;n lateral derecha y extensi&oacute;n total con cierre suave."
+                aria-label="Ampliar imagen de Especiero Select">
+                <img
+                  src="assets/herrajes-select/especiero-select.jpg"
+                  alt="Especiero Select extra&iacute;ble de dos niveles con botellas de aceite y frascos de especias en mueble bajo"
+                  width="624"
+                  height="680"
+                  loading="lazy">
+              </button>
+              <span class="acc-finish-tag">2 Niveles Extra&iacute;ble</span>
+            </div>
+            <div class="select-card-body">
+              <span class="select-card-kicker">07 &bull; BOTELLERO &amp; ESPECIAS</span>
+              <h3>Especiero Select</h3>
+              <p class="select-card-tagline">Dos niveles. Cada envase a la vista y al alcance.</p>
+              <ul class="select-specs-list">
+                <li>Dise&ntilde;ado para almacenar <strong>botellas, aceites, especias</strong> y productos de despensa junto a la zona de cocci&oacute;n.</li>
+                <li>Organizaci&oacute;n vertical de doble capacidad que aprovecha un mueble bajo angosto en un solo herraje.</li>
+                <li>Instalaci&oacute;n lateral en <strong>costado derecho</strong> sujeto al frente del gabinete.</li>
+                <li>Correderas de <strong>extensi&oacute;n total con cierre suave</strong>.</li>
+              </ul>
+              <div class="select-card-footer">
+                <span class="acc-dim-pill">2 niveles verticales &bull; Costado derecho &bull; Cierre suave</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- 08. ORGANIZADOR DE UTENSILIOS SELECT -->
+          <article class="select-product-card" data-select-cat="organizacion">
+            <div class="select-card-media">
+              <button
+                type="button"
+                class="kitchen-zoom-trigger"
+                data-zoom-src="assets/herrajes-select/organizador-utensilios-select.jpg"
+                data-zoom-caption="Organizador de Utensilios Select: Sistema modular para caj&oacute;n en tres medidas combinables (100, 150 y 200 mm), sobrepuesto y compatible con Contenedor Select."
+                aria-label="Ampliar imagen de Organizador de Utensilios Select">
+                <img
+                  src="assets/herrajes-select/organizador-utensilios-select.jpg"
+                  alt="Organizador de Utensilios Select modular instalado en caj&oacute;n de cocina en acabado grafito oscuro"
+                  width="799"
+                  height="521"
+                  loading="lazy">
+              </button>
+              <span class="acc-finish-tag">Modular 3 Medidas</span>
+            </div>
+            <div class="select-card-body">
+              <span class="select-card-kicker">08 &bull; INTERIOR DE CAJ&Oacute;N</span>
+              <h3>Organizador de Utensilios Select</h3>
+              <p class="select-card-tagline">Organizaci&oacute;n por m&oacute;dulos: tres medidas combinables.</p>
+              <ul class="select-specs-list">
+                <li>Sistema modular de marcos organizadores en <strong>3 medidas combinables: 100 mm, 150 mm y 200 mm</strong>.</li>
+                <li>Configuraci&oacute;n interior 100% personalizable con m&uacute;ltiples distribuciones para cualquier ancho de caj&oacute;n.</li>
+                <li>Instalaci&oacute;n sobrepuesta directa sobre el piso del caj&oacute;n, sin perforaciones.</li>
+                <li>Totalmente compatible con el sistema <strong>Contenedor Select</strong>.</li>
+              </ul>
+              <div class="select-card-footer">
+                <span class="acc-dim-pill">M&oacute;dulos 100 / 150 / 200 mm &bull; Sobrepuesto</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- 09. CONTENEDOR SELECT -->
+          <article class="select-product-card" data-select-cat="organizacion">
+            <div class="select-card-media">
+              <button
+                type="button"
+                class="kitchen-zoom-trigger"
+                data-zoom-src="assets/herrajes-select/contenedor-select.jpg"
+                data-zoom-caption="Contenedor Select: Accesorios modulares en formatos A y B de instalaci&oacute;n sobrepuesta dentro del Organizador de Utensilios Select para cubiertos y accesorios."
+                aria-label="Ampliar imagen de Contenedor Select">
+                <img
+                  src="assets/herrajes-select/contenedor-select.jpg"
+                  alt="Contenedor Select en formatos A y B con cuberter&iacute;a y utensilios organizados en caj&oacute;n de cocina"
+                  width="800"
+                  height="695"
+                  loading="lazy">
+              </button>
+              <span class="acc-finish-tag">Formatos A &amp; B</span>
+            </div>
+            <div class="select-card-body">
+              <span class="select-card-kicker">09 &bull; COMPLEMENTO DE CAJ&Oacute;N</span>
+              <h3>Contenedor Select</h3>
+              <p class="select-card-tagline">Accesorios modulares para un caj&oacute;n realmente organizado.</p>
+              <ul class="select-specs-list">
+                <li>Contenedores desmontables de acabado oscuro para clasificar cubiertos, cuchillos y utensilios finos.</li>
+                <li>Disponible en dos formatos complementarios: <strong>Contenedor A</strong> (alargado) y <strong>Contenedor B</strong> (compacto).</li>
+                <li>Permite m&uacute;ltiples opciones de distribuci&oacute;n interior seg&uacute;n tus h&aacute;bitos de cocina.</li>
+                <li>Instalaci&oacute;n sobrepuesta directamente dentro del <strong>Organizador de Utensilios Select</strong>.</li>
+              </ul>
+              <div class="select-card-footer">
+                <span class="acc-dim-pill">Contenedor A y Contenedor B &bull; Modular desmontable</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- 10. BASURERO DOBLE SELECT -->
+          <article class="select-product-card" data-select-cat="residuos">
+            <div class="select-card-media">
+              <button
+                type="button"
+                class="kitchen-zoom-trigger"
+                data-zoom-src="assets/herrajes-select/basurero-doble-select.jpg"
+                data-zoom-caption="Basurero Doble Select: Sistema doble oculto integrado en caj&oacute;n con contenedores individuales desmontables, tapa, jaladera, marco portacontenedor y cierre suave."
+                aria-label="Ampliar imagen de Basurero Doble Select">
+                <img
+                  src="assets/herrajes-select/basurero-doble-select.jpg"
+                  alt="Basurero Doble Select integrado en caj&oacute;n extra&iacute;ble de cocina con dos contenedores con tapa"
+                  width="800"
+                  height="533"
+                  loading="lazy">
+              </button>
+              <span class="acc-finish-tag">Oculto en Caj&oacute;n</span>
+            </div>
+            <div class="select-card-body">
+              <span class="select-card-kicker">10 &bull; GESTI&Oacute;N DE RESIDUOS</span>
+              <h3>Basurero Doble Select</h3>
+              <p class="select-card-tagline">Separaci&oacute;n de residuos integrada al dise&ntilde;o.</p>
+              <ul class="select-specs-list">
+                <li>Sistema doble integrado en caj&oacute;n, completamente <strong>invisible desde el exterior</strong> del gabinete.</li>
+                <li>Dos contenedores individuales desmontables con <strong>tapa y jaladera integradas</strong> para f&aacute;cil vaciado y limpieza.</li>
+                <li>Incluye <strong>marco portacontenedor</strong> estructural dentro del sistema.</li>
+                <li>Rieles de extracci&oacute;n total con <strong>cierre suave</strong>.</li>
+              </ul>
+              <div class="select-card-footer">
+                <span class="acc-dim-pill">Doble contenedor con tapa &bull; Marco incluido &bull; Cierre suave</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- Tabla Técnica Resumen en Acordeón Nativo (<details>) -->
+        <details class="closets-specs-Accordion select-specs-accordion">
+          <summary>
+            <span>Ver Ficha T&eacute;cnica Comparativa de los 10 Accesorios &ldquo;Select&rdquo; para Cocina</span>
+          </summary>
+          <div class="table-responsive" style="margin-top: 18px;">
+            <table class="closets-matrix-table is-compact">
+              <thead>
+                <tr>
+                  <th>Sistema Select</th>
+                  <th>Zona de Cocina</th>
+                  <th>Niveles / Capacidad</th>
+                  <th>Mecanismo &amp; Equipamiento</th>
+                  <th>Compatibilidad / Configuraci&oacute;n</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Pantry Select</strong></td>
+                  <td>Despensa alta</td>
+                  <td>5 niveles &bull; 8 kg por bandeja</td>
+                  <td>Giratorio 360&deg; con retorno autom&aacute;tico, anti-rayaduras</td>
+                  <td>Apertura izquierda o derecha &bull; Altura ajustable</td>
+                </tr>
+                <tr>
+                  <td><strong>Elevador de Alacena Select</strong></td>
+                  <td>Alacena superior</td>
+                  <td>3 rangos: 0&ndash;6 / 6&ndash;12 / 12&ndash;18 kg</td>
+                  <td>Elevable manual con parada multiposici&oacute;n y amortiguaci&oacute;n</td>
+                  <td>Engranes regulables seg&uacute;n carga &bull; Ajuste de altura</td>
+                </tr>
+                <tr>
+                  <td><strong>Elevador El&eacute;ctrico Select</strong></td>
+                  <td>Alacena superior</td>
+                  <td>2 bandejas &bull; Soporte total 15 kg</td>
+                  <td>Motor 38 dB, sensor de movimiento, anti-obst&aacute;culos, LED c&aacute;lido</td>
+                  <td>Bandejas desmontables con piso de cristal negro</td>
+                </tr>
+                <tr>
+                  <td><strong>LeMans Select</strong></td>
+                  <td>Gabinete esquinero</td>
+                  <td>2 niveles en media luna</td>
+                  <td>Rotaci&oacute;n en 2 ejes con piso texturizado antideslizante</td>
+                  <td>Puerta de 450 mm &bull; Apertura izquierda o derecha</td>
+                </tr>
+                <tr>
+                  <td><strong>Magic Corner Select</strong></td>
+                  <td>Gabinete esquinero</td>
+                  <td>2 niveles (4 canastillas)</td>
+                  <td>Extracci&oacute;n lateral dividida con desplazamiento independiente</td>
+                  <td>Puerta de 450 mm &bull; Apertura izquierda o derecha</td>
+                </tr>
+                <tr>
+                  <td><strong>Especiero Premium Select</strong></td>
+                  <td>Gabinete bajo</td>
+                  <td>3 niveles &bull; 6 zonas escalonadas</td>
+                  <td>Costados de cristal, portacuchillos madera, cierre suave</td>
+                  <td>Contenedores desmontables de f&aacute;cil limpieza</td>
+                </tr>
+                <tr>
+                  <td><strong>Especiero Select</strong></td>
+                  <td>Gabinete bajo estrecho</td>
+                  <td>2 niveles verticales</td>
+                  <td>Correderas de extensi&oacute;n total con cierre suave</td>
+                  <td>Instalaci&oacute;n lateral en costado derecho sujeto al frente</td>
+                </tr>
+                <tr>
+                  <td><strong>Organizador de Utensilios</strong></td>
+                  <td>Caj&oacute;n de cocina</td>
+                  <td>3 medidas: 100 / 150 / 200 mm</td>
+                  <td>Marcos modulares combinables de distribuci&oacute;n libre</td>
+                  <td>Sobrepuesto en piso de caj&oacute;n &bull; Apto Contenedor Select</td>
+                </tr>
+                <tr>
+                  <td><strong>Contenedor Select</strong></td>
+                  <td>Caj&oacute;n de cocina</td>
+                  <td>2 formatos: A y B</td>
+                  <td>Contenedores modulares desmontables para cuberter&iacute;a</td>
+                  <td>Sobrepuesto dentro del Organizador de Utensilios Select</td>
+                </tr>
+                <tr>
+                  <td><strong>Basurero Doble Select</strong></td>
+                  <td>Bajo tarja / caj&oacute;n</td>
+                  <td>2 contenedores con tapa y asa</td>
+                  <td>Sistema oculto con marco portacontenedor y cierre suave</td>
+                  <td>Integrado en caj&oacute;n extra&iacute;ble, invisible al exterior</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </details>
       </div>
+    </section>
 
-      <!-- Galería de Perspectivas de Cocinas Reales Finezza -->
-      <div class="closets-block" id="galeriaCocinas">
-        <div class="section-header-row">
-          <div>
-            <span class="eyebrow">PERSPECTIVAS ARQUITECT&Oacute;NICAS &bull; PROYECTOS FINEZZA</span>
-            <h3 class="editorial-h2">Di&aacute;logo entre <em>cocina, estancia y doble altura.</em></h3>
-          </div>
-          <p class="section-intro-copy">
-            Cada cocina Finezza se proyecta a la medida exacta de la arquitectura residencial, integrando iluminaci&oacute;n c&aacute;lida indirecta, vitrinas en cristal fum&eacute; y herrajes europeos ocultos.
-          </p>
-        </div>
-
-        <div class="islands-2025-grid">
-          <article class="island-2025-card">
-            <div class="island-img-pair">
-              <img src="assets/portada-finezza.jpg" alt="Perspectiva integral de cocina en isla de m&aacute;rmol y estancia" loading="lazy" style="grid-column: span 2; height: 280px;">
-            </div>
-            <div class="island-card-body">
-              <span class="island-badge is-gold">PERSPECTIVA INTEGRAL</span>
-              <h4>Cocina en Isla Monol&iacute;tica &amp; Librero Doble Altura</h4>
-              <p>Integraci&oacute;n abierta donde los vol&uacute;menes de nogal y m&aacute;rmol de la cocina dialogan directamente con el librero monumental y la sala principal.</p>
-            </div>
-          </article>
-
-          <article class="island-2025-card">
-            <div class="island-img-pair">
-              <img src="assets/portada-03-arquitectura-terraza.jpg" alt="Conexi&oacute;n interior-exterior de cocina hacia terraza" loading="lazy" style="grid-column: span 2; height: 280px;">
-            </div>
-            <div class="island-card-body">
-              <span class="island-badge">CONEXI&Oacute;N INTERIOR&ndash;EXTERIOR</span>
-              <h4>Apertura hacia Terraza &amp; Jard&iacute;n</h4>
-              <p>Configuraci&oacute;n de planta libre que conecta visual y funcionalmente el coraz&oacute;n gastron&oacute;mico interior con la terraza outdoor.</p>
-            </div>
-          </article>
-
-          <article class="island-2025-card">
-            <div class="island-img-pair">
-              <img src="assets/portada-panoramica-invertida.jpg" alt="Simetr&iacute;a italiana en cocina abierta y ventanal reticular" loading="lazy" style="grid-column: span 2; height: 280px;">
-            </div>
-            <div class="island-card-body">
-              <span class="island-badge">SIMETR&Iacute;A ITALIANA</span>
-              <h4>Proporci&oacute;n &Aacute;urea &amp; Ventanales Monumentales</h4>
-              <p>Modulaci&oacute;n milim&eacute;trica de torres de hornos, refrigeraci&oacute;n panelable y alacenas superiores con apertura asistida.</p>
-            </div>
-          </article>
-
-          <article class="island-2025-card">
-            <div class="island-img-pair">
-              <img src="assets/portada-02-estancia.jpg" alt="Atm&oacute;sfera nocturna en cocina y estancia Finezza" loading="lazy" style="grid-column: span 2; height: 280px;">
-            </div>
-            <div class="island-card-body">
-              <span class="island-badge">ESCENOGRAF&Iacute;A LUM&Iacute;NICA 2700K</span>
-              <h4>Luz de Atardecer &amp; Vitrinas Iluminadas</h4>
-              <p>Circuitos independientes de iluminaci&oacute;n LED c&aacute;lida empotrada en golas, nichos, zoclos y vitrinas de cristal templado.</p>
-            </div>
-          </article>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ==========================================================================
-       EL HILO CONDUCTOR: MATERIALIDAD ITALIANA INTERACTIVA
-       ========================================================================== -->
-  <section class="materials-section" id="materialidad">
-    <div class="container">
-      <div class="materials-layout">
-        <div class="materials-info">
-          <span class="eyebrow">04 / EL HILO CONDUCTOR</span>
-          <h2 class="editorial-h2">Materiales que hablan <em>el mismo idioma.</em></h2>
-          <p class="materials-lead">
-            El secreto de las grandes residencias contempor&aacute;neas italianas es la coherencia material. En Finezza seleccionamos una paleta curada para tu cocina y la declinamos con sutileza en tu sala, vestidor, ba&ntilde;o y terraza.
-          </p>
-
-          <div class="palette-selector" role="tablist" aria-label="Paletas de dise&ntilde;o Finezza">
-            <button class="palette-btn active" data-palette="milano" role="tab" aria-selected="true">
-              <span class="swatch-group">
-                <span class="swatch" style="background:#3b2d23;"></span>
-                <span class="swatch" style="background:#d8d2c7;"></span>
-                <span class="swatch" style="background:#1e1e1e;"></span>
-              </span>
-              <span class="palette-text">
-                <strong>Atm&oacute;sfera Milano Notte</strong>
-                <small>Nogal Canaletto + Piedra Travertino Mate + Aluminio Grafito</small>
-              </span>
-            </button>
-
-            <button class="palette-btn" data-palette="como" role="tab" aria-selected="false">
-              <span class="swatch-group">
-                <span class="swatch" style="background:#e6dfd5;"></span>
-                <span class="swatch" style="background:#b99d7c;"></span>
-                <span class="swatch" style="background:#8c857b;"></span>
-              </span>
-              <span class="palette-text">
-                <strong>Atm&oacute;sfera Lago di Como</strong>
-                <small>Laca Seda Arena + Roble Natural + M&aacute;rmol Calacatta C&aacute;lido</small>
-              </span>
-            </button>
-
-            <button class="palette-btn" data-palette="torino" role="tab" aria-selected="false">
-              <span class="swatch-group">
-                <span class="swatch" style="background:#26282a;"></span>
-                <span class="swatch" style="background:#594a3c;"></span>
-                <span class="swatch" style="background:#9a7b56;"></span>
-              </span>
-              <span class="palette-text">
-                <strong>Atm&oacute;sfera Torino Monolith</strong>
-                <small>Fenix Negro Anti-huella + Eucalipto Ahumado + Bronce Cepillado</small>
-              </span>
-            </button>
-          </div>
-        </div>
-
-        <div class="materials-showcase" id="palettePreview">
-          <div class="palette-card">
-            <div class="palette-card-header">
-              <span class="palette-tag" id="paletteCode">PALETA ARQUITECT&Oacute;NICA 01</span>
-              <h3 id="paletteTitle">Atm&oacute;sfera Milano Notte</h3>
-            </div>
-            <p id="paletteDesc">
-              Ideal para residencias de planta abierta donde la cocina convive directamente con el living y el comedor. Combina la calidez profunda del nogal italiano con superficies p&eacute;treas de poro cerrado.
+    <!-- ==========================================================================
+         EL HILO CONDUCTOR: MATERIALIDAD INTERACTIVA
+         ========================================================================== -->
+    <section class="materials-section" id="materialidad">
+      <div class="container">
+        <div class="materials-layout">
+          <div class="materials-info">
+            <span class="eyebrow">03 / EL HILO CONDUCTOR</span>
+            <h2 class="editorial-h2">Materiales que hablan <em>el mismo idioma.</em></h2>
+            <p class="materials-lead">
+              Partimos de tu cocina para construir la armon&iacute;a del resto de tu casa. En Finezza curamos una paleta de maderas, cubiertas y tonos mate que puede extenderse con coherencia hacia tu living, cl&oacute;sets, rec&aacute;mara, puertas y terraza.
             </p>
-            <div class="continuity-timeline">
-              <div class="continuity-step">
-                <span class="step-room">En la Cocina</span>
-                <p id="stepKitchen">Isla monol&iacute;tica en piedra sinterizada tono travertino con columnas ocultas en Nogal Canaletto.</p>
+
+            <div class="palette-selector" role="tablist" aria-label="Paletas de dise&ntilde;o Finezza">
+              <button type="button" class="palette-btn active" data-palette="milano" role="tab" aria-selected="true">
+                <span class="swatch-group">
+                  <span class="swatch" style="background:#3b2d23;"></span>
+                  <span class="swatch" style="background:#d8d2c7;"></span>
+                  <span class="swatch" style="background:#1e1e1e;"></span>
+                </span>
+                <span class="palette-text">
+                  <strong>Atm&oacute;sfera Milano Notte</strong>
+                  <small>Nogal Canaletto + Piedra Travertino Mate + Aluminio Grafito</small>
+                </span>
+              </button>
+
+              <button type="button" class="palette-btn" data-palette="como" role="tab" aria-selected="false">
+                <span class="swatch-group">
+                  <span class="swatch" style="background:#e6dfd5;"></span>
+                  <span class="swatch" style="background:#b99d7c;"></span>
+                  <span class="swatch" style="background:#8c857b;"></span>
+                </span>
+                <span class="palette-text">
+                  <strong>Atm&oacute;sfera Lago di Como</strong>
+                  <small>Laca Seda Arena + Roble Natural + M&aacute;rmol Calacatta C&aacute;lido</small>
+                </span>
+              </button>
+
+              <button type="button" class="palette-btn" data-palette="torino" role="tab" aria-selected="false">
+                <span class="swatch-group">
+                  <span class="swatch" style="background:#26282a;"></span>
+                  <span class="swatch" style="background:#594a3c;"></span>
+                  <span class="swatch" style="background:#9a7b56;"></span>
+                </span>
+                <span class="palette-text">
+                  <strong>Atm&oacute;sfera Torino Monolith</strong>
+                  <small>Fenix Negro Anti-huella + Eucalipto Ahumado + Bronce Cepillado</small>
+                </span>
+              </button>
+            </div>
+          </div>
+
+          <div class="materials-showcase" id="palettePreview">
+            <div class="palette-card">
+              <div class="palette-card-header">
+                <span class="palette-tag" id="paletteCode">PALETA ARQUITECT&Oacute;NICA 01</span>
+                <h3 id="paletteTitle">Atm&oacute;sfera Milano Notte</h3>
               </div>
-              <div class="continuity-step">
-                <span class="step-room">En Living &amp; Libreros</span>
-                <p id="stepLiving">Muro multimedia con lambr&iacute;n del mismo Nogal Canaletto y repisas met&aacute;licas en grafito.</p>
-              </div>
-              <div class="continuity-step">
-                <span class="step-room">En Rec&aacute;mara &amp; Vestidor</span>
-                <p id="stepBedroom">Vestidor con vitrinas en aluminio grafito, cristal fum&eacute; y cajoneras con interiores en piel topo.</p>
-              </div>
-              <div class="continuity-step">
-                <span class="step-room">En Terraza Outdoor</span>
-                <p id="stepOutdoor">M&oacute;dulo de asador revestido en la misma piedra ultracompacta inalterable a la intemperie.</p>
+              <p id="paletteDesc">
+                Ideal para residencias de planta abierta donde la cocina convive directamente con el living y el comedor. Combina la calidez profunda del nogal con superficies p&eacute;treas de poro cerrado.
+              </p>
+              <div class="continuity-timeline">
+                <div class="continuity-step">
+                  <span class="step-room">En la Cocina</span>
+                  <p id="stepKitchen">Isla monol&iacute;tica en piedra sinterizada tono travertino con columnas ocultas en Nogal Canaletto.</p>
+                </div>
+                <div class="continuity-step">
+                  <span class="step-room">En Living &amp; Libreros</span>
+                  <p id="stepLiving">Muro multimedia con lambr&iacute;n del mismo Nogal Canaletto y repisas met&aacute;licas en grafito.</p>
+                </div>
+                <div class="continuity-step">
+                  <span class="step-room">En Rec&aacute;mara &amp; Vestidor</span>
+                  <p id="stepBedroom">Vestidor con vitrinas en aluminio grafito, cristal fum&eacute; y cajoneras con interiores en piel topo.</p>
+                </div>
+                <div class="continuity-step">
+                  <span class="step-room">En Terraza Outdoor</span>
+                  <p id="stepOutdoor">M&oacute;dulo de asador revestido en la misma piedra ultracompacta inalterable a la intemperie.</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- FRANJA DE NAVEGACIÓN CRUZADA Y REGRESO A LA PÁGINA DE INICIO -->
-  <section class="subpage-return-strip" aria-label="Explorar otras l&iacute;neas o volver al inicio">
-    <div class="container">
-      <div class="subpage-return-card">
-        <div class="subpage-return-copy">
-          <span class="eyebrow">CONTINUIDAD ARQUITECT&Oacute;NICA FINEZZA &bull; NAVEGACI&Oacute;N POR L&Iacute;NEAS</span>
-          <h3>&iquest;Deseas regresar a la p&aacute;gina de inicio o explorar otra divisi&oacute;n?</h3>
-          <p>Todas nuestras l&iacute;neas de mobiliario comparten la misma curadur&iacute;a de materiales, herrajes europeos e ingenier&iacute;a a medida.</p>
-        </div>
-        <div class="subpage-return-links">
-          <a href="index.html" class="hero-btn">
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-              <path d="M12.5 8H3.5M3.5 8L7.5 4M3.5 8L7.5 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-            <span>Volver a la P&aacute;gina de Inicio</span>
-          </a>
-          <a href="cocinas.html" class="subpage-quick-pill">Cocinas de Autor</a>
-          <a href="vestidores.html" class="subpage-quick-pill">Vestidores (3 L&iacute;neas)</a>
-          <a href="home-office.html" class="subpage-quick-pill">Home Office On-Demand</a>
-          <a href="outdoor.html" class="subpage-quick-pill">Outdoor: Mont Alpi</a>
-          <a href="espacios-residenciales.html" class="subpage-quick-pill">Living, Rec&aacute;mara &amp; M&aacute;s</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==========================================================================
-       SECCIÓN DE CONVERSIÓN PARA CAMPAÑAS EN REDES (LEAD MAGNET + SHOWROOMS)
-       ========================================================================== -->
-  <section class="campaign-cta-section" id="cotizar">
-    <div class="container">
-      <div class="campaign-grid">
-        
-        <!-- Columna Izquierda: Propuesta de Valor & Showrooms -->
-        <div class="campaign-copy">
-          <span class="eyebrow">05 / INICIA TU PROYECTO</span>
-          <h2 class="editorial-h2">Agenda una sesi&oacute;n de <em>dise&ntilde;o privado.</em></h2>
-          <p>
-            Ya sea que est&eacute;s construyendo desde planos arquitect&oacute;nicos o renovando el coraz&oacute;n de tu residencia, nuestro equipo de arquitectos e interioristas desarrollar&aacute; una propuesta integral a medida.
-          </p>
-
-          <div class="process-steps">
-            <div class="p-step">
-              <strong>01. Diagn&oacute;stico &amp; Curadur&iacute;a</strong>
-              <span>Revisamos tus planos o levantamos medidas en sitio para definir el lenguaje material de tu hogar.</span>
-            </div>
-            <div class="p-step">
-              <strong>02. Propuesta 3D &amp; Muestrario</strong>
-              <span>Experimenta en nuestros showrooms las piedras, maderas, lacas y herrajes reales de tu proyecto.</span>
-            </div>
-            <div class="p-step">
-              <strong>03. Fabricaci&oacute;n &amp; Instalaci&oacute;n de Precisi&oacute;n</strong>
-              <span>Ejecuci&oacute;n milim&eacute;trica con garant&iacute;a y acompa&ntilde;amiento directo en obra.</span>
-            </div>
+    <!-- FRANJA DE NAVEGACIÓN CRUZADA Y REGRESO A LA PÁGINA DE INICIO -->
+    <section class="subpage-return-strip" aria-label="Explorar otras l&iacute;neas o volver al inicio">
+      <div class="container">
+        <div class="subpage-return-card">
+          <div class="subpage-return-copy">
+            <span class="eyebrow">CONTINUIDAD FINEZZA &bull; EXPANDE EL DISE&Ntilde;O AL RESTO DE TU HOGAR</span>
+            <h2>&iquest;Quieres coordinar tu cocina con otros espacios?</h2>
+            <p>Todas nuestras l&iacute;neas de mobiliario comparten la misma curadur&iacute;a de materiales, herrajes europeos e ingenier&iacute;a a la medida.</p>
           </div>
-
-          <div class="showrooms-box">
-            <h4>Showroom Finezza Quer&eacute;taro</h4>
-            <div class="showrooms-grid">
-              <div class="showroom-item">
-                <strong>Ubicaci&oacute;n Sucursal</strong>
-                <p>Blvd. Bernardo Quintana 7 D, Col. &Aacute;lamos 2da. Secci&oacute;n<br>Quer&eacute;taro, Qro. C.P. 76160</p>
-              </div>
-              <div class="showroom-item">
-                <strong>Contacto Directo</strong>
-                <p>
-                  Tel. Sucursal: <a href="tel:4422137342"><strong>442 213 73 42</strong></a><br>
-                  WhatsApp: <a href="https://wa.me/524427197102" target="_blank" rel="noopener"><strong>442 719 7102</strong></a>
-                </p>
-              </div>
-            </div>
-            <p class="showroom-hours">Atenci&oacute;n personalizada en showroom y proyectos a medida &bull; Tel: 442 213 73 42 &bull; WhatsApp: 442 719 7102</p>
-          </div>
-        </div>
-
-        <!-- Columna Derecha: Formulario interactivo para campañas de Redes Sociales -->
-        <div class="campaign-form-card">
-          <form id="leadForm" class="lead-form">
-            <div class="form-header">
-              <h3>Solicitar Cotizaci&oacute;n / Cita</h3>
-              <p>Selecciona los espacios de tu inter&eacute;s y recibe atenci&oacute;n prioritaria de un especialista en dise&ntilde;o.</p>
-            </div>
-
-            <div class="form-group">
-              <label for="clientName">Nombre completo *</label>
-              <input type="text" id="clientName" name="clientName" required placeholder="Ej. Alejandro Montemayor">
-            </div>
-
-            <div class="form-row">
-              <div class="form-group">
-                <label for="clientPhone">WhatsApp / Tel&eacute;fono *</label>
-                <input type="tel" id="clientPhone" name="clientPhone" required placeholder="442 000 0000">
-              </div>
-              <div class="form-group">
-                <label for="clientCity">Ciudad / Zona del Proyecto</label>
-                <input type="text" id="clientCity" name="clientCity" placeholder="Ej. El Campanario / Juriquilla, Qro.">
-              </div>
-            </div>
-
-            <div class="form-group">
-              <label>&iquest;Qu&eacute; espacios deseas integrar en tu proyecto? <small>(Selecciona todos los que apliquen)</small></label>
-              <div class="chips-grid" id="spacesChips">
-                <label class="chip-checkbox">
-                  <input type="checkbox" name="spaces" value="Cocina Integral" checked>
-                  <span>Cocina Integral (Core)</span>
-                </label>
-                <label class="chip-checkbox">
-                  <input type="checkbox" name="spaces" value="Vestidor / Walk-in Closet">
-                  <span>Vestidores (Core)</span>
-                </label>
-                <label class="chip-checkbox">
-                  <input type="checkbox" name="spaces" value="Living">
-                  <span>Mobiliario Living</span>
-                </label>
-                <label class="chip-checkbox">
-                  <input type="checkbox" name="spaces" value="Entretenimiento / TV">
-                  <span>Entretenimiento</span>
-                </label>
-                <label class="chip-checkbox">
-                  <input type="checkbox" name="spaces" value="Libreros">
-                  <span>Libreros</span>
-                </label>
-                <label class="chip-checkbox">
-                  <input type="checkbox" name="spaces" value="Rec&aacute;mara">
-                  <span>Rec&aacute;mara</span>
-                </label>
-                <label class="chip-checkbox">
-                  <input type="checkbox" name="spaces" value="Ba&ntilde;o">
-                  <span>Ba&ntilde;o</span>
-                </label>
-                <label class="chip-checkbox">
-                  <input type="checkbox" name="spaces" value="Pasillos y Puertas">
-                  <span>Pasillos / Lambrines</span>
-                </label>
-                <label class="chip-checkbox">
-                  <input type="checkbox" name="spaces" value="Home Office">
-                  <span>Home Office</span>
-                </label>
-                <label class="chip-checkbox">
-                  <input type="checkbox" name="spaces" value="Lavander&iacute;a">
-                  <span>Lavander&iacute;a</span>
-                </label>
-                <label class="chip-checkbox">
-                  <input type="checkbox" name="spaces" value="Outdoor / Asador en Terraza">
-                  <span>Outdoor (Asador Terraza)</span>
-                </label>
-              </div>
-            </div>
-
-            <div class="form-group">
-              <label for="closetLineSelect">L&iacute;nea de Cl&oacute;set / Vestidor de Inter&eacute;s <small>(Si deseas cotizar una de las 3 l&iacute;neas de f&aacute;brica)</small></label>
-              <select id="closetLineSelect" name="closetLineSelect">
-                <option value="">&mdash; Sin selecci&oacute;n espec&iacute;fica / Proyecto general &mdash;</option>
-                <optgroup label="Las 3 L&iacute;neas Definidas por F&aacute;brica (Lanzamiento 2025)">
-                  <option value="L&iacute;nea 01: Cl&oacute;set Modular (M&oacute;dulos individuales / Tornillo)">L&iacute;nea 01: Cl&oacute;set Modular &mdash; M&oacute;dulos individuales, Fondo o Manguete, Tornillo (Armado/Desarmado)</option>
-                  <option value="L&iacute;nea 02: Cl&oacute;set Libre (Sin l&iacute;mite de ancho / Rafix interno)">L&iacute;nea 02: Cl&oacute;set Libre &mdash; Sin l&iacute;mite de ancho, Fondo o Manguete, Rafix interno (-14% a -32%)</option>
-                  <option value="L&iacute;nea 03: Cl&oacute;set Light 2025 (Verticales 400mm y Horizontales 600mm)">L&iacute;nea 03: Cl&oacute;set Light (2025) &mdash; Manguete, Rafix interno, Verticales 400mm y Horizontales 600mm (-19% a -37%)</option>
-                </optgroup>
-                <optgroup label="Islas Centrales &amp; Configuraciones Especiales">
-                  <option value="Walk-in Closet con Isla 8 Cajones Organizador c/ Vidrio">Walk-in Closet con Isla Doble (8 Cajones Organizador c/ Vidrio)</option>
-                  <option value="Walk-in Closet con Isla 16 Cajones Organizador c/ Vidrio">Walk-in Closet con Isla Cu&aacute;druple (16 Cajones Organizador c/ Vidrio)</option>
-                  <option value="Cl&oacute;set Fondo 400 mm (Espacios Reducidos / Sin Puertas)">Cl&oacute;set Fondo 400 mm (Espacios Reducidos / Sin Puertas)</option>
-                  <option value="Cl&oacute;set Fondo 600 mm (Con Puertas y Accesorios)">Cl&oacute;set Fondo 600 mm (Con Puertas y 16 Accesorios)</option>
-                </optgroup>
-              </select>
-            </div>
-
-            <div class="form-group">
-              <label for="homeOfficeModelSelect">Mueble Home Office / Workstation On-Demand <small>(Si deseas cotizar un modelo o configuraci&oacute;n espec&iacute;fica)</small></label>
-              <select id="homeOfficeModelSelect" name="homeOfficeModelSelect">
-                <option value="">&mdash; Sin selecci&oacute;n espec&iacute;fica / Proyecto general &mdash;</option>
-                <optgroup label="Familia Habitat Essenziale (8 Modelos On-Demand)">
-                  <option value="Habitat Essenziale &mdash; Nuvola L (Workstation en esquina 200 x 140 x 180 cm &mdash; Desde $24,900 MXN)">Nuvola L &mdash; Workstation en esquina (200 &times; 140 &times; 180 cm) &bull; Configurador Activo ($24,900 MXN base)</option>
-                  <option value="Habitat Essenziale &mdash; Sospeso (Escritorio suspendido 140 x 60 x 75 cm)">Sospeso &mdash; Escritorio suspendido con cajonera y estante a&eacute;reo (140 &times; 60 &times; 75 cm)</option>
-                  <option value="Habitat Essenziale &mdash; Levita 18 (Escritorio mural integrado 180 x 50 x 200 cm)">Levita 18 &mdash; Escritorio mural integrado con torre y m&oacute;dulo a&eacute;reo (180 &times; 50 &times; 200 cm)</option>
-                  <option value="Habitat Essenziale &mdash; Levita 22 (Escritorio mural integrado 220 x 50 x 200 cm)">Levita 22 &mdash; Escritorio mural integrado extendido (220 &times; 50 &times; 200 cm)</option>
-                  <option value="Habitat Essenziale &mdash; Nuvola 18 (Workstation ligero 180 x 60 x 180 cm)">Nuvola 18 &mdash; Workstation ligero con estantes abiertos y m&oacute;dulo a&eacute;reo (180 &times; 60 &times; 180 cm)</option>
-                  <option value="Habitat Essenziale &mdash; Nuvola 22 (Workstation ligero 220 x 60 x 180 cm)">Nuvola 22 &mdash; Workstation ligero amplio con estantes abiertos (220 &times; 60 &times; 180 cm)</option>
-                  <option value="Habitat Essenziale &mdash; Studente (Escritorio juvenil 120 x 55 x 160 cm)">Studente &mdash; Escritorio juvenil con cajonera, nicho y estante superior (120 &times; 55 &times; 160 cm)</option>
-                  <option value="Habitat Essenziale &mdash; Zen (Workstation minimalista 130 x 50 x 75 cm)">Zen &mdash; Workstation minimalista con panel de listones y m&oacute;dulo flotante (130 &times; 50 &times; 75 cm)</option>
-                </optgroup>
-                <optgroup label="Familia Spazio Studio (8 Modelos Ejecutivos 38 mm)">
-                  <option value="Spazio Studio &mdash; Volo (Escritorio de autor 160 x 75 x 75 cm)">Volo &mdash; Escritorio de autor con pata estructural suspendida y cajonera flotante (160 &times; 75 &times; 75 cm)</option>
-                  <option value="Spazio Studio &mdash; Alcova 18 (Escritorio mural integrado 180 x 60 x 180 cm)">Alcova 18 &mdash; Escritorio mural integrado con torre y m&oacute;dulo a&eacute;reo (180 &times; 60 &times; 180 cm)</option>
-                  <option value="Spazio Studio &mdash; Alcova 22 (Escritorio mural integrado 220 x 60 x 180 cm)">Alcova 22 &mdash; Escritorio mural integrado extendido (220 &times; 60 &times; 180 cm)</option>
-                  <option value="Spazio Studio &mdash; Aero 18 (Workstation ejecutivo 180 x 80 x 210 cm)">Aero 18 &mdash; Workstation ejecutivo con torre de almacenamiento y librero a&eacute;reo (180 &times; 80 &times; 210 cm)</option>
-                  <option value="Spazio Studio &mdash; Aero 22 (Workstation ejecutivo 220 x 80 x 210 cm)">Aero 22 &mdash; Workstation ejecutivo amplio con torre y librero a&eacute;reo (220 &times; 80 &times; 210 cm)</option>
-                  <option value="Spazio Studio &mdash; Aero Angolo (Workstation en esquina 200 x 160 x 210 cm)">Aero Angolo &mdash; Workstation ejecutivo en esquina con torre y librero a&eacute;reo (200 &times; 160 &times; 210 cm)</option>
-                  <option value="Spazio Studio &mdash; Universita (Centro de estudio y archivo 150 x 70 x 190 cm)">Universita &mdash; Centro de estudio y trabajo con m&oacute;dulos de archivo y estanter&iacute;a (150 &times; 70 &times; 190 cm)</option>
-                  <option value="Spazio Studio &mdash; Cubica (Workstation compacto 120 x 60 x 160 cm)">Cubica &mdash; Workstation compacto con cubos de almacenamiento modulares (120 &times; 60 &times; 160 cm)</option>
-                </optgroup>
-              </select>
-            </div>
-
-            <div class="form-group">
-              <label for="outdoorModelSelect">Composici&oacute;n Outdoor Mont Alpi / Thor <small>(Si deseas cotizar u ordenar una isla de asador)</small></label>
-              <select id="outdoorModelSelect" name="outdoorModelSelect">
-                <option value="">&mdash; Sin selecci&oacute;n espec&iacute;fica / Proyecto general &mdash;</option>
-                <optgroup label="Mont Alpi Original Series &mdash; 6 Quemadores (115,000 BTU)">
-                  <option value="Mont Alpi MAi805-D (Isla 6 Quemadores)">MAi805-D &mdash; Isla Original Deluxe 6 Quemadores (94")</option>
-                  <option value="Mont Alpi MAi805-DFC (6 Quemadores + Refrigerador)">MAi805-DFC &mdash; Isla 6 Quemadores + Gabinete Refrigerador (119")</option>
-                  <option value="Mont Alpi MAi805-DBEV (6 Quemadores + Centro de Bebidas)">MAi805-DBEV &mdash; Isla 6 Quemadores + Centro de Bebidas y Tarja (132")</option>
-                  <option value="Mont Alpi MAi805-DKEG (6 Quemadores + Kegerator)">MAi805-DKEG &mdash; Isla 6 Quemadores + M&oacute;dulo Kegerator 3 Grifos (119")</option>
-                  <option value="Mont Alpi MAi805-D90FC (Esquina 90&deg; + Refrigerador)">MAi805-D90FC &mdash; Isla en &laquo;L&raquo; 90&deg; 6 Quemadores + Refrigerador</option>
-                  <option value="Mont Alpi MAi805-D90BEV (Esquina 90&deg; + Centro de Bebidas)">MAi805-D90BEV &mdash; Isla en &laquo;L&raquo; 90&deg; 6 Quemadores + Centro de Bebidas</option>
-                  <option value="Mont Alpi MAi805-D90KEG (Esquina 90&deg; + Kegerator)">MAi805-D90KEG &mdash; Isla en &laquo;L&raquo; 90&deg; 6 Quemadores + Kegerator</option>
-                </optgroup>
-                <optgroup label="Mont Alpi Original Series &mdash; 4 Quemadores (78,000 BTU)">
-                  <option value="Mont Alpi MAi400-D (Isla 4 Quemadores)">MAi400-D &mdash; Isla Original Deluxe 4 Quemadores (82")</option>
-                  <option value="Mont Alpi MAi400-DFC (4 Quemadores + Refrigerador)">MAi400-DFC &mdash; Isla 4 Quemadores + Gabinete Refrigerador (107")</option>
-                  <option value="Mont Alpi MAi400-DBEV (4 Quemadores + Centro de Bebidas)">MAi400-DBEV &mdash; Isla 4 Quemadores + Centro de Bebidas y Tarja (120")</option>
-                </optgroup>
-                <optgroup label="Thor Appliances &amp; M&oacute;dulos Individuales">
-                  <option value="Equipos Thor Appliances Outdoor">Equipos Thor Appliances&reg; (Asesor&iacute;a de cat&aacute;logo)</option>
-                  <option value="M&oacute;dulos o Accesorios Individuales Mont Alpi">M&oacute;dulos adicionales / Accesorios Mont Alpi&reg;</option>
-                </optgroup>
-              </select>
-            </div>
-
-            <div class="form-row">
-              <div class="form-group">
-                <label for="projectStage">Etapa de tu proyecto</label>
-                <select id="projectStage" name="projectStage">
-                  <option value="En planos arquitect&oacute;nicos">En planos arquitect&oacute;nicos</option>
-                  <option value="Obra gris / en construcci&oacute;n">Obra gris / en construcci&oacute;n</option>
-                  <option value="Remodelaci&oacute;n residencial">Remodelaci&oacute;n residencial</option>
-                  <option value="Soy Arquitecto / Interiorista">Soy Arquitecto / Desarrollador</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label for="preferredShowroom">Preferencia de atenci&oacute;n</label>
-                <select id="preferredShowroom" name="preferredShowroom">
-                  <option value="Showroom Quer&eacute;taro (Blvd. Bernardo Quintana 7 D)">Visita Showroom Quer&eacute;taro (Bernardo Quintana 7 D)</option>
-                  <option value="Visita en Obra / Domicilio en Quer&eacute;taro">Cita en Obra / Domicilio (Quer&eacute;taro)</option>
-                  <option value="Videollamada inicial">Videollamada de diagn&oacute;stico</option>
-                </select>
-              </div>
-            </div>
-
-            <button type="submit" class="submit-btn">
-              <span>Agendar Asesor&iacute;a Personalizada</span>
+          <div class="subpage-return-links">
+            <a href="index.html" class="hero-btn">
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-                <path d="M3.5 8H12.5M12.5 8L8.5 4M12.5 8L8.5 12" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M12.5 8H3.5M3.5 8L7.5 4M3.5 8L7.5 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
-            </button>
-
-            <p class="form-footnote" id="formFeedback" aria-live="polite">
-              Trato directo con arquitectos proyectistas. Tus datos est&aacute;n protegidos.
-            </p>
-          </form>
+              <span>Volver al Inicio</span>
+            </a>
+            <a href="vestidores.html" class="subpage-quick-pill">Closets &amp; Vestidores</a>
+            <a href="living.html" class="subpage-quick-pill">Living</a>
+            <a href="entretenimiento.html" class="subpage-quick-pill">Entretenimiento</a>
+            <a href="home-office.html" class="subpage-quick-pill">Home Office</a>
+            <a href="recamaras.html" class="subpage-quick-pill">Rec&aacute;maras</a>
+            <a href="puertas.html" class="subpage-quick-pill">Puertas</a>
+            <a href="mobiliario-autor.html" class="subpage-quick-pill">Mobiliario de Autor</a>
+            <a href="outdoor.html" class="subpage-quick-pill">Outdoor</a>
+          </div>
         </div>
-
       </div>
-    </div>
-  </section>
+    </section>
+
+    <!-- ==========================================================================
+         SECCIÓN DE CONVERSIÓN Y SHOWROOM QUERÉTARO
+         ========================================================================== -->
+    <section class="campaign-cta-section" id="cotizar">
+      <div class="container">
+        <div class="campaign-grid">
+
+          <!-- Columna Izquierda: Proceso & Showroom -->
+          <div class="campaign-copy">
+            <span class="eyebrow">04 / INICIA TU PROYECTO</span>
+            <h2 class="editorial-h2">Agenda una sesi&oacute;n de <em>dise&ntilde;o para tu cocina.</em></h2>
+            <p>
+              Ya sea que est&eacute;s construyendo desde planos o renovando tu cocina actual, nuestro equipo desarrollar&aacute; una propuesta funcional y a la medida de tu espacio y presupuesto.
+            </p>
+
+            <div class="process-steps">
+              <div class="p-step">
+                <strong>01. Diagn&oacute;stico &amp; Medidas</strong>
+                <span>Revisamos tus planos o levantamos medidas en sitio para optimizar distribuci&oacute;n, almacenaje y recorridos.</span>
+              </div>
+              <div class="p-step">
+                <strong>02. Propuesta 3D &amp; Muestrario</strong>
+                <span>Conoce en nuestro showroom las cubiertas, maderas, tonos mate y herrajes reales antes de fabricar.</span>
+              </div>
+              <div class="p-step">
+                <strong>03. Fabricaci&oacute;n Automatizada &amp; 10 A&ntilde;os de Garant&iacute;a</strong>
+                <span>Manufactura de precisi&oacute;n con procesos certificados en planta, instalaci&oacute;n especializada y el respaldo de 10 a&ntilde;os de garant&iacute;a Finezza.</span>
+              </div>
+            </div>
+
+            <div class="showrooms-box">
+              <h3>Showroom Finezza Quer&eacute;taro</h3>
+              <div class="showrooms-grid">
+                <div class="showroom-item">
+                  <strong>Ubicaci&oacute;n Sucursal</strong>
+                  <p>Blvd. Bernardo Quintana 7 D, Col. &Aacute;lamos 2da. Secci&oacute;n<br>Quer&eacute;taro, Qro. C.P. 76160</p>
+                </div>
+                <div class="showroom-item">
+                  <strong>Contacto Directo</strong>
+                  <p>
+                    Tel. Sucursal: <a href="tel:4422137342"><strong>442 213 73 42</strong></a><br>
+                    WhatsApp: <a href="https://wa.me/524427197102" target="_blank" rel="noopener"><strong>442 719 7102</strong></a>
+                  </p>
+                </div>
+              </div>
+              <p class="showroom-hours">Atenci&oacute;n personalizada en showroom y proyectos a medida &bull; Tel: 442 213 73 42 &bull; WhatsApp: 442 719 7102</p>
+            </div>
+          </div>
+
+          <!-- Columna Derecha: Formulario limpio homologado con index.html -->
+          <div class="campaign-form-card">
+            <form id="leadForm" class="lead-form">
+              <div class="form-header">
+                <h3>Solicitar Cotizaci&oacute;n / Cita</h3>
+                <p>Selecciona tu cocina y cualquier otro espacio que quieras integrar para recibir atenci&oacute;n directa.</p>
+              </div>
+
+              <div class="form-group">
+                <label for="clientName">Nombre completo *</label>
+                <input type="text" id="clientName" name="clientName" autocomplete="name" required placeholder="Ej. Alejandro Montemayor">
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="clientPhone">WhatsApp / Tel&eacute;fono *</label>
+                  <input type="tel" id="clientPhone" name="clientPhone" autocomplete="tel" inputmode="tel" required placeholder="442 000 0000">
+                </div>
+                <div class="form-group">
+                  <label for="clientCity">Ciudad / Zona del Proyecto</label>
+                  <input type="text" id="clientCity" name="clientCity" autocomplete="address-level2" placeholder="Ej. El Campanario / Juriquilla, Qro.">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label>&iquest;Qu&eacute; espacios deseas integrar en tu proyecto? <small>(Activa todos los que apliquen)</small></label>
+                <div class="chips-grid" id="spacesChips">
+                  <label class="chip-checkbox">
+                    <input type="checkbox" name="spaces" value="Cocinas" checked>
+                    <span>Cocinas</span>
+                  </label>
+                  <label class="chip-checkbox">
+                    <input type="checkbox" name="spaces" value="Closets y Vestidores">
+                    <span>Closets</span>
+                  </label>
+                  <label class="chip-checkbox">
+                    <input type="checkbox" name="spaces" value="Living">
+                    <span>Living</span>
+                  </label>
+                  <label class="chip-checkbox">
+                    <input type="checkbox" name="spaces" value="Entretenimiento">
+                    <span>Entretenimiento</span>
+                  </label>
+                  <label class="chip-checkbox">
+                    <input type="checkbox" name="spaces" value="Home Office">
+                    <span>Home Office</span>
+                  </label>
+                  <label class="chip-checkbox">
+                    <input type="checkbox" name="spaces" value="Rec&aacute;maras">
+                    <span>Rec&aacute;maras</span>
+                  </label>
+                  <label class="chip-checkbox">
+                    <input type="checkbox" name="spaces" value="Puertas de Intercomunicaci&oacute;n">
+                    <span>Puertas Intercomunicaci&oacute;n</span>
+                  </label>
+                  <label class="chip-checkbox">
+                    <input type="checkbox" name="spaces" value="Mobiliario de Autor">
+                    <span>Mobiliario de Autor</span>
+                  </label>
+                  <label class="chip-checkbox">
+                    <input type="checkbox" name="spaces" value="Outdoor">
+                    <span>Outdoor</span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="projectStage">Etapa de tu proyecto</label>
+                  <select id="projectStage" name="projectStage">
+                    <option value="En planos arquitect&oacute;nicos">En planos arquitect&oacute;nicos</option>
+                    <option value="Obra gris / en construcci&oacute;n">Obra gris / en construcci&oacute;n</option>
+                    <option value="Remodelaci&oacute;n residencial">Remodelaci&oacute;n residencial</option>
+                    <option value="Soy Arquitecto / Desarrollador">Soy Arquitecto / Desarrollador</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="preferredShowroom">Preferencia de atenci&oacute;n</label>
+                  <select id="preferredShowroom" name="preferredShowroom">
+                    <option value="Showroom Quer&eacute;taro (Blvd. Bernardo Quintana 7 D)">Visita Showroom Quer&eacute;taro (Bernardo Quintana 7 D)</option>
+                    <option value="Visita en Obra / Domicilio en Quer&eacute;taro">Cita en Obra / Domicilio (Quer&eacute;taro)</option>
+                    <option value="Videollamada inicial">Videollamada de diagn&oacute;stico</option>
+                  </select>
+                </div>
+              </div>
+
+              <button type="submit" class="submit-btn">
+                <span>Agendar Asesor&iacute;a Personalizada</span>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                  <path d="M3.5 8H12.5M12.5 8L8.5 4M12.5 8L8.5 12" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+
+              <p class="form-footnote" id="formFeedback" aria-live="polite">
+                Trato directo con proyectistas especialistas en cocinas. Tus datos est&aacute;n protegidos.
+              </p>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
 
   <!-- ==========================================================================
-       PIE DE PÁGINA (FOOTER)
+       PIE DE PÁGINA (FOOTER HOMOLOGADO)
        ========================================================================== -->
   <footer class="site-footer">
     <div class="container">
       <div class="footer-top">
         <div class="footer-brand-col">
-          <a href="index.html" class="footer-logo-link" aria-label="Finezza Cocinas &mdash; Volver al inicio">
-            <img 
-              src="assets/logo-finezza-white.png" 
-              alt="FINEZZA Cocinas" 
+          <a href="index.html" class="footer-logo-link" aria-label="Finezza Quer&eacute;taro &mdash; Volver al inicio">
+            <img
+              src="assets/logo-finezza-white.png"
+              alt="FINEZZA Interiores"
               class="footer-logo-img"
               width="210"
               height="58"
               loading="lazy">
           </a>
-          <p>Mobiliario de autor inspirado en el dise&ntilde;o moderno italiano. Cocinas integrales, vestidores y arquitectura interior residencial a medida.</p>
+          <p>Especialistas en cocinas integrales en Quer&eacute;taro. Acercamos el dise&ntilde;o contempor&aacute;neo de inspiraci&oacute;n italiana a todo tu hogar a la medida de tu espacio y presupuesto.</p>
         </div>
         <div class="footer-links-col">
-          <h5>Core Business</h5>
+          <h5>Especialidad Core</h5>
           <ul>
-            <li><a href="cocinas.html">Cocinas Integrales de Autor</a></li>
-            <li><a href="vestidores.html">Vestidores &amp; Walk-in Closets (3 L&iacute;neas)</a></li>
-            <li><a href="index.html#materialidad">Piedras Sinterizadas &amp; Maderas</a></li>
+            <li><a href="cocinas.html">Cocinas Integrales</a></li>
+            <li><a href="vestidores.html">Closets &amp; Vestidores</a></li>
+            <li><a href="puertas.html">Puertas de Intercomunicaci&oacute;n</a></li>
           </ul>
         </div>
         <div class="footer-links-col">
-          <h5>H&aacute;bitat Integral</h5>
+          <h5>Otros Espacios</h5>
           <ul>
-            <li><a href="espacios-residenciales.html">Living, Entretenimiento, Rec&aacute;mara &amp; Ba&ntilde;o</a></li>
-            <li><a href="home-office.html">Home Office: Spazio Studio &amp; Habitat</a></li>
-            <li><a href="outdoor.html">Outdoor: Mont Alpi &amp; Thor Appliances</a></li>
+            <li><a href="living.html">Living &amp; Estancias</a></li>
+            <li><a href="entretenimiento.html">Entretenimiento</a></li>
+            <li><a href="home-office.html">Home Office</a></li>
+            <li><a href="recamaras.html">Rec&aacute;maras</a></li>
+            <li><a href="mobiliario-autor.html">Mobiliario de Autor</a></li>
+            <li><a href="outdoor.html">Outdoor</a></li>
           </ul>
         </div>
         <div class="footer-links-col">
@@ -579,175 +1174,166 @@
       </div>
       <div class="footer-bottom">
         <span>&copy; 2026 FINEZZA &mdash; Todos los derechos reservados.</span>
-        <span>Dise&ntilde;o Moderno Italiano &bull; Quer&eacute;taro, Qro., M&eacute;xico</span>
+        <span>Especialistas en Cocinas &amp; Dise&ntilde;o Contempor&aacute;neo &bull; Quer&eacute;taro, Qro., M&eacute;xico</span>
       </div>
     </div>
   </footer>
 
-  <script src="script.js"></script>
   <!-- ========================================================================
-       MODAL GALERÍA DE PROYECTOS DE COCINAS & LIGHTBOX ZOOM
+       DIÁLOGO NATIVO: GALERÍA DE PROYECTOS DE COCINAS & LIGHTBOX ZOOM
        ======================================================================== -->
-  <div class="ho-modal-galeria" id="modalGaleriaCocinas" onclick="cerrarGaleriaCocinas()" role="dialog" aria-modal="true" aria-labelledby="galeria-titulo-cocinas">
-    <div class="ho-modal-galeria-contenido" onclick="event.stopPropagation()">
-      <button type="button" class="ho-galeria-cerrar" onclick="cerrarGaleriaCocinas()" aria-label="Cerrar galer&iacute;a">&times;</button>
+  <dialog class="kitchen-gallery-dialog" id="modalGaleriaCocinas" closedby="any" aria-labelledby="galeria-titulo-cocinas">
+    <div class="kitchen-gallery-dialog-inner">
+      <form method="dialog">
+        <button type="submit" class="ho-galeria-cerrar" aria-label="Cerrar galer&iacute;a" autofocus>&times;</button>
+      </form>
       <div class="ho-galeria-header">
         <div>
           <span class="eyebrow">PORTAFOLIO RESIDENCIAL &bull; FINEZZA QUER&Eacute;TARO</span>
-          <h3 id="galeria-titulo-cocinas">Galer&iacute;a de Proyectos &mdash; <em>Cocinas de Autor</em></h3>
-          <p class="ho-galeria-subtitulo" id="galeria-subtitulo-cocinas">Haz clic en cualquier fotograf&iacute;a para ampliarla en pantalla completa.</p>
+          <h2 id="galeria-titulo-cocinas">Galer&iacute;a de Proyectos &mdash; <em>Cocinas Integrales</em></h2>
+          <p class="ho-galeria-subtitulo" id="galeria-subtitulo-cocinas">18 fotograf&iacute;as disponibles (haz clic en cualquier proyecto para ampliarlo)</p>
         </div>
         <div class="ho-galeria-header-actions">
-          <a href="index.html#cotizar" class="ho-btn-cotizar-directo" style="text-decoration:none;display:inline-block;">
+          <a href="#cotizar" class="ho-btn-cotizar-directo" id="galleryQuoteLink">
             Dise&ntilde;ar mi Cocina &rarr;
           </a>
         </div>
       </div>
       <div class="ho-galeria-grid" id="galeria-grid-cocinas"></div>
     </div>
-  </div>
+  </dialog>
 
-  <!-- Lightbox de Ampliación -->
-  <div class="ho-modal-zoom" id="modalZoomCocinas" onclick="cerrarZoomCocinas()" role="dialog" aria-modal="true" aria-label="Vista ampliada de proyecto de cocina">
-    <button type="button" class="ho-modal-cerrar" onclick="cerrarZoomCocinas()" aria-label="Cerrar vista ampliada">&times;</button>
-    <img id="imgZoomContenidoCocinas" src="" alt="Proyecto de Cocina de Autor Finezza" onclick="event.stopPropagation()">
-  </div>
+  <dialog class="kitchen-zoom-dialog" id="modalZoomCocinas" closedby="any" aria-label="Vista ampliada de proyecto de cocina">
+    <form method="dialog">
+      <button type="submit" class="kitchen-zoom-close" aria-label="Cerrar vista ampliada" autofocus>&times;</button>
+    </form>
+    <img id="imgZoomContenidoCocinas" src="" alt="Proyecto de cocina integral Finezza">
+    <p class="kitchen-zoom-caption" id="captionZoomCocinas"></p>
+  </dialog>
 
+  <script src="script.js"></script>
   <script>
     (function () {
-      const MAX_FOTOS = 30; // Detecta automáticamente hasta 30 fotos numeradas (1, 2, 3...)
-      const extensiones = ['webp', 'jpg', 'png'];
-      const fotosEncontradas = [];
-      let cargado = false;
+      const FOTOS_PORTADA = [
+        { src: 'Fotos_Cocinas/portada_cocinas_2.webp', caption: 'Cocina contempor\u00e1nea en nogal con isla en piedra veteada y torre de hornos integrada.' },
+        { src: 'Fotos_Cocinas/portada_cocinas_1.webp', caption: 'Cocina abierta hacia terraza exterior con isla en nogal y alacenas mate.' },
+        { src: 'Fotos_Cocinas/portada_cocinas_3.webp', caption: 'Isla monol\u00edtica en piedra natural oscura, muro en nogal y barra comedor volada.' },
+        { src: 'Fotos_Cocinas/portada_cocinas_4.webp', caption: 'Composici\u00f3n bicolor en grafito y arena mate con estaci\u00f3n de caf\u00e9 e isla con zoclo LED.' },
+        { src: 'Fotos_Cocinas/portada_cocinas_5.webp', caption: 'Isla en cascada oscura con parrilla integrada, roble natural y barra de caf\u00e9.' },
+        { src: 'Fotos_Cocinas/portada_cocinas_6.webp', caption: 'Desayunador oculto con puertas escamoteables (pocket doors) y bandeja extra\u00edble.' },
+        { src: 'Fotos_Cocinas/portada_cocinas_7.webp', caption: 'Isla en cascada de piedra gris veteada, repisas LED y vitrinas en cristal ahumado.' },
+        { src: 'Fotos_Cocinas/portada_cocinas_8.webp', caption: 'Cocina social con mesa comedor integrada, estaci\u00f3n espresso y vitrinas iluminadas.' }
+      ];
+      const FOTOS_PORTAFOLIO = Array.from({ length: 10 }, (_, i) => ({
+        src: `Fotos_Cocinas/${i + 1}.webp`,
+        caption: `Proyecto de Cocina Integral Finezza ${String(i + 1).padStart(2, '0')}`
+      }));
+      const TODAS_LAS_FOTOS = [...FOTOS_PORTADA, ...FOTOS_PORTAFOLIO];
 
-      function detectarFotosCocinas() {
-        if (cargado) return;
-        cargado = true;
-        const grid = document.getElementById('galeria-grid-cocinas');
-        const subtitulo = document.getElementById('galeria-subtitulo-cocinas');
+      const galleryDialog = document.getElementById('modalGaleriaCocinas');
+      const zoomDialog = document.getElementById('modalZoomCocinas');
+      const zoomImg = document.getElementById('imgZoomContenidoCocinas');
+      const zoomCaption = document.getElementById('captionZoomCocinas');
+      const grid = document.getElementById('galeria-grid-cocinas');
+      const openGalleryBtn = document.getElementById('openCocinasGalleryBtn');
+      const galleryQuoteLink = document.getElementById('galleryQuoteLink');
+      let galleryRendered = false;
 
-        for (let i = 1; i <= MAX_FOTOS; i++) {
-          extensiones.forEach((ext) => {
-            const ruta = `Fotos_Cocinas/${i}.${ext}`;
-            const probe = new Image();
-            probe.onload = function () {
-              if (fotosEncontradas.includes(ruta)) return;
-              fotosEncontradas.push(ruta);
+      function openZoom(src, caption) {
+        if (!zoomDialog || !zoomImg) return;
+        zoomImg.src = src;
+        zoomImg.alt = caption || 'Proyecto de cocina integral Finezza';
+        if (zoomCaption) zoomCaption.textContent = caption || '';
+        zoomDialog.showModal();
+      }
 
-              const img = document.createElement('img');
-              img.src = ruta;
-              img.alt = `Proyecto Cocina de Autor Finezza ${i}`;
-              img.loading = 'lazy';
-              img.onclick = () => abrirZoomCocinas(ruta);
-              grid.appendChild(img);
+      function renderGallery() {
+        if (!grid || galleryRendered) return;
+        galleryRendered = true;
+        const fragment = document.createDocumentFragment();
+        TODAS_LAS_FOTOS.forEach((foto) => {
+          const btn = document.createElement('button');
+          btn.type = 'button';
+          btn.setAttribute('aria-label', `Ampliar: ${foto.caption}`);
 
-              if (subtitulo) {
-                subtitulo.textContent = `${fotosEncontradas.length} proyectos disponibles (clic en cualquier imagen para ampliar)`;
-              }
-            };
-            probe.src = ruta;
+          const img = document.createElement('img');
+          img.src = foto.src;
+          img.alt = foto.caption;
+          img.loading = 'lazy';
+
+          btn.appendChild(img);
+          btn.addEventListener('click', () => openZoom(foto.src, foto.caption));
+          fragment.appendChild(btn);
+        });
+        grid.appendChild(fragment);
+      }
+
+      if (openGalleryBtn && galleryDialog) {
+        openGalleryBtn.addEventListener('click', () => {
+          renderGallery();
+          galleryDialog.showModal();
+        });
+      }
+
+      if (galleryQuoteLink && galleryDialog) {
+        galleryQuoteLink.addEventListener('click', () => {
+          galleryDialog.close();
+        });
+      }
+
+      document.querySelectorAll('[data-zoom-src]').forEach((trigger) => {
+        trigger.addEventListener('click', () => {
+          openZoom(
+            trigger.getAttribute('data-zoom-src'),
+            trigger.getAttribute('data-zoom-caption') || ''
+          );
+        });
+      });
+
+      // Filtro interactivo de categorías para Herrajes Select de Cocina
+      const selectFilterBtns = document.querySelectorAll('.select-filter-btn');
+      const selectCards = document.querySelectorAll('#selectKitchenGrid .select-product-card');
+      const selectCountEl = document.getElementById('selectKitchenCount');
+      if (selectFilterBtns.length && selectCards.length) {
+        selectFilterBtns.forEach((btn) => {
+          btn.addEventListener('click', () => {
+            const cat = btn.getAttribute('data-select-filter');
+            selectFilterBtns.forEach((b) => {
+              const isCurrent = b === btn;
+              b.classList.toggle('active', isCurrent);
+              b.setAttribute('aria-selected', String(isCurrent));
+            });
+            let visible = 0;
+            selectCards.forEach((card) => {
+              const show = cat === 'all' || card.getAttribute('data-select-cat') === cat;
+              card.hidden = !show;
+              if (show) visible++;
+            });
+            if (selectCountEl) {
+              selectCountEl.textContent = visible === 1
+                ? 'Mostrando 1 sistema Select para cocina \u2014 haz clic en la foto para ampliarla.'
+                : `Mostrando ${visible} sistemas Select para cocina \u2014 haz clic en cualquier foto para ampliarla.`;
+            }
+          });
+        });
+      }
+
+      // Fallback de light-dismiss para navegadores sin soporte nativo de closedby (ej. Safari)
+      if (!('closedBy' in HTMLDialogElement.prototype)) {
+        const outside = (e, dialog) => {
+          const r = dialog.getBoundingClientRect();
+          return e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom;
+        };
+        for (const dialog of document.querySelectorAll('dialog[closedby="any"]')) {
+          let pressedOutside = false;
+          dialog.addEventListener('pointerdown', (e) => {
+            pressedOutside = outside(e, dialog);
+          });
+          dialog.addEventListener('pointerup', (e) => {
+            if (pressedOutside && outside(e, dialog)) dialog.close();
           });
         }
       }
-
-      window.abrirGaleriaCocinas = function () {
-        detectarFotosCocinas();
-        document.getElementById('modalGaleriaCocinas').style.display = 'flex';
-        document.body.style.overflow = 'hidden';
-      };
-
-      window.cerrarGaleriaCocinas = function () {
-        document.getElementById('modalGaleriaCocinas').style.display = 'none';
-        document.body.style.overflow = '';
-      };
-
-      window.abrirZoomCocinas = function (src) {
-        document.getElementById('imgZoomContenidoCocinas').src = src;
-        document.getElementById('modalZoomCocinas').style.display = 'flex';
-      };
-
-      window.cerrarZoomCocinas = function () {
-        document.getElementById('modalZoomCocinas').style.display = 'none';
-      };
-
-      document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') {
-          cerrarZoomCocinas();
-          cerrarGaleriaCocinas();
-        }
-      });
-    })();
-  </script>
-  <!-- ========================================================================
-       MODAL GALERÍA DE PROYECTOS DE COCINAS (10 FOTOGRAFÍAS WEBP) & LIGHTBOX
-       ======================================================================== -->
-  <div class="ho-modal-galeria" id="modalGaleriaCocinas" onclick="cerrarGaleriaCocinas()" role="dialog" aria-modal="true" aria-labelledby="galeria-titulo-cocinas">
-    <div class="ho-modal-galeria-contenido" onclick="event.stopPropagation()">
-      <button type="button" class="ho-galeria-cerrar" onclick="cerrarGaleriaCocinas()" aria-label="Cerrar galer&iacute;a">&times;</button>
-      <div class="ho-galeria-header">
-        <div>
-          <span class="eyebrow">PORTAFOLIO RESIDENCIAL &bull; FINEZZA QUER&Eacute;TARO</span>
-          <h3 id="galeria-titulo-cocinas">Galer&iacute;a de Proyectos &mdash; <em>Cocinas de Autor</em></h3>
-          <p class="ho-galeria-subtitulo">10 proyectos disponibles (clic en cualquier fotograf&iacute;a para ampliar en pantalla completa)</p>
-        </div>
-        <div class="ho-galeria-header-actions">
-          <a href="index.html#cotizar" class="ho-btn-cotizar-directo" style="text-decoration:none;display:inline-block;">
-            Dise&ntilde;ar mi Cocina &rarr;
-          </a>
-        </div>
-      </div>
-      <div class="ho-galeria-grid" id="galeria-grid-cocinas"></div>
-    </div>
-  </div>
-
-  <!-- Lightbox de Ampliación -->
-  <div class="ho-modal-zoom" id="modalZoomCocinas" onclick="cerrarZoomCocinas()" role="dialog" aria-modal="true" aria-label="Vista ampliada de proyecto de cocina">
-    <button type="button" class="ho-modal-cerrar" onclick="cerrarZoomCocinas()" aria-label="Cerrar vista ampliada">&times;</button>
-    <img id="imgZoomContenidoCocinas" src="" alt="Proyecto de Cocina de Autor Finezza" onclick="event.stopPropagation()">
-  </div>
-
-  <script>
-    (function () {
-      const FOTOS_COCINAS = Array.from({ length: 10 }, (_, i) => `Fotos_Cocinas/${i + 1}.webp`);
-      let renderizado = false;
-
-      window.abrirGaleriaCocinas = function () {
-        const grid = document.getElementById('galeria-grid-cocinas');
-        if (grid && !renderizado) {
-          renderizado = true;
-          FOTOS_COCINAS.forEach((ruta, index) => {
-            const img = document.createElement('img');
-            img.src = ruta;
-            img.alt = `Proyecto Cocina de Autor Finezza ${index + 1}`;
-            img.loading = 'lazy';
-            img.onclick = () => abrirZoomCocinas(ruta);
-            grid.appendChild(img);
-          });
-        }
-        document.getElementById('modalGaleriaCocinas').style.display = 'flex';
-        document.body.style.overflow = 'hidden';
-      };
-
-      window.cerrarGaleriaCocinas = function () {
-        document.getElementById('modalGaleriaCocinas').style.display = 'none';
-        document.body.style.overflow = '';
-      };
-
-      window.abrirZoomCocinas = function (src) {
-        document.getElementById('imgZoomContenidoCocinas').src = src;
-        document.getElementById('modalZoomCocinas').style.display = 'flex';
-      };
-
-      window.cerrarZoomCocinas = function () {
-        document.getElementById('modalZoomCocinas').style.display = 'none';
-      };
-
-      document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') {
-          cerrarZoomCocinas();
-          cerrarGaleriaCocinas();
-        }
-      });
     })();
   </script>
 </body>

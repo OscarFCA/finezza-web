@@ -25,37 +25,56 @@
 <body class="subpage-body">
 
   <!-- BARRA SUPERIOR FIJA DE NAVEGACIÓN & REGRESO A INICIO -->
-  <header class="subpage-header" id="topSubpage">
+    <header class="subpage-header" id="topSubpage">
     <div class="container subpage-header-inner">
       <div class="subpage-brand-group">
-        <a href="index.html" class="subpage-logo-link" aria-label="FINEZZA Quer&eacute;taro &mdash; Volver a la p&aacute;gina de inicio">
-          <img src="assets/logo-finezza.png" alt="FINEZZA Quer&eacute;taro" class="subpage-logo" width="175" height="49">
-        </a>
-        <a href="index.html" class="back-home-pill" title="Regresar a la p&aacute;gina de inicio principal">
-          <svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-            <path d="M12.5 8H3.5M3.5 8L7.5 4M3.5 8L7.5 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-          <span>Volver a Inicio</span>
+        <a href="index.html" class="subpage-logo-link" aria-label="FINEZZA Interiores &mdash; Volver a la p&aacute;gina de inicio">
+          <img src="assets/logo-finezza.png" alt="FINEZZA Interiores" class="subpage-logo" width="185" height="52">
         </a>
       </div>
 
       <nav class="subpage-nav" aria-label="Categor&iacute;as principales Finezza">
         <a href="cocinas.html">Cocinas</a>
         <a href="vestidores.html">Closets</a>
-        <a href="espacios-residenciales.html#living">Living</a>
-        <a href="espacios-residenciales.html#entretenimiento">Entretenimiento</a>
+        <a href="living.html">Living</a>
+        <a href="entretenimiento.html">Entretenimiento</a>
         <a href="home-office.html" class="active">Home Office</a>
-        <a href="espacios-residenciales.html#recamara">Rec&aacute;maras</a>
-        <a href="espacios-residenciales.html#pasillos">Puertas Intercomunicaci&oacute;n</a>
-        <a href="espacios-residenciales.html#libreros">Mobiliario de Autor</a>
+        <a href="recamaras.html">Rec&aacute;maras</a>
+        <a href="puertas.html">Puertas Intercomunicaci&oacute;n</a>
+        <a href="mobiliario-autor.html">Mobiliario de Autor</a>
         <a href="outdoor.html">Outdoor</a>
       </nav>
 
       <div class="subpage-actions">
-        <a href="index.html#cotizar" class="subpage-cta-btn">Agendar Cita</a>
+        <a href="index.html#cotizar" class="header-cta-link">Agendar Cita</a>
+        <button type="button" class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir men&uacute; de navegaci&oacute;n" aria-expanded="false" aria-controls="mobileMenuDrawer">
+          <span></span><span></span><span></span>
+        </button>
       </div>
     </div>
   </header>
+
+  <nav class="mobile-menu-drawer" id="mobileMenuDrawer" aria-label="Men&uacute; m&oacute;vil Finezza" hidden>
+    <div class="mobile-menu-inner">
+      <span class="mobile-menu-label">Colecciones Core</span>
+      <div class="mobile-menu-core">
+        <a href="cocinas.html">Cocinas de Autor</a>
+        <a href="vestidores.html">Closets &amp; Vestidores</a>
+      </div>
+      <span class="mobile-menu-label">Otros Espacios</span>
+      <div class="mobile-menu-grid">
+        <a href="living.html">Living</a>
+        <a href="entretenimiento.html">Entretenimiento</a>
+        <a href="home-office.html">Home Office</a>
+        <a href="recamaras.html">Rec&aacute;maras</a>
+        <a href="puertas.html">Puertas</a>
+        <a href="mobiliario-autor.html">Mobiliario de Autor</a>
+        <a href="outdoor.html">Outdoor</a>
+        <a href="index.html">Inicio</a>
+      </div>
+      <a href="index.html#cotizar" class="mobile-menu-cta">Agendar Cita en Showroom &rarr;</a>
+    </div>
+  </nav>
 
   <!-- CINTILLO DE RUTA DE NAVEGACIÓN (BREADCRUMB) -->
   <div class="subpage-breadcrumb-bar">
@@ -401,11 +420,11 @@
           <a href="index.html" class="subpage-quick-pill">Volver a Inicio</a>
           <a href="cocinas.html" class="subpage-quick-pill">Cocinas</a>
           <a href="vestidores.html" class="subpage-quick-pill">Closets</a>
-          <a href="espacios-residenciales.html#living" class="subpage-quick-pill">Living</a>
-          <a href="espacios-residenciales.html#entretenimiento" class="subpage-quick-pill">Entretenimiento</a>
-          <a href="espacios-residenciales.html#recamara" class="subpage-quick-pill">Rec&aacute;maras</a>
-          <a href="espacios-residenciales.html#pasillos" class="subpage-quick-pill">Puertas Intercomunicaci&oacute;n</a>
-          <a href="espacios-residenciales.html#libreros" class="subpage-quick-pill">Mobiliario de Autor</a>
+          <a href="living.html" class="subpage-quick-pill">Living</a>
+          <a href="entretenimiento.html" class="subpage-quick-pill">Entretenimiento</a>
+          <a href="recamaras.html" class="subpage-quick-pill">Rec&aacute;maras</a>
+          <a href="puertas.html" class="subpage-quick-pill">Puertas Intercomunicaci&oacute;n</a>
+          <a href="mobiliario-autor.html" class="subpage-quick-pill">Mobiliario de Autor</a>
           <a href="outdoor.html" class="subpage-quick-pill">Outdoor</a>
         </div>
       </div>
