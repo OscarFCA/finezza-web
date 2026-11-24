@@ -1189,3 +1189,46 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+
+// WhatsApp flotante: subirlo mientras el pie del hero (controles del carrusel) esté en pantalla
+const initWaLift = function () {
+  const wa = document.querySelector('.wa-float');
+  const heroFooter = document.querySelector('.hero .hero-footer');
+  if (!wa || !heroFooter || !('IntersectionObserver' in window)) return;
+  const setLift = () => {
+    wa.style.setProperty('--wa-lift', Math.round(heroFooter.getBoundingClientRect().height + 14) + 'px');
+  };
+  setLift();
+  window.addEventListener('resize', setLift);
+  new IntersectionObserver((entries) => {
+    entries.forEach((entry) => wa.classList.toggle('is-lifted', entry.isIntersecting));
+  }).observe(heroFooter);
+};
+if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', initWaLift);
+else initWaLift();
+
+// Menú deslizable en celular: mostrar la página actual aunque esté al final de la tira
+(function () {
+  const run = () => {
+    const nav = document.querySelector('.subpage-nav');
+    const cur = nav && nav.querySelector('[aria-current="page"], a.active');
+    if (!nav || !cur || nav.scrollWidth <= nav.clientWidth) return;
+    nav.scrollLeft = Math.max(0, cur.offsetLeft - (nav.clientWidth - cur.offsetWidth) / 2);
+  };
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', run); else run();
+})();
+
+// Submenú "Espacios": abre con clic/tacto y con teclado; se cierra al salir o con Escape
+(function () {
+  const init = () => {
+    document.querySelectorAll('.nav-drop').forEach((drop) => {
+      const btn = drop.querySelector('.nav-drop-btn');
+      if (!btn) return;
+      const set = (open) => { drop.classList.toggle('is-open', open); btn.setAttribute('aria-expanded', open ? 'true' : 'false'); };
+      btn.addEventListener('click', (e) => { e.stopPropagation(); set(!drop.classList.contains('is-open')); });
+      document.addEventListener('click', (e) => { if (!drop.contains(e.target)) set(false); });
+      drop.addEventListener('keydown', (e) => { if (e.key === 'Escape') { set(false); btn.focus(); } });
+    });
+  };
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
+})();

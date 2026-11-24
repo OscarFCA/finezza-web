@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vestidores y Closets a la Medida en Querétaro | Walk-in Closets — FINEZZA</title>
+  <meta name="description" content="Vestidores, closets y walk-in closets a la medida en Querétaro: con isla, en L, en U o rectos, con accesorios extraíbles y LED. Cotiza tu vestidor.">
+  <!-- SEO -->
+  <link rel="canonical" href="https://finezzainteriores.com/landing-vestidores">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#1A1918">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_MX">
+  <meta property="og:site_name" content="FINEZZA Querétaro">
+  <meta property="og:title" content="Vestidores y Closets a la Medida en Querétaro | Walk-in Closets — FINEZZA">
+  <meta property="og:description" content="Vestidores, closets y walk-in closets a la medida en Querétaro: con isla, en L, en U o rectos, con accesorios extraíbles y LED. Cotiza tu vestidor.">
+  <meta property="og:url" content="https://finezzainteriores.com/landing-vestidores">
+  <meta property="og:image" content="https://finezzainteriores.com/assets/portada-vestidores-finezza.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Vestidores y Closets a la Medida en Querétaro | Walk-in Closets — FINEZZA">
+  <meta name="twitter:description" content="Vestidores, closets y walk-in closets a la medida en Querétaro: con isla, en L, en U o rectos, con accesorios extraíbles y LED. Cotiza tu vestidor.">
+  <meta name="twitter:image" content="https://finezzainteriores.com/assets/portada-vestidores-finezza.jpg">
+
+  <!-- Datos del negocio para buscadores (solo datos reales del showroom) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HomeAndConstructionBusiness",
+    "name": "FINEZZA Querétaro — Vestidores y closets a la medida",
+    "description": "Diseño, fabricación e instalación de vestidores, closets y walk-in closets a la medida en Querétaro.",
+    "telephone": "+52 442 719 7102",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Blvd. Bernardo Quintana 7 D, Col. Álamos 2da. Sección",
+      "addressLocality": "Querétaro",
+      "addressRegion": "Qro.",
+      "postalCode": "76160",
+      "addressCountry": "MX"
+    },
+    "areaServed": "Querétaro",
+    "makesOffer": { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Vestidores y closets a la medida" } }
+  }
+  </script>
+
+  <link rel="icon" type="image/png" href="assets/favicon-finezza.png">
+  <link rel="preload" as="image" href="assets/portada-vestidores-finezza.jpg" fetchpriority="high">
+  <link rel="preload" as="image" href="assets/logo-finezza-interiores.png" fetchpriority="high">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wdth,wght@0,75..100,400..700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..500;1,6..72,300..400&display=swap">
+
+  <link rel="stylesheet" href="styles.css?v=20261124">
+  <style>
+    .hero-edge { display: none !important; background: none !important; }
+
+    /* Velo oscuro detrás del texto de portada, desde el borde superior */
+    .hero::before {
+      content: "" !important;
+      position: absolute !important;
+      top: 0 !important;
+      left: 0 !important;
+      right: 0 !important;
+      bottom: 0 !important;
+      background: linear-gradient(95deg, rgba(22, 19, 17, 0.72) 0%, rgba(22, 19, 17, 0.42) 45%, rgba(22, 19, 17, 0.12) 100%) !important;
+      z-index: 1 !important;
+      pointer-events: none !important;
+    }
+
+    /* ---------- Landing de vestidores: piezas propias ---------- */
+    .campaign-grid { grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); }
+    .campaign-grid > * { min-width: 0; }
+    @media (max-width: 980px) { .campaign-grid { grid-template-columns: minmax(0, 1fr); } }
+
+    .closet-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px; }
+    .closet-grid--3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .closet-grid .eco-card { min-width: 0; }
+    .closet-grid .eco-img-wrap img { aspect-ratio: 4 / 5; width: 100%; height: auto; object-fit: cover; }
+    .closet-grid--3 .eco-img-wrap img { aspect-ratio: 1 / 1; }
+
+    .lines-section { padding: clamp(72px, 9vw, 120px) 0; background: #1A1918; color: #F7F3EA; }
+    .lines-section .eyebrow { color: #B08D57; }
+    .lines-section .editorial-h2 { color: #F7F3EA; }
+    .lines-section .section-intro-copy { color: rgba(247, 243, 234, 0.72); }
+    .lines-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; margin-top: 40px; }
+    .line-card { min-width: 0; border: 1px solid rgba(247, 243, 234, 0.14); background: rgba(247, 243, 234, 0.03); display: flex; flex-direction: column; }
+    .line-card img { width: 100%; height: clamp(220px, 22vw, 300px) !important; object-fit: cover; display: block; }
+    .line-card-body { padding: 26px 24px 28px; display: flex; flex-direction: column; gap: 14px; flex: 1; }
+    .line-card .line-tag { font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase; color: #B08D57; }
+    .line-card h3 { font-family: 'Newsreader', serif; font-weight: 400; font-size: 1.7rem; margin: 0; color: #F7F3EA; }
+    .line-card p { margin: 0; color: rgba(247, 243, 234, 0.78); line-height: 1.6; }
+    .line-card ul { margin: 0; padding-left: 18px; color: rgba(247, 243, 234, 0.78); line-height: 1.6; }
+    .line-card .line-save { margin-top: auto; padding-top: 14px; border-top: 1px solid rgba(247, 243, 234, 0.14); font-size: 0.95rem; color: #F7F3EA; }
+    .line-card .line-save strong { color: #B08D57; font-weight: 600; }
+    .lines-footnote { margin-top: 22px; font-size: 0.8rem; color: rgba(247, 243, 234, 0.55); }
+
+    .projects-section { padding: clamp(72px, 9vw, 120px) 0; background: #f4f0e8; }
+    .projects-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; margin-top: 40px; }
+    .projects-grid button { all: unset; cursor: zoom-in; display: block; overflow: hidden; position: relative; aspect-ratio: 4 / 3; background: #ddd6ca; }
+    .projects-grid button:first-child { grid-column: span 2; grid-row: span 2; aspect-ratio: auto; }
+    .projects-grid img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .6s ease; }
+    .projects-grid button:hover img { transform: scale(1.04); }
+    .projects-grid button:focus-visible { outline: 2px solid #B08D57; outline-offset: 3px; }
+    .projects-cta { margin-top: 36px; display: flex; flex-wrap: wrap; gap: 16px; align-items: center; }
+    .projects-cta p { margin: 0; color: #5e5a54; }
+
+    .kitchen-lightbox { position: fixed; inset: 0; z-index: 9999; background: rgba(18, 16, 14, 0.94); display: none; align-items: center; justify-content: center; padding: 24px; }
+    .kitchen-lightbox.is-open { display: flex; }
+    .kitchen-lightbox img { max-width: 100%; max-height: 88vh; object-fit: contain; }
+    .kitchen-lightbox button { all: unset; cursor: pointer; position: absolute; color: #F7F3EA; font-size: 34px; line-height: 1; padding: 14px; }
+    .kitchen-lightbox .lb-close { top: 10px; right: 14px; }
+    .kitchen-lightbox .lb-prev { left: 8px; top: 50%; transform: translateY(-50%); }
+    .kitchen-lightbox .lb-next { right: 8px; top: 50%; transform: translateY(-50%); }
+
+    .faq-section { padding: clamp(72px, 9vw, 120px) 0; }
+    .faq-layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.6fr); gap: clamp(32px, 6vw, 96px); align-items: start; }
+    .faq-list details { border-top: 1px solid rgba(24, 22, 20, 0.14); }
+    .faq-list details:last-child { border-bottom: 1px solid rgba(24, 22, 20, 0.14); }
+    .faq-list summary { cursor: pointer; list-style: none; padding: 22px 36px 22px 0; position: relative; font-family: 'Newsreader', serif; font-size: 1.28rem; line-height: 1.3; color: #1A1918; }
+    .faq-list summary::-webkit-details-marker { display: none; }
+    .faq-list summary::after { content: "+"; position: absolute; right: 4px; top: 50%; transform: translateY(-50%); font-family: 'Instrument Sans', sans-serif; font-size: 1.4rem; color: #B08D57; transition: transform .3s ease; }
+    .faq-list details[open] summary::after { transform: translateY(-50%) rotate(45deg); }
+    .faq-list details p { margin: 0 0 24px; color: #4a4640; max-width: 62ch; line-height: 1.65; }
+
+    @media (max-width: 1100px) {
+      .closet-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (max-width: 980px) {
+      .closet-grid--3 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .lines-grid { grid-template-columns: minmax(0, 1fr); }
+      .projects-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .faq-layout { grid-template-columns: minmax(0, 1fr); }
+    }
+    @media (max-width: 620px) {
+      .closet-grid, .closet-grid--3 { grid-template-columns: minmax(0, 1fr); }
+      .projects-grid { gap: 8px; }
+      .faq-list summary { font-size: 1.12rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==========================================================================
+       HERO — PALABRAS CLAVE: VESTIDORES / CLOSETS / WALK-IN CLOSET / A LA MEDIDA / QUERÉTARO
+       ========================================================================== -->
+  <section class="hero" id="inicio" aria-label="Vestidores y closets a la medida en Querétaro">
+    <div class="hero-stage" id="heroStage" aria-live="off">
+      <div class="hero-slide is-active" data-motion="zoom-in" data-type="wide" data-label="WALK-IN CLOSET &bull; VITRINAS ILUMINADAS, TOCADOR Y CAJONERAS">
+        <img class="hero-cover" src="assets/portada-vestidores-finezza.jpg" alt="Walk-in closet a la medida con vitrinas iluminadas, tocador y cajoneras" width="2752" height="1536" fetchpriority="high" decoding="async">
+      </div>
+      <div class="hero-slide" data-motion="pan-right" data-type="wide" data-label="VESTIDOR EN ESQUINA &bull; ZAPATERAS, COLGADORES Y ENTREPA&Ntilde;OS">
+        <img class="hero-cover" src="assets/closets/linea-libre-esquina.jpg" alt="Vestidor en esquina con zapateras, colgadores y entrepa&ntilde;os a la medida" width="1728" height="1333" loading="eager" decoding="async">
+      </div>
+    </div>
+
+    <header class="hero-header">
+      <a href="#inicio" class="section-brand" aria-label="FINEZZA Quer&eacute;taro &mdash; Vestidores a la medida">
+        <img src="assets/logo-finezza-interiores.png" alt="FINEZZA Quer&eacute;taro &mdash; Vestidores a la medida" class="brand-logo" width="240" height="67">
+      </a>
+      <div class="header-actions">
+        <a href="#cotizar" class="header-cta-link">Cotizar Vestidor</a>
+      </div>
+    </header>
+
+    <div class="hero-editorial">
+      <div class="hero-tag reveal-item" style="--delay: 0.05s;">
+        <span class="tag-dot"></span>
+        <span id="heroEyebrow">VESTIDORES Y WALK-IN CLOSETS A LA MEDIDA &bull; SHOWROOM QUER&Eacute;TARO</span>
+      </div>
+
+      <h1 class="section-title reveal-item" style="--delay: 0.16s;" id="heroTitle">
+        Vestidores a la medida<br>
+        <em>en Quer&eacute;taro.</em>
+      </h1>
+
+      <p class="section-copy reveal-item" style="--delay: 0.28s;" id="heroCopy">
+        Dise&ntilde;amos, fabricamos e instalamos vestidores, closets y walk-in closets con isla central, cajones con cierre suave e iluminaci&oacute;n LED. Ven al showroom y cotiza tu proyecto.
+      </p>
+
+      <div class="hero-actions reveal-item" style="--delay: 0.40s;">
+        <a href="#cotizar" class="hero-btn" id="heroBtn">
+          <span id="heroBtnText">Cotizar mi Vestidor</span>
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <path d="M3.5 8H12.5M12.5 8L8.5 4M12.5 8L8.5 12" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+        <a href="#proyectos" class="hero-btn-secondary">Ver Vestidores Terminados</a>
+      </div>
+    </div>
+
+    <footer class="hero-footer reveal-item" style="--delay: 0.52s;">
+      <div class="hero-footer-left">
+        <span class="scene-counter" id="heroFooterCode">VISTA 01 / 02</span>
+        <span class="footer-divider">/</span>
+        <span class="scene-caption" id="heroFooterLabel">WALK-IN CLOSET &bull; VITRINAS ILUMINADAS, TOCADOR Y CAJONERAS</span>
+      </div>
+      <div class="hero-scene-controls" aria-label="Selector de vistas de vestidores">
+        <button type="button" class="scene-arrow" id="prevSceneBtn" aria-label="Vista anterior">
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M10.5 3.5L6 8L10.5 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="scene-dots" role="tablist" aria-label="Vistas de vestidores">
+          <button type="button" class="scene-dot is-active" data-scene="0" role="tab" aria-selected="true"><span class="scene-dot-num">01</span><span class="scene-dot-bar"><span class="scene-dot-fill"></span></span></button>
+          <button type="button" class="scene-dot" data-scene="1" role="tab" aria-selected="false"><span class="scene-dot-num">02</span><span class="scene-dot-bar"><span class="scene-dot-fill"></span></span></button>
+        </div>
+        <button type="button" class="scene-arrow" id="nextSceneBtn" aria-label="Siguiente vista">
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M5.5 3.5L10 8L5.5 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+    </footer>
+  </section>
+
+  <!-- ==========================================================================
+       01 / BENEFICIO: ¿QUÉ GANO CON UN VESTIDOR A LA MEDIDA?
+       ========================================================================== -->
+  <section class="manifesto-strip" id="beneficios">
+    <div class="container">
+      <div class="manifesto-grid">
+        <div class="manifesto-lead">
+          <img src="assets/logo-finezza-interiores.png" alt="FINEZZA Quer&eacute;taro" class="manifesto-brand-logo" width="180" height="50" loading="lazy">
+          <span class="eyebrow">01 / VESTIDORES Y CLOSETS A LA MEDIDA</span>
+          <h2 class="editorial-h2">
+            Cada prenda en su lugar,<br>
+            <em>medido en mil&iacute;metros.</em>
+          </h2>
+        </div>
+        <div class="manifesto-body">
+          <p>
+            Proyectamos tu vestidor por tipo de prenda: maletero arriba, ropa doblada en entrepa&ntilde;os de <strong>350 a 450 mm</strong>, doble nivel de colgado para camisas y sacos, colgador largo para vestidos y abrigos, y <strong>zapateras</strong> abajo. Antes de fabricar lo ves en 3D y eliges los acabados reales en el showroom.
+          </p>
+          <div class="manifesto-stats">
+            <div class="stat-item">
+              <span class="stat-num">3</span>
+              <span class="stat-desc">L&iacute;neas de f&aacute;brica: Modular, Libre y Light</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-num">16</span>
+              <span class="stat-desc">Accesorios extra&iacute;bles m&aacute;s iluminaci&oacute;n LED</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-num">2</span>
+              <span class="stat-desc">Profundidades: 400 mm para espacios reducidos y 600 mm completa</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       02 / FORMAS: ¿QUÉ VESTIDOR CABE EN MI ESPACIO?
+       ========================================================================== -->
+  <section class="ecosystem-section" id="tipos">
+    <div class="container">
+      <div class="section-header-row">
+        <div>
+          <span class="eyebrow">02 / TIPOS DE VESTIDOR</span>
+          <h2 class="editorial-h2">Un vestidor para <em>cada espacio.</em></h2>
+        </div>
+        <p class="section-intro-copy">
+          Elige la forma que se parece a tu espacio y la marcamos en tu solicitud de cotizaci&oacute;n.
+        </p>
+      </div>
+
+      <div class="closet-grid">
+        <article class="eco-card">
+          <a href="#cotizar" class="eco-img-wrap" data-select-space="Clóset recto" style="display:block;">
+            <img src="assets/closets/tipologia-recto-foto.jpg" alt="Cl&oacute;set recto con torres de cajones e iluminaci&oacute;n" loading="lazy" width="718" height="522">
+            <span class="eco-num">01 / RECTO</span>
+          </a>
+          <div class="eco-body">
+            <h3>Cl&oacute;set recto</h3>
+            <p>Distribuci&oacute;n lineal frente a un muro, con torres de cajones al centro, secciones de colgado y maletero corrido arriba.</p>
+            <div class="eco-card-actions">
+              <a href="#cotizar" class="link-arrow" data-select-space="Clóset recto">Cotizar cl&oacute;set recto <span>&rarr;</span></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="eco-card">
+          <a href="#cotizar" class="eco-img-wrap" data-select-space="Walk-in closet con isla" style="display:block;">
+            <img src="assets/closets/linea-modular-isla.jpg" alt="Walk-in closet perimetral con isla central" loading="lazy" width="735" height="490">
+            <span class="eco-num">02 / CON ISLA</span>
+          </a>
+          <div class="eco-body">
+            <h3>Walk-in closet con isla</h3>
+            <p>Vestidor perimetral de gran formato con una isla central para joyer&iacute;a y accesorios, con cubierta de cristal.</p>
+            <div class="eco-card-actions">
+              <a href="#cotizar" class="link-arrow" data-select-space="Walk-in closet con isla">Quiero una isla <span>&rarr;</span></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="eco-card">
+          <a href="#cotizar" class="eco-img-wrap" data-select-space="Vestidor en U" style="display:block;">
+            <img src="assets/closets/tipologia-u-foto-limpia.jpg" alt="Vestidor en U a tres muros con cajonera central" loading="lazy" width="574" height="597">
+            <span class="eco-num">03 / EN U</span>
+          </a>
+          <div class="eco-body">
+            <h3>Vestidor en U</h3>
+            <p>Envuelve tres muros y aprovecha las esquinas al 100%. Ideal para separar el &aacute;rea de &eacute;l y la de ella.</p>
+            <div class="eco-card-actions">
+              <a href="#cotizar" class="link-arrow" data-select-space="Vestidor en U">Cotizar en U <span>&rarr;</span></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="eco-card">
+          <a href="#cotizar" class="eco-img-wrap" data-select-space="Vestidor en L" style="display:block;">
+            <img src="assets/closets/tipologia-l-foto-limpia.jpg" alt="Vestidor en L con rinconero de entrepa&ntilde;os" loading="lazy" width="579" height="604">
+            <span class="eco-num">04 / EN L</span>
+          </a>
+          <div class="eco-body">
+            <h3>Vestidor en L</h3>
+            <p>Une dos muros con un rinconero de entrepa&ntilde;os y deja libre el centro del espacio.</p>
+            <div class="eco-card-actions">
+              <a href="#cotizar" class="link-arrow" data-select-space="Vestidor en L">Cotizar en L <span>&rarr;</span></a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       03 / CARACTERÍSTICAS: LAS 3 LÍNEAS DE FÁBRICA (¿POR QUÉ ESTE Y NO OTRO?)
+       ========================================================================== -->
+  <section class="lines-section" id="lineas">
+    <div class="container">
+      <div class="section-header-row">
+        <div>
+          <span class="eyebrow">03 / LAS 3 L&Iacute;NEAS DE F&Aacute;BRICA</span>
+          <h2 class="editorial-h2">Modular, Libre o Light: <em>t&uacute; eliges el sistema.</em></h2>
+        </div>
+        <p class="section-intro-copy">
+          Las tres se fabrican a la medida. Cambia c&oacute;mo se construyen, c&oacute;mo se ven y cu&aacute;nto inviertes.
+        </p>
+      </div>
+
+      <div class="lines-grid">
+        <article class="line-card">
+          <img src="assets/closets/linea-modular-portada.jpg" alt="Vestidor de la l&iacute;nea Modular" loading="lazy" width="736" height="917">
+          <div class="line-card-body">
+            <span class="line-tag">Armado con tornillo</span>
+            <h3>Cl&oacute;set Modular</h3>
+            <p>M&oacute;dulos independientes con costado propio: gabinetes, lockers, rinconeros, maleteros e islas. Es la &uacute;nica l&iacute;nea que puede llegar armada de f&aacute;brica.</p>
+            <ul>
+              <li>M&oacute;dulos de hasta 2,400 mm de ancho</li>
+              <li>Con fondo o con manguete</li>
+            </ul>
+            <p class="line-save">La l&iacute;nea base de comparaci&oacute;n.</p>
+          </div>
+        </article>
+
+        <article class="line-card">
+          <img src="assets/closets/linea-libre-vestidor.jpg" alt="Vestidor de la l&iacute;nea Libre de muro a muro" loading="lazy" width="736" height="864">
+          <div class="line-card-body">
+            <span class="line-tag">Rafix interno &bull; sin l&iacute;mite de ancho</span>
+            <h3>Cl&oacute;set Libre</h3>
+            <p>Una estructura continua de muro a muro con herraje oculto. Comparte costados entre secciones, as&iacute; que lleva menos divisiones verticales y se ve m&aacute;s limpio.</p>
+            <ul>
+              <li>Sin l&iacute;mite de ancho</li>
+              <li>Con fondo, sin fondo o con manguete</li>
+            </ul>
+            <p class="line-save">Ahorro de <strong>14% a 32%</strong> frente a Modular*</p>
+          </div>
+        </article>
+
+        <article class="line-card">
+          <img src="assets/closets/linea-light-vitrina.jpg" alt="Vestidor de la l&iacute;nea Light con divisiones cortantes" loading="lazy" width="735" height="1103">
+          <div class="line-card-body">
+            <span class="line-tag">Divisiones cortantes 400 / 600 mm</span>
+            <h3>Cl&oacute;set Light</h3>
+            <p>Los costados miden 400 mm de fondo y las repisas y cajones 600 mm: los entrepa&ntilde;os sobresalen y el vestidor se ve ligero, casi flotante.</p>
+            <ul>
+              <li>Sin l&iacute;mite de ancho</li>
+              <li>Sistema con manguete</li>
+            </ul>
+            <p class="line-save">Ahorro de <strong>19% a 37%</strong> frente a Modular*</p>
+          </div>
+        </article>
+      </div>
+      <p class="lines-footnote">*Rangos de ejercicios comparativos de f&aacute;brica (versiones con manguete). El ahorro final depende de la configuraci&oacute;n, los acabados y los accesorios de tu proyecto.</p>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       04 / EQUIPAMIENTO INTERIOR
+       ========================================================================== -->
+  <section class="ecosystem-section" id="equipamiento">
+    <div class="container">
+      <div class="section-header-row">
+        <div>
+          <span class="eyebrow">04 / EQUIPAMIENTO INTERIOR</span>
+          <h2 class="editorial-h2">Lo que hace que tu vestidor <em>se use mejor.</em></h2>
+        </div>
+        <p class="section-intro-copy">
+          16 accesorios extra&iacute;bles, islas de joyer&iacute;a y correderas ocultas Blum TANDEM y H&auml;fele con cierre suave.
+        </p>
+      </div>
+
+      <div class="closet-grid closet-grid--3">
+        <article class="eco-card">
+          <a href="#cotizar" class="eco-img-wrap" data-select-space="Isla de joyería" style="display:block;">
+            <img src="assets/closets/isla-portada-2025.jpg" alt="Isla de cajones con organizadores de joyer&iacute;a y cubierta de cristal" loading="lazy" width="736" height="595">
+            <span class="eco-num">ISLAS 2025</span>
+          </a>
+          <div class="eco-body">
+            <h3>Islas de joyer&iacute;a</h3>
+            <p>Islas de 8 o 16 cajones con organizadores interiores, con o sin cubierta de vidrio.</p>
+          </div>
+        </article>
+
+        <article class="eco-card">
+          <a href="#cotizar" class="eco-img-wrap" data-select-space="Iluminación LED" style="display:block;">
+            <img src="assets/closets/acc-iluminacion-led.jpg" alt="Vestidor con iluminaci&oacute;n LED en entrepa&ntilde;os y vitrinas" loading="lazy" width="736" height="736">
+            <span class="eco-num">ILUMINACI&Oacute;N</span>
+          </a>
+          <div class="eco-body">
+            <h3>Iluminaci&oacute;n LED</h3>
+            <p>Luz fr&iacute;a o c&aacute;lida en entrepa&ntilde;os, colgadores y vitrinas para encontrar todo de un vistazo.</p>
+          </div>
+        </article>
+
+        <article class="eco-card">
+          <a href="#cotizar" class="eco-img-wrap" data-select-space="Accesorios extraíbles" style="display:block;">
+            <img src="assets/closets/acc-joyero.jpg" alt="Joyero extra&iacute;ble con divisiones para accesorios" loading="lazy" width="1000" height="1000">
+            <span class="eco-num">ACCESORIOS</span>
+          </a>
+          <div class="eco-body">
+            <h3>Accesorios extra&iacute;bles</h3>
+            <p>Joyero, pantalonero, corbatero, cinturonero, valet, zapateras telesc&oacute;picas, cesto de ropa y tabla de planchar integrada.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       05 / PRUEBA: GALERÍA DE VESTIDORES
+       ========================================================================== -->
+  <section class="projects-section" id="proyectos">
+    <div class="container">
+      <div class="section-header-row">
+        <div>
+          <span class="eyebrow">05 / GALER&Iacute;A DE PROYECTOS</span>
+          <h2 class="editorial-h2">Vestidores Finezza <em>ya terminados.</em></h2>
+        </div>
+        <p class="section-intro-copy">
+          Walk-in closets, vestidores con isla, en L o en U. Toca cualquier foto para verla completa.
+        </p>
+      </div>
+
+      <div class="projects-grid" id="projectsGrid">
+        <button type="button" aria-label="Ampliar vestidor 1"><img src="assets/portada-vestidores-finezza.jpg" alt="Walk-in closet con vitrinas iluminadas y tocador" loading="lazy" width="2752" height="1536"></button>
+        <button type="button" aria-label="Ampliar vestidor 2"><img src="assets/closets/linea-modular-isla.jpg" alt="Walk-in closet con isla central y plaf&oacute;n iluminado" loading="lazy" width="735" height="490"></button>
+        <button type="button" aria-label="Ampliar vestidor 3"><img src="assets/closets/linea-light-portada.jpg" alt="Vestidor en madera clara con cajoneras" loading="lazy" width="601" height="378"></button>
+        <button type="button" aria-label="Ampliar vestidor 4"><img src="assets/closets/linea-light-nogal.jpg" alt="Walk-in closet en nogal con entrepa&ntilde;os iluminados" loading="lazy" width="736" height="475"></button>
+        <button type="button" aria-label="Ampliar vestidor 5"><img src="assets/closets/acc-iluminacion-led.jpg" alt="Vestidor con vitrinas y entrepa&ntilde;os iluminados con LED" loading="lazy" width="736" height="736"></button>
+        <button type="button" aria-label="Ampliar vestidor 6"><img src="assets/closets/linea-libre-esquina.jpg" alt="Vestidor blanco en esquina con zapateras" loading="lazy" width="1728" height="1333"></button>
+        <button type="button" aria-label="Ampliar vestidor 7"><img src="assets/closets/linea-modular-vitrinas.jpg" alt="Vestidor con vitrinas y puertas de cristal" loading="lazy" width="736" height="669"></button>
+        <button type="button" aria-label="Ampliar vestidor 8"><img src="assets/closets/linea-libre-vestidor.jpg" alt="Vestidor en tonos arena con banca central" loading="lazy" width="736" height="864"></button>
+        <button type="button" aria-label="Ampliar vestidor 9"><img src="assets/closets/tipologia-recto-foto.jpg" alt="Cl&oacute;set recto con cajones e iluminaci&oacute;n" loading="lazy" width="718" height="522"></button>
+      </div>
+
+      <div class="projects-cta">
+        <a href="#cotizar" class="hero-btn">
+          <span>Quiero un Vestidor as&iacute;</span>
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <path d="M3.5 8H12.5M12.5 8L8.5 4M12.5 8L8.5 12" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+        <p>La primera sesi&oacute;n de dise&ntilde;o no tiene costo.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="kitchen-lightbox" id="kitchenLightbox" role="dialog" aria-modal="true" aria-label="Foto de vestidor ampliada">
+    <button type="button" class="lb-close" aria-label="Cerrar">&times;</button>
+    <button type="button" class="lb-prev" aria-label="Foto anterior">&lsaquo;</button>
+    <img src="" alt="">
+    <button type="button" class="lb-next" aria-label="Foto siguiente">&rsaquo;</button>
+  </div>
+
+  <!-- ==========================================================================
+       06 / OBJECIONES Y FAQ
+       ========================================================================== -->
+  <section class="faq-section" id="preguntas">
+    <div class="container">
+      <div class="faq-layout">
+        <div>
+          <span class="eyebrow">06 / PREGUNTAS FRECUENTES</span>
+          <h2 class="editorial-h2">Antes de cotizar <em>tu vestidor.</em></h2>
+        </div>
+        <div class="faq-list">
+          <details open>
+            <summary>&iquest;Cu&aacute;nto cuesta un vestidor a la medida?</summary>
+            <p>Depende de las medidas, la forma, la l&iacute;nea (Modular, Libre o Light), los acabados y los accesorios que elijas. Por eso cada cotizaci&oacute;n parte de un diagn&oacute;stico de tu espacio. La primera sesi&oacute;n de dise&ntilde;o no tiene costo.</p>
+          </details>
+          <details>
+            <summary>&iquest;Mi espacio es peque&ntilde;o, se puede?</summary>
+            <p>S&iacute;. Adem&aacute;s de la profundidad completa de 600 mm, fabricamos con fondo de 400 mm para espacios reducidos. Con la l&iacute;nea Light, los costados de 400 mm ganan espacio de paso.</p>
+          </details>
+          <details>
+            <summary>&iquest;Qu&eacute; diferencia hay entre Modular, Libre y Light?</summary>
+            <p>Modular usa m&oacute;dulos independientes armados con tornillo. Libre es una estructura continua de muro a muro con herraje oculto. Light combina costados de 400 mm con repisas y cajones de 600 mm. En el showroom te ayudamos a elegir la que conviene a tu espacio.</p>
+          </details>
+          <details>
+            <summary>&iquest;Qu&eacute; acabados puedo elegir?</summary>
+            <p>Colecci&oacute;n Merino Super Mate (Cloud, Ceniza, Stone y Black), Merino Altos Brillos antiscratch (Onix, Snow y Grafito) y chapas de madera natural (Nogal, Encino Arena, Encino &Aacute;mbar y Encino). Los ves y los tocas en el showroom.</p>
+          </details>
+          <details>
+            <summary>&iquest;Hacen remodelaci&oacute;n o solo obra nueva?</summary>
+            <p>Las dos. Trabajamos desde planos arquitect&oacute;nicos, en obra gris o sobre un cl&oacute;set que quieres renovar. Revisamos tus planos o levantamos medidas en sitio.</p>
+          </details>
+          <details>
+            <summary>&iquest;La instalaci&oacute;n tiene garant&iacute;a?</summary>
+            <p>S&iacute;. Tu proyecto tiene <strong>10 a&ntilde;os de garant&iacute;a Finezza</strong>, con herrajes europeos originales (Blum, Hettich y H&auml;fele) y acompa&ntilde;amiento directo en obra hasta la entrega.</p>
+          </details>
+          <details>
+            <summary>&iquest;Me atienden fuera del showroom?</summary>
+            <p>S&iacute;. Podemos vernos en tu obra o domicilio en Quer&eacute;taro, o empezar con una videollamada de diagn&oacute;stico.</p>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       07 / CONVERSIÓN: COTIZA TU VESTIDOR
+       ========================================================================== -->
+  <section class="campaign-cta-section" id="cotizar">
+    <div class="container">
+      <div class="campaign-grid">
+
+        <div class="campaign-copy">
+          <span class="eyebrow">07 / COTIZA TU VESTIDOR &bull; SESI&Oacute;N SIN COSTO</span>
+          <h2 class="editorial-h2">Tu vestidor a la medida, <em>en tres pasos.</em></h2>
+          <p>
+            Ya sea que est&eacute;s construyendo desde planos o renovando tu cl&oacute;set en Quer&eacute;taro, te entregamos una propuesta hecha para tu espacio y tu forma de guardar.
+          </p>
+
+          <div class="process-steps">
+            <div class="p-step">
+              <strong>01. Medidas &amp; Diagn&oacute;stico</strong>
+              <span>Revisamos tus planos o levantamos medidas en sitio y definimos la forma y la l&iacute;nea de tu vestidor.</span>
+            </div>
+            <div class="p-step">
+              <strong>02. Propuesta 3D &amp; Muestrario F&iacute;sico</strong>
+              <span>Ves tu vestidor en 3D y eliges en el showroom los acabados, herrajes y accesorios reales.</span>
+            </div>
+            <div class="p-step">
+              <strong>03. Fabricaci&oacute;n &amp; Instalaci&oacute;n</strong>
+              <span>Fabricaci&oacute;n milim&eacute;trica e instalaci&oacute;n con 10 a&ntilde;os de garant&iacute;a y acompa&ntilde;amiento directo en obra.</span>
+            </div>
+          </div>
+
+          <div class="showrooms-box">
+            <h4>Showroom Finezza Quer&eacute;taro</h4>
+            <div class="showrooms-grid">
+              <div class="showroom-item">
+                <strong>Ubicaci&oacute;n Sucursal</strong>
+                <p>Blvd. Bernardo Quintana 7 D, Col. &Aacute;lamos 2da. Secci&oacute;n<br>Quer&eacute;taro, Qro. C.P. 76160</p>
+              </div>
+              <div class="showroom-item">
+                <strong>Contacto Directo</strong>
+                <p>
+                  Tel&eacute;fono: <a href="tel:4427197102"><strong>442 719 7102</strong></a><br>
+                  WhatsApp: <a href="https://wa.me/524427197102?text=Hola%20Finezza%20Quer%C3%A9taro,%20quiero%20cotizar%20un%20vestidor%20a%20la%20medida." target="_blank" rel="noopener"><strong>442 719 7102</strong></a>
+                </p>
+              </div>
+            </div>
+            <p class="showroom-hours">Atenci&oacute;n personalizada previa cita &bull; Tel. y WhatsApp: 442 719 7102</p>
+          </div>
+        </div>
+
+        <div class="campaign-form-card">
+          <form id="leadForm" class="lead-form">
+            <div class="form-header">
+              <h3>Cotizar mi Vestidor</h3>
+              <p>Cu&eacute;ntanos qu&eacute; vestidor buscas y un especialista te contacta por WhatsApp.</p>
+            </div>
+
+            <div class="form-group">
+              <label for="clientName">Nombre completo *</label>
+              <input type="text" id="clientName" name="clientName" required placeholder="Ej. Alejandro Montemayor">
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="clientPhone">WhatsApp / Tel&eacute;fono *</label>
+                <input type="tel" id="clientPhone" name="clientPhone" required placeholder="442 000 0000">
+              </div>
+              <div class="form-group">
+                <label for="clientCity">Zona / Fraccionamiento</label>
+                <input type="text" id="clientCity" name="clientCity" placeholder="Ej. El Campanario / Juriquilla / Zibat&aacute;">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>&iquest;Qu&eacute; vestidor buscas? <small>(Selecciona todo lo que aplique)</small></label>
+              <div class="chips-grid" id="spacesChips">
+                <label class="chip-checkbox"><input type="checkbox" name="spaces" value="Vestidor a la medida" checked><span>Vestidor a la medida</span></label>
+                <label class="chip-checkbox"><input type="checkbox" name="spaces" value="Walk-in closet con isla"><span>Walk-in con isla</span></label>
+                <label class="chip-checkbox"><input type="checkbox" name="spaces" value="Clóset recto"><span>Cl&oacute;set recto</span></label>
+                <label class="chip-checkbox"><input type="checkbox" name="spaces" value="Vestidor en L"><span>En L</span></label>
+                <label class="chip-checkbox"><input type="checkbox" name="spaces" value="Vestidor en U"><span>En U</span></label>
+                <label class="chip-checkbox"><input type="checkbox" name="spaces" value="Isla de joyería"><span>Isla de joyer&iacute;a</span></label>
+                <label class="chip-checkbox"><input type="checkbox" name="spaces" value="Iluminación LED"><span>Iluminaci&oacute;n LED</span></label>
+                <label class="chip-checkbox"><input type="checkbox" name="spaces" value="Accesorios extraíbles"><span>Accesorios extra&iacute;bles</span></label>
+                <label class="chip-checkbox"><input type="checkbox" name="spaces" value="Espacio reducido (fondo 400 mm)"><span>Espacio reducido</span></label>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="projectStage">Etapa de tu proyecto</label>
+                <select id="projectStage" name="projectStage">
+                  <option value="Renovación de clóset">Renovaci&oacute;n de cl&oacute;set</option>
+                  <option value="Obra gris / en construcción">Obra gris / en construcci&oacute;n</option>
+                  <option value="En planos arquitectónicos">En planos arquitect&oacute;nicos</option>
+                  <option value="Soy Arquitecto / Desarrollador">Soy Arquitecto / Desarrollador</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="preferredShowroom">Modalidad de cita</label>
+                <select id="preferredShowroom" name="preferredShowroom">
+                  <option value="Showroom Querétaro (Blvd. Bernardo Quintana 7 D)">Visita Showroom Quer&eacute;taro (Bernardo Quintana 7 D)</option>
+                  <option value="Visita en Obra / Domicilio en Querétaro">Cita en Obra / Domicilio (Quer&eacute;taro)</option>
+                  <option value="Videollamada inicial">Videollamada de diagn&oacute;stico</option>
+                </select>
+              </div>
+            </div>
+
+            <button type="submit" class="submit-btn">
+              <span>Cotizar mi Vestidor</span>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                <path d="M3.5 8H12.5M12.5 8L8.5 4M12.5 8L8.5 12" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+
+            <p class="form-footnote" id="formFeedback" aria-live="polite">
+              Trato directo con proyectistas de vestidores en Quer&eacute;taro. Tus datos est&aacute;n protegidos.
+            </p>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div style="text-align: center; color: #5e5a54; font-size: 0.82rem; padding: 28px 16px 36px; border-top: 1px solid rgba(24,22,20,0.08);">
+    <p>&copy; 2026 FINEZZA Quer&eacute;taro &bull; Vestidores y closets a la medida &bull; Blvd. Bernardo Quintana 7 D, Col. &Aacute;lamos 2da. Secci&oacute;n, Quer&eacute;taro, Qro.</p>
+  </div>
+
+  <a class="wa-float" href="https://wa.me/524427197102?text=Hola%20Finezza%20Quer%C3%A9taro,%20quiero%20cotizar%20un%20vestidor%20a%20la%20medida." target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp"><svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path d="M16.04 3C8.86 3 3.03 8.82 3.03 16c0 2.29.6 4.53 1.74 6.5L3 29l6.68-1.75A12.95 12.95 0 0 0 16.04 29C23.2 29 29 23.18 29 16S23.2 3 16.04 3Zm0 23.62c-1.95 0-3.86-.52-5.53-1.52l-.4-.24-3.96 1.04 1.06-3.86-.26-.4A10.6 10.6 0 0 1 5.4 16c0-5.86 4.77-10.62 10.64-10.62 5.86 0 10.6 4.76 10.6 10.62 0 5.87-4.76 10.62-10.6 10.62Zm5.83-7.95c-.32-.16-1.88-.93-2.17-1.03-.3-.11-.5-.16-.72.16-.21.32-.82 1.03-1 1.24-.19.21-.37.24-.69.08-.32-.16-1.35-.5-2.56-1.58-.95-.85-1.59-1.89-1.77-2.21-.19-.32-.02-.5.14-.65.14-.14.32-.37.48-.56.16-.19.21-.32.32-.53.1-.21.05-.4-.03-.56-.08-.16-.72-1.73-.98-2.37-.26-.62-.52-.54-.72-.55h-.61c-.21 0-.56.08-.85.4-.3.32-1.12 1.09-1.12 2.66s1.14 3.09 1.3 3.3c.16.21 2.25 3.43 5.45 4.81.76.33 1.36.53 1.82.67.77.24 1.46.21 2.01.13.61-.09 1.88-.77 2.15-1.51.27-.74.27-1.38.19-1.51-.08-.13-.29-.21-.61-.37Z"/></svg><span class="wa-float-label">WhatsApp</span></a>
+
+  <script src="script.js?v=20261124"></script>
+  <script>
+    // Preselección del tipo de vestidor al tocar una tarjeta o su enlace
+    document.querySelectorAll('[data-select-space]').forEach((trigger) => {
+      trigger.addEventListener('click', () => {
+        const spaceName = trigger.getAttribute('data-select-space');
+        if (!spaceName) return;
+        const checkbox = document.querySelector(`input[name="spaces"][value="${spaceName}"]`);
+        if (checkbox) checkbox.checked = true;
+      });
+    });
+
+    // Visor de la galería
+    (function () {
+      const grid = document.getElementById('projectsGrid');
+      const box = document.getElementById('kitchenLightbox');
+      if (!grid || !box) return;
+      const imgs = Array.from(grid.querySelectorAll('img'));
+      const big = box.querySelector('img');
+      let current = 0;
+      const show = (i) => { current = (i + imgs.length) % imgs.length; big.src = imgs[current].src; big.alt = imgs[current].alt; };
+      const open = (i) => { show(i); box.classList.add('is-open'); document.body.style.overflow = 'hidden'; };
+      const close = () => { box.classList.remove('is-open'); document.body.style.overflow = ''; };
+      grid.querySelectorAll('button').forEach((btn, i) => btn.addEventListener('click', () => open(i)));
+      box.querySelector('.lb-close').addEventListener('click', close);
+      box.querySelector('.lb-prev').addEventListener('click', (e) => { e.stopPropagation(); show(current - 1); });
+      box.querySelector('.lb-next').addEventListener('click', (e) => { e.stopPropagation(); show(current + 1); });
+      box.addEventListener('click', (e) => { if (e.target === box) close(); });
+      document.addEventListener('keydown', (e) => {
+        if (!box.classList.contains('is-open')) return;
+        if (e.key === 'Escape') close();
+        if (e.key === 'ArrowLeft') show(current - 1);
+        if (e.key === 'ArrowRight') show(current + 1);
+      });
+    })();
+  </script>
+</body>
+</html>
