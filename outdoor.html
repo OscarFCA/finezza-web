@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
@@ -21,14 +21,14 @@
   <meta name="twitter:description" content="Asadores y cocinas exteriores en Querétaro: islas Mont Alpi de acero inoxidable 304 y módulos THOR Kitchen. Distribuidor autorizado en el showroom Finezza.">
   <meta name="twitter:image" content="https://finezzainteriores.com/assets/portada-outdoor-finezza.jpg">
   <script type="application/ld+json" data-seo="finezza">
-{
+  {
     "@context": "https://schema.org",
     "@graph": [
       {
         "@type": "HomeAndConstructionBusiness",
         "@id": "https://finezzainteriores.com/#negocio",
         "name": "FINEZZA Querétaro",
-        "description": "Cocinas integrales, vestidores, home office y mobiliario a la medida con diseño moderno italiano en Querétaro.",
+        "description": "Especialistas en cocinas integrales. Vestidores, home office y mobiliario a la medida con diseño contemporáneo de inspiración italiana en Querétaro.",
         "url": "https://finezzainteriores.com/",
         "logo": "https://finezzainteriores.com/assets/logo-finezza-interiores.png",
         "image": "https://finezzainteriores.com/assets/portada-finezza.jpg",
@@ -71,7 +71,7 @@
           {
             "@type": "ListItem",
             "position": 2,
-            "name": "Asadores y cocinas exteriores",
+            "name": "Outdoor: Mont Alpi y THOR",
             "item": "https://finezzainteriores.com/outdoor.html"
           }
         ]
@@ -84,31 +84,68 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wdth,wght@0,75..100,400..700&display=swap">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..500;1,6..72,300..400&display=swap">
-  <link rel="stylesheet" href="styles.css?v=20261120d">
+  <link rel="stylesheet" href="styles.css?v=20261124">
 </head>
 <body class="subpage-body">
 
   <!-- NAVEGACIÓN PRINCIPAL -->
-  <header class="subpage-header" id="topSubpage">
+    <header class="subpage-header" id="topSubpage">
     <div class="container subpage-header-inner">
       <div class="subpage-brand-group">
-        <a href="index.html" class="subpage-logo-link" aria-label="FINEZZA Quer&eacute;taro &mdash; Ir al inicio">
-          <img src="assets/logo-finezza-interiores.png" alt="FINEZZA Quer&eacute;taro" class="subpage-logo" width="175" height="49">
+        <a href="index.html" class="subpage-logo-link" aria-label="FINEZZA Interiores &mdash; Ir al inicio">
+          <img src="assets/logo-finezza-interiores.png" alt="FINEZZA Interiores" class="subpage-logo" width="175" height="49">
         </a>
       </div>
 
       <nav class="subpage-nav" aria-label="Secciones de Finezza">
         <a href="cocinas.html">Cocinas</a>
         <a href="vestidores.html">Vestidores</a>
+        <div class="nav-drop">
+          <button type="button" class="nav-drop-btn" aria-expanded="false" aria-haspopup="true">Espacios<svg width="10" height="10" viewBox="0 0 10 10" aria-hidden="true"><path d="M2 3.5L5 6.5L8 3.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <div class="nav-drop-menu">
+          <a href="living.html">Living</a>
+          <a href="entretenimiento.html">Entretenimiento</a>
+          <a href="recamaras.html">Rec&aacute;maras</a>
+          <a href="puertas.html">Puertas</a>
+          <a href="mobiliario-autor.html">Mobiliario de Autor</a>
+          <a href="espacios-residenciales.html" class="nav-drop-all">Todos los espacios</a>
+          </div>
+        </div>
         <a href="home-office.html">Home Office</a>
-        <a href="espacios-residenciales.html">Espacios Residenciales</a>
         <a href="outdoor.html" class="active" aria-current="page">Outdoor</a>
       </nav>
 
       <div class="subpage-actions">
         <a href="index.html#cotizar" class="subpage-cta-btn">Agendar Cita</a>
+        <button type="button" class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir men&uacute; de navegaci&oacute;n" aria-expanded="false" aria-controls="mobileMenuDrawer">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </div>
     </div>
+
+    <nav class="mobile-menu-drawer" id="mobileMenuDrawer" aria-label="Men&uacute; m&oacute;vil Finezza" hidden>
+      <div class="mobile-menu-inner">
+        <span class="mobile-menu-label">Especialidad</span>
+        <div class="mobile-menu-core">
+          <a href="cocinas.html">Cocinas</a>
+          <a href="vestidores.html">Vestidores y Closets</a>
+        </div>
+        <span class="mobile-menu-label">Espacios</span>
+        <div class="mobile-menu-grid">
+          <a href="living.html">Living</a>
+          <a href="entretenimiento.html">Entretenimiento</a>
+          <a href="recamaras.html">Rec&aacute;maras</a>
+          <a href="puertas.html">Puertas</a>
+          <a href="mobiliario-autor.html">Mobiliario de Autor</a>
+          <a href="home-office.html">Home Office</a>
+          <a href="outdoor.html" class="active" aria-current="page">Outdoor</a>
+          <a href="espacios-residenciales.html">Todos los espacios</a>
+        </div>
+        <a href="index.html#cotizar" class="mobile-menu-cta">Agendar Cita en Showroom &rarr;</a>
+      </div>
+    </nav>
   </header>
 
   <!-- CINTILLO DE RUTA DE NAVEGACIÓN (BREADCRUMB) -->
@@ -681,19 +718,18 @@
           <a href="index.html" class="subpage-quick-pill">Volver a Inicio</a>
           <a href="cocinas.html" class="subpage-quick-pill">Cocinas</a>
           <a href="vestidores.html" class="subpage-quick-pill">Closets</a>
-          <a href="espacios-residenciales.html#living" class="subpage-quick-pill">Living</a>
-          <a href="espacios-residenciales.html#entretenimiento" class="subpage-quick-pill">Entretenimiento</a>
+          <a href="living.html" class="subpage-quick-pill">Living</a>
+          <a href="entretenimiento.html" class="subpage-quick-pill">Entretenimiento</a>
           <a href="home-office.html" class="subpage-quick-pill">Home Office</a>
-          <a href="espacios-residenciales.html#recamara" class="subpage-quick-pill">Rec&aacute;maras</a>
-          <a href="espacios-residenciales.html#pasillos" class="subpage-quick-pill">Puertas Intercomunicaci&oacute;n</a>
-          <a href="espacios-residenciales.html#habitat-integral" class="subpage-quick-pill">Mobiliario de Autor</a>
+          <a href="recamaras.html" class="subpage-quick-pill">Rec&aacute;maras</a>
+          <a href="puertas.html" class="subpage-quick-pill">Puertas Intercomunicaci&oacute;n</a>
+          <a href="mobiliario-autor.html" class="subpage-quick-pill">Mobiliario de Autor</a>
         </div>
       </div>
     </div>
   </section>
 
-  <script src="script.js?v=20261120d"></script>
-
+  <script src="script.js?v=20261124"></script>
   <a class="wa-float" href="https://wa.me/524427197102?text=Hola%20Finezza%20Quer%C3%A9taro%2C%20me%20gustar%C3%ADa%20informaci%C3%B3n%20para%20mi%20proyecto." target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp"><svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path d="M16.04 3C8.86 3 3.03 8.82 3.03 16c0 2.29.6 4.53 1.74 6.5L3 29l6.68-1.75A12.95 12.95 0 0 0 16.04 29C23.2 29 29 23.18 29 16S23.2 3 16.04 3Zm0 23.62c-1.95 0-3.86-.52-5.53-1.52l-.4-.24-3.96 1.04 1.06-3.86-.26-.4A10.6 10.6 0 0 1 5.4 16c0-5.86 4.77-10.62 10.64-10.62 5.86 0 10.6 4.76 10.6 10.62 0 5.87-4.76 10.62-10.6 10.62Zm5.83-7.95c-.32-.16-1.88-.93-2.17-1.03-.3-.11-.5-.16-.72.16-.21.32-.82 1.03-1 1.24-.19.21-.37.24-.69.08-.32-.16-1.35-.5-2.56-1.58-.95-.85-1.59-1.89-1.77-2.21-.19-.32-.02-.5.14-.65.14-.14.32-.37.48-.56.16-.19.21-.32.32-.53.1-.21.05-.4-.03-.56-.08-.16-.72-1.73-.98-2.37-.26-.62-.52-.54-.72-.55h-.61c-.21 0-.56.08-.85.4-.3.32-1.12 1.09-1.12 2.66s1.14 3.09 1.3 3.3c.16.21 2.25 3.43 5.45 4.81.76.33 1.36.53 1.82.67.77.24 1.46.21 2.01.13.61-.09 1.88-.77 2.15-1.51.27-.74.27-1.38.19-1.51-.08-.13-.29-.21-.61-.37Z"/></svg><span class="wa-float-label">WhatsApp</span></a>
 </body>
 </html>

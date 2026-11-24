@@ -229,9 +229,37 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // 3.B. Menú móvil / tablet desplegable
+  const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+  const mobileMenuDrawer = document.getElementById('mobileMenuDrawer');
+
+  if (mobileMenuBtn && mobileMenuDrawer) {
+    const closeMobileMenu = () => {
+      mobileMenuBtn.setAttribute('aria-expanded', 'false');
+      mobileMenuDrawer.hidden = true;
+    };
+
+    mobileMenuBtn.addEventListener('click', () => {
+      const isOpen = mobileMenuBtn.getAttribute('aria-expanded') === 'true';
+      mobileMenuBtn.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
+      mobileMenuDrawer.hidden = isOpen;
+    });
+
+    mobileMenuDrawer.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', closeMobileMenu);
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !mobileMenuDrawer.hidden) {
+        closeMobileMenu();
+      }
+    });
+  }
+
   // 4. Filtros del Ecosistema de 9 Colecciones
   const ecoTabs = document.querySelectorAll('.eco-tab');
   const ecoCards = document.querySelectorAll('.eco-card');
+  const ecosystemGrid = document.getElementById('ecosystemGrid');
 
   ecoTabs.forEach((tab) => {
     tab.addEventListener('click', () => {
@@ -244,14 +272,33 @@ document.addEventListener('DOMContentLoaded', () => {
       tab.classList.add('active');
       tab.setAttribute('aria-selected', 'true');
 
+      let visibleCount = 0;
       ecoCards.forEach((card) => {
         const category = card.getAttribute('data-category');
         if (filter === 'all' || category === filter) {
           card.classList.remove('is-hidden');
+          visibleCount++;
         } else {
           card.classList.add('is-hidden');
         }
       });
+
+      if (ecosystemGrid) {
+        ecosystemGrid.classList.toggle('is-filtered', filter !== 'all');
+        ecosystemGrid.setAttribute('data-visible-count', String(visibleCount));
+      }
+    });
+  });
+
+  // 4.A. Preselección de espacio al hacer clic en enlaces con data-space
+  document.querySelectorAll('[data-space]').forEach((link) => {
+    link.addEventListener('click', () => {
+      const spaceVal = link.getAttribute('data-space');
+      if (!spaceVal) return;
+      const checkbox = document.querySelector(`input[name="spaces"][value="${spaceVal}"]`);
+      if (checkbox) {
+        checkbox.checked = true;
+      }
     });
   });
 
@@ -1142,6 +1189,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+
 // WhatsApp flotante: subirlo mientras el pie del hero (controles del carrusel) esté en pantalla
 const initWaLift = function () {
   const wa = document.querySelector('.wa-float');
@@ -1168,4 +1216,19 @@ else initWaLift();
     nav.scrollLeft = Math.max(0, cur.offsetLeft - (nav.clientWidth - cur.offsetWidth) / 2);
   };
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', run); else run();
+})();
+
+// Submenú "Espacios": abre con clic/tacto y con teclado; se cierra al salir o con Escape
+(function () {
+  const init = () => {
+    document.querySelectorAll('.nav-drop').forEach((drop) => {
+      const btn = drop.querySelector('.nav-drop-btn');
+      if (!btn) return;
+      const set = (open) => { drop.classList.toggle('is-open', open); btn.setAttribute('aria-expanded', open ? 'true' : 'false'); };
+      btn.addEventListener('click', (e) => { e.stopPropagation(); set(!drop.classList.contains('is-open')); });
+      document.addEventListener('click', (e) => { if (!drop.contains(e.target)) set(false); });
+      drop.addEventListener('keydown', (e) => { if (e.key === 'Escape') { set(false); btn.focus(); } });
+    });
+  };
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
 })();
